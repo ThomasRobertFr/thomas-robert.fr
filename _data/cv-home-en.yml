@@ -1,0 +1,57 @@
+- title: Research engineer in Deep Learning
+  at: Heuritech – Paris, France
+  date: "Nov. 2019 <em>Current</em>"
+  image: /data/cv/heuritech.png
+  type: pro
+  icon: flask
+  tags: [ML, research]
+  content: |
+    Working in the R&D lab of Heuritech, a fashion tech company providing trends data to the fashion industry.
+
+
+- title: PhD in Deep Learning
+  at: LIP6 lab, Sorbonne University (prev. Pierre and Marie Curie University) – Paris, France
+  date: "2019 <em>3 years</em>"
+  image: /data/cv/SU.png
+  type: edu
+  tags: [ML, research]
+  urls:
+    - url: https://hal.archives-ouvertes.fr/tel-02309812
+      title: Thesis
+    - url: /data/publis/TheseSlides_ThomasRobert.pdf
+      title: Slides
+  content: |
+    [_Improving Latent Representations of ConvNets for Visual Understanding_](https://hal.archives-ouvertes.fr/tel-02309812/) - [Slides](/data/publis/TheseSlides_ThomasRobert.pdf)
+
+    **Jury:**
+
+    * Supervisors: [Matthieu Cord](http://webia.lip6.fr/~cord/), [Nicolas Thome](http://cedric.cnam.fr/~thomen/)
+    * Reviewers: [Stéphane Canu](http://asi.insa-rouen.fr/enseignants/~scanu/), [Greg Mori](https://www.cs.sfu.ca/~mori/)
+    * Examinators: [Catherine Achard](http://www.isir.upmc.fr/?op=view_profil&lang=fr&id=7), [Karteek Alahari](https://lear.inrialpes.fr/people/alahari/), [David Picard](https://davidpicard.github.io/)
+
+
+- title: Research engineer then PhD student in Deep Learning
+  at: LIP6 lab, Sorbonne University (prev. Pierre and Marie Curie University) – Paris, France
+  date: "2019 <em>4 years</em>"
+  image: /data/cv/LIP6.png
+  type: pro
+  icon: flask
+  urls:
+    - url: /publications-courses/
+      title: Publications and courses 
+  tags: [ML, research]
+  content: |
+    Supervised by [Matthieu Cord](http://webia.lip6.fr/~cord/) and [Nicolas Thome](http://webia.lip6.fr/~thomen/)
+
+    Work on the ANR projects [VISIIR](http://visiir.univ-lr.fr); et [DeepVision](https://anr.fr/Projet-ANR-15-CE23-0029) in partnership with the LIRIS (INSA Lyon, France), the Simon Fraser University (Canada) and the University of Guelph (Canada).
+
+    - Work on **recipe image classification**. Creation of a [demonstration website of the classifier](http://visiir.lip6.fr)
+    - **Teaching work** (64h / year): in charge of multiple courses, writing of convolutional networks practical sessions subjects
+    - Submission to the **_workflow_ challenge of the [_M2CAI (MICCAI 2016)_](http://camma.u-strasbg.fr/m2cai2016/) workshop** with [Remi Cadène](http://remicadene.com) : classification of surgical operation step based on endosopic videos. 2nd best model submitted.
+    - **Regularization of deep neural networks** with [Michael Blot](http://webia.lip6.fr/~blot/). Published at ICIP 2018 (best paper award).  
+      _SHADE: Information-Based Regularization for Deep Learning_
+    - Improvement of **semi-supervised learning models based on auto-encoders**. Published at ECCV 2018.  
+      _HybridNet: Classification and Reconstruction Cooperation for Semi-Supervised Learning_
+    - Work on **disentangling model for generation.**  
+      _DualDis: Dual-Branch Disentangling with Adversarial Learning_
+

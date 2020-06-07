@@ -1,0 +1,37 @@
+- title: "Improving Latent Representations of ConvNets for Visual Understanding"
+  authors: T. Robert
+  type: PhD thesis
+  year: 2019
+  in: PhD thesis, Sorbonne Université, Paris
+  image: /data/publis/thesis.png
+  additional: "Jury: Stéphane Canu [Reviewer], Greg Mori [Reviewer], Catherine Achard  [Examinator], Karteek Alahari [Examinator], David Picard [Examinator], Matthieu Cord [Supervisor], Nicolas Thome [Supervisor]"
+  urls:
+    - url: https://hal.archives-ouvertes.fr/tel-02309812
+      title: Thesis
+      style: primary
+    - url: /data/publis/TheseSlides_ThomasRobert.pdf
+      title: Slides
+      style: info
+
+- title: "DualDis: Dual-Branch Disentangling with Adversarial Learning"
+  authors: T. Robert, N. Thome, M. Cord
+  type: conference
+  year: 2019
+  in: arXiv
+  image: /data/publis/dualdis.png
+  urls:
+    - url: https://arxiv.org/abs/1906.00804
+      title: Paper
+      style: primary
+
+- title: "HybridNet: Classification and Reconstruction Cooperation for Semi-Supervised Learning"
+  authors: T. Robert, N. Thome, M. Cord
+  type: conference
+  year: 2018
+  in: European Conference on Computer Vision (ECCV)
+  image: /data/publis/hybridnet.png
+  additional: Munich, Germany
+  urls:
+    - url: https://arxiv.org/abs/1807.11407
+      title: Paper
+      style: primary

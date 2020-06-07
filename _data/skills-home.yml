@@ -1,0 +1,79 @@
+- title: Machine Learning & Data Science
+  icon: fa-cogs
+  content:
+    - title: Deep Learning
+      tooltip:
+        en: Subject of my PhD. Good general knowledge of Computer Vision methods. Advanced experience on classification, semi-supervised learning, auto-encoders, generative models, disentangling.
+        fr: Sujet de ma thèse. Bonnes connaissances générales des méthodes de vision par ordinateur. Expérience avancée en classification, semi-supervisé, auto-encodeurs, modèles génératifs, disentangling.
+      level: 3
+    - title: Data Science
+      tooltip:
+        en: General knowledge and use of Machine Learning, Statistics, Vision, Graphs theory, Optimization.
+        fr: Connaissances générales et compétences pratiques en Machine Learning, Statistiques, Vision, Théorie des graphes, Optimisation.
+      level: 3
+    - title: PyTorch
+      level: 3
+    - title: TensorFlow
+      level: 2
+    - title: Keras
+      level: 3
+    - title: Matlab
+      level: 3
+    - title: Scikit-learn
+      level: 2
+    - title: Hadoop / Spark
+      tooltip:
+        en: Basic knowledge of the concepts and the different sofwares in the Hadoop ecosystem
+        fr: Connaissances de base des concepts et des différents logiciels de l'écosystème Hadoop
+      level: 1
+
+
+- title:
+    en: Programming
+    fr: Programmation
+  icon: fa-code
+  content:
+    - title:
+        en: Theoretical knowledge
+        fr: Connaissances théoriques
+      tooltip:
+        en: Algorithmic, Object-Oriented & Functional Programming, UML Modeling.
+        fr: Algorithmique, Programmation Orientée-Objet & Fonctionnelle, Modélisation UML.
+      level: 2
+    - title: Python
+      level: 2
+    - title: Java
+      level: 2
+    - title: Scala
+      level: 1
+    - title: C / C++
+      level: 1
+    - title: Bash
+      level: 1
+    - title: Git / SVN
+      tooltip:
+        en: Love a neatly rebased linear history
+        fr: J'aime les beaux historiques rebased linéaires
+      level: 3
+
+
+- title: Web
+  icon: fa-cloud
+  content:
+    - title:
+        en: Theoretical knowledge
+        fr: Connaissances théoriques
+      tooltip:
+        en: Networks, Databases, Distributed Services.
+        fr: Réseau, Base de données, services distribués.
+      level: 2
+    - title: PHP
+      level: 3
+    - title: MySQL
+      level: 3
+    - title: JavaScript
+      level: 3
+    - title: HTML5
+      level: 3
+    - title: CSS3
+      level: 3

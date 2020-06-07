@@ -1,0 +1,106 @@
+{% assign cv_meta = site.data['cv-meta'].cv %}
+{% assign lang = page.lang | default: "en" %}
+
+<section
+    id="{{ page.title-short | default: page.title | slugify }}"
+    class="onepage-block {% if page.class %}{{ page.class }}{% endif %}"
+    {% if page.class contains "cover-image" %}style="background-image: url('{{ page.bg-image | prepend: site.baseurl }}')"{% endif %}>
+    <div class="container">
+        {% if page.no-title != true %}
+        <h2>{{ page.title }}</h2>
+        {% endif %}
+
+    {% if page.cv_filtering %}
+        <p class="subtitle">{{ cv_meta.texts.subtitle[lang] }}</p>
+        <p class="text-center"><em>{{ cv_meta.texts.help[lang] }}</em></p>
+
+        <div id="timeline-controls">
+            <strong>{{ cv_meta.texts.type[lang] }}</strong>
+            <ul>
+                {% for type in cv_meta.types %}
+                <li data-dim="type" data-filter="{{ type[0] }}" class="{{ type[0] }} active"><span class="btn-circle"></span> <span class="keyword">{{ type[1].title[lang] }}</span></li>
+                {% endfor %}
+            </ul>
+            <div class="clearfix"></div>
+            <strong>{{ cv_meta.texts.tag[lang] }}</strong>
+            <ul>
+                {% for tag in cv_meta.tags %}
+                <li data-dim="tags" data-filter="{{ tag[0] }}" class="{{ tag[1].color }} active"><span class="btn-circle"></span> <span class="keyword">{{ tag[1].title[lang] }}</span></li>
+                {% endfor %}
+                <li data-dim="tags" data-filter="" class="color-8 active"><span class="btn-circle"></span> <span class="keyword">None</span></li>
+            </ul>
+        <div class="clearfix"></div>
+        <strong class="show-all">{{ cv_meta.texts.showall[lang] }}</strong>
+        </div>
+    {% endif %}
+
+    <div id="cd-timeline" class="cd-container
+        {% if page.cv_js_reveal %}cd-timeline-reveal{% endif %}
+        {% if page.cv_filtering %}cd-offset{% endif %}
+        {% if page.cv_center %}cd-center{% endif %}">
+    {% for exp in site.data[page.data-name] %}
+
+        <div id="experience-{{ forloop.index0 }}" class="cd-timeline-block cd-enter" data-type="{{ exp.type }}"  data-tags="{{ exp.tags | join: ',' }}">
+            <div class="cd-timeline-img cd-type-{{ exp.type }}">
+                {% if exp.icon %}
+                <i class="fa fa-{{ exp.icon }}"></i>
+                {% else %}
+                <i class="fa fa-{{ cv_meta.types[exp.type].icon }}"></i>
+                {% endif %}
+            </div>
+
+            <div class="cd-timeline-content">
+                {% if page.cv_hide_tags != true %}
+                <div class="cd-tags">
+                    {% for tag in exp.tags %}
+                        {% if cv_meta.tags contains tag %}
+                        <span class="{{ cv_meta.tags[tag].color }}">{{ cv_meta.tags[tag].title[lang] }}</span>
+                        {% else %}
+                        {{ "Incorrect tag: " | append: tag | raise_error }}
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if exp.image %}
+                    <img src="{{ exp.image | prepend: site.baseurl }}" />
+                    {% elsif exp.image-big %}
+                    <img src="{{ exp.image-big | prepend: site.baseurl }}" class="big" />
+                    {% endif %}
+                </div>
+                {% endif %}
+                
+                <h3>{{ exp.title }}</h3>
+                <p class="subtitle">{{ exp.at }}</p>
+                <p class="cd-date">{{ exp.date }}</p>
+                {{ exp.content | markdownify }}
+
+                {% if exp.urls %}
+                <div class="clearfix"></div>
+                <p class="text-right">
+                {% for url in exp.urls %}
+                    <a class="btn btn-default btn-sm btn-sm cd-read-more" href="{{ url.url }}">{% if url.title %}{{ url.title }}{% else %}Details{%endif%} <i class="fa fa-chevron-right"></i></a>
+                    <?php } ?>
+                {% endfor %}
+                </p>
+                {% endif %}
+            </div>
+        </div>
+
+    {% endfor %}
+    </div>
+
+    {% if page.cv_dots %}
+    <div class="cd-timeline-dot"></div>
+    <div class="cd-timeline-dot"></div>
+    <div class="cd-timeline-dot"></div>
+    {% endif %}
+
+    <div class="clearfix"></div>
+    {% if page.more-cv-url %}
+    <p class="text-center mrgtop30">
+        <a href="{% include url.html url=page.more-cv-url %}" class="btn btn-info">{{ cv_meta.texts.more[lang] }} <i class="fa fa-chevron-right fa-margin-left"></i></a>
+    </p>
+    {%endif%}
+
+    </div>
+</section>
+

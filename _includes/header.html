@@ -1,0 +1,80 @@
+<nav id="header" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ "/" | prepend: site.baseurl }}{% if page.lang == 'en' %}en/{% endif %}">
+        <span class="navbar-brand-img"><img src="{{ site.author.logo | prepend: site.baseurl }}" alt="" /></span>
+        <span class="navbar-brand-title">{{ site.author.name }}</span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        {% if page.layout == "onepage" %}
+          {% assign onepageCollection = page.collection | default: site.onepage-default-collection %}
+          {% assign blocks = site[onepageCollection] | sort:"order", "last" %}
+          {% for block in blocks %}
+            {% if block.title != "" and block.no-navlink != true %}
+              <li><a href="#{{ block.title-short | default: block.title | slugify }}">{{ block.title-short | default: block.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bars" style="font-size: 1.3em;"></i></span></a>
+            <ul class="dropdown-menu">
+
+        {% endif %}
+
+        {% assign pages = site.pages | where: "lang", page.lang | sort:"order", "last" %}
+        {% for a_page in pages %}
+          {% if a_page.title and a_page.no-title != true and a_page.no-navlink != true %}
+            <!-- unless page.layout == "onepage" and page.url == a_page.url or a_page.parent -->
+            {% unless a_page.parent %}
+            <li {% if page.url == a_page.url %}class="active"{% endif %}><a href="{{ a_page.url | prepend: site.baseurl }}">{{ a_page.title | escape }}</a></li>
+            {% endunless %}
+          {% endif %}
+        {% endfor %}
+
+        {% if page.layout == "onepage" %}
+          </ul>
+        </li>
+        {% endif %}
+
+        {% assign post_fr=site.posts | where:"lang-ref", page.lang-ref | where: "lang", "fr" %}
+        {% assign post_en=site.posts | where:"lang-ref", page.lang-ref | where: "lang", "en" %}
+        {% if post_fr.size == 0 %}
+          {% assign post_fr=site.pages | where:"lang-ref", page.lang-ref | where: "lang", "fr" %}
+        {% endif %}
+        {% if post_en.size == 0 %}
+          {% assign post_en=site.pages | where:"lang-ref", page.lang-ref | where: "lang", "en" %}
+        {% endif %}
+
+        <li class="lang-selector">
+          {% if page.lang == "fr" %}
+          <a class="current-lang">
+          {% elsif post_fr.size > 0 %}
+          <a href="{{ site.base-url }}{{ post_fr[0].url }}">
+          {% else %}
+          <a class="no-translation">
+          {% endif %}
+            <img src="{{ '/assets/images/fr.png' | prepend: site.baseurl }}" alt="Français" title="Français">
+          </a>
+
+          {% if page.lang == "en" %}
+          <a class="current-lang">
+          {% elsif post_en.size > 0 %}
+          <a href="{{ site.base-url }}{{ post_en[0].url }}">
+          {% else %}
+          <a class="no-translation">
+          {% endif %}
+            <img src="{{ '/assets/images/en.png' | prepend: site.baseurl }}" alt="English" title="English">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

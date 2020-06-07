@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Mon Résumé Des Concepts Du Big Data | Thomas Robert</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="http://www.thomas-robert.fr/blog/fr/2014/09/06/mon-resume-des-concepts-du-big-data/">
+  <link rel="alternate" type="application/rss+xml" title="Thomas Robert" href="http://www.thomas-robert.fr/feed.xml">
+
+  <link rel="shortcut icon" href="/data/images/favicon.ico" />
+  <!-- <link rel="icon" type="image/png" href="/data/images/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/data/images/favicon-16x16.png" sizes="16x16"> -->
+</head>
+
+
+  <body data-spy="scroll" data-target="#header">
+
+    <nav id="header" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <span class="navbar-brand-img"><img src="/data/images/logo.png" alt="" /></span>
+        <span class="navbar-brand-title">Thomas Robert</span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        
+          
+        
+          
+            <!-- unless page.layout == "onepage" and page.url == a_page.url or a_page.parent -->
+            
+            <li ><a href="/">Accueil</a></li>
+            
+          
+        
+          
+            <!-- unless page.layout == "onepage" and page.url == a_page.url or a_page.parent -->
+            
+            <li ><a href="/fr/cv/">CV</a></li>
+            
+          
+        
+          
+        
+          
+            <!-- unless page.layout == "onepage" and page.url == a_page.url or a_page.parent -->
+            
+            <li ><a href="/fr/publications/">Publications</a></li>
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <!-- unless page.layout == "onepage" and page.url == a_page.url or a_page.parent -->
+            
+            <li ><a href="/fr/fiches/">Fiches</a></li>
+            
+          
+        
+          
+        
+          
+            <!-- unless page.layout == "onepage" and page.url == a_page.url or a_page.parent -->
+            
+            <li ><a href="/fr/teaching/">Cours</a></li>
+            
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        <li class="lang-selector">
+          
+          <a class="current-lang">
+          
+            <img src="/assets/images/fr.png" alt="Français" title="Français">
+          </a>
+
+          
+          <a href="/blog/en/2014/09/06/my-sum-up-of-big-data-concepts/">
+          
+            <img src="/assets/images/en.png" alt="English" title="English">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <main id="main" class="layout-post">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <header class="post-header trianglify ">
+        <div class="background" ></div>
+        <div class="container-fluid">
+            <h1 class="post-title" itemprop="name headline">Mon Résumé Des Concepts Du Big Data</h1>
+            <p class="post-meta color-emph-light">
+                <i class="fa fa-clock-o"></i>
+                <time datetime="2014-09-06T00:00:00+02:00" itemprop="datePublished">Sep 6, 2014</time>
+                
+            </p>
+            <div class="post-intro color-emph-light">
+                
+            </div>
+        </div>
+    </header>
+
+    <div class="post-content" itemprop="articleBody">
+        <div class="container-fluid">
+            <p class="text-center">
+<img src="/data/blog/bigdata_prev.png" />
+</p>
+
+<p>Cet été, j’ai fait un stage dans une jeune startup normande : Creative Data. Un des sujets de mon stage a été de travailler sur les technologies du Big Data, et j’ai donc passé un certain temps à apprendre des choses sur le Big Data. Ce post présente les concepts principaux et quelques avis concernant ce domaine.</p>
+
+<p>Au programme :</p>
+
+<ul>
+  <li><a href="#bigdata3">Pourquoi le <em>Big Data</em> ?</a></li>
+  <li><a href="#bigdata4">Vers une approche distribuée et « simplifiée »</a></li>
+  <li><a href="#bigdata5">Hadoop</a></li>
+  <li><a href="#bigdata6">Résumé des technologies <em>Big Data</em></a></li>
+  <li><a href="#bigdata7">Distributions Hadoop</a></li>
+  <li><a href="#bigdata8">Evolution du <em>Big Data</em> : le développement de Spark et la fin de MapReduce</a></li>
+  <li><a href="#bigdata9">Hadoop dans le <em>cloud</em></a></li>
+</ul>
+
+<h3 id="pourquoi-le-big-data"><a name="bigdata3"></a>Pourquoi le <em>Big Data</em> ?</h3>
+
+<p><em>Tout d’abord, notons que dans ce post « technologies actuelles » signifie technologies non-Big Data, ce qui n’est bien sur pas vrai.</em></p>
+
+<p>La problématique à laquelle répond le <em>Big Data</em> est souvent illustrée par la règle des 3V, décrivant trois composantes auxquelles le <em>Big Data</em> doit répondre :</p>
+
+<ul>
+  <li><strong>Volume :</strong> Les volumes de données à traiter sont de plus en plus importants et les solutions de traitement actuelles, majoritairement peu <em>scalable</em> ne permettent plus de répondre à une telle augmentation des volumes. Les solutions étant généralement centralisées sur une seule machine, il arrive en effet un moment où l’augmentation des capacités d’une machine n’est plus possible pour des raisons techniques ou des raisons de coût.</li>
+  <li><strong>Variété :</strong> Les données ne sont plus seulement issues de systèmes structurées (bases relationnelles) mais sont de plus en plus semi-structurées voire non-structurées (données textuelles, images, logs serveurs, etc.), alors que les outils de traitement traditionnels sont souvent prévus pour fonctionner avec des données structurées.</li>
+  <li><strong>Vélocité :</strong> Les temps de traitement sont parfois cruciaux, et les solutions actuelles peuvent avoir du mal à répondre en un temps suffisant, toujours pour des raisons de non-_scalabilité_.</li>
+</ul>
+
+<p>Les solutions regroupées sous le terme de « <em>Big Data</em> » permettent de répondre efficacement a au moins une voire généralement plusieurs de ces composantes. Dans ce sens, je considère que le « <em>Big Data</em> » n’apporte pas en soi de nouveauté dans les concepts de traitement de données, mais plutôt dans leur implémentation permettant de répondre à de nouvelles contraintes.</p>
+
+<h3 id="vers-une-approche-distribuée-et-simplifiée"><a name="bigdata4"></a>Vers une approche distribuée et « simplifiée »</h3>
+
+<p>Nous avons vu que les défauts des technologies actuelles face aux problématiques du <em>Big Data</em> sont liées à leur rigueur dans le format des données (« Variété ») et à la non-_scalabilité_ des outils (« Volume » et « Vélocité »).</p>
+
+<p>Pour répondre à ces problématiques, les solutions <em>Big Data</em> sont hautement distribuées afin de répartir les traitements sur un <em>cluster</em> de machines travaillant de concert. Cette approche distribuée permet de répondre « simplement » aux besoins de <em>scalabilité</em> du <em>Big Data</em> puisqu’il suffit de cumuler un ensemble de machines modestes jusqu’à atteindre les performances voulues, et d’en rajouter si les besoins augmentent, au lieu de modifier des machines existantes.</p>
+
+<p>Par ailleurs, pour répondre à la problématique de variété, l’approche <em>Big Data</em> est « simplifiée » dans le sens où elle est plus souple que les outils traditionnels tels que les systèmes de gestion de bases de données relationnelles (SGBDR). Par exemple, la plupart des solutions <em>Big Data</em> permettant la lecture de données tabulaires appliquent le schéma à la lecture <em>(schema-on-read)</em> : c’est lors de la lecture des données qu’on fait correspondre les données à un schéma de table ; à l’opposé des SGBDR fonctionnant en schéma à l’écriture : le schéma est appliqué aux données lors de l’écriture et les données sont enregistrées selon ce schéma.</p>
+
+<p>Suivant le même principe de souplesse et de simplicité, la grande majorité des solutions de <em>Big Data</em> laissent à l’utilisateur le soin de gérer le format de stockage des données, pouvant être un format brut type CSV ou un format sérialisé et/ou compressé comme le Parquet ; à l’opposé de la majorité des outils classiques tels les SGBDR qui gèrent elles même le stockage.</p>
+
+<h3 id="hadoop"><a name="bigdata5"></a>Hadoop</h3>
+
+<p>Quelques recherches permettent de se rendre rapidement compte qu’Hadoop est la base de l’écosystème de technologies du <em>Big Data</em>.</p>
+
+<p>Inspiré des publications de Google sur GoogleFS et MapReduce, Hadoop est un framework en Java servant de socle à la plupart des technologies de <em>Big Data</em>. Ce framework est constitué de deux éléments principaux :</p>
+
+<ul>
+  <li><strong>Hadoop File System (HDFS) :</strong> un système de fichier distribué permettant de stocker des fichiers sur le <em>cluster</em> de machines comme s’il s’agissait d’un seul disque.</li>
+  <li><strong>Hadoop MapReduce :</strong> une implémentation du paradigme MapReduce permettant par héritage d’écrire simplement des traitements distribués sur les données stockées dans HDFS.</li>
+</ul>
+
+<p>La quasi-totalité des technologies de <em>Big Data</em> utilisent HDFS, et une grande partie utilise également MapReduce.</p>
+
+<h3 id="résumé-des-technologies-big-data"><a name="bigdata6"></a>Résumé des technologies <em>Big Data</em></h3>
+
+<p>L’ensemble de ces technologies, plus ou moins interdépendantes et complémentaires, constituent un « écosystème Hadoop » énorme, que je vais présenter rapidement.</p>
+
+<p class="text-center"><img src="/data/blog/BigDataTechnologies.png" alt="Technologies Big Data" /></p>
+
+<p>La figure ci dessus présente le schéma récapitulatif décrivant les dépendances des différentes technologies. On y distingue plusieurs couches :</p>
+
+<ul>
+  <li><strong>l’infrastructure</strong> c’est-à-dire les machines, pouvant être « <em>on-premise</em> » donc gérées soi-même localement, ou louées et hébergées dans le <em>cloud</em> ;</li>
+  <li><strong>le stockage</strong> qui peut être HDFS ou d’autres systèmes de fichiers distribués offrant les mêmes interfaces ;</li>
+  <li><strong>l’interrogation / analyse</strong> par diverses solutions se basant pour certaines sur MapReduce ;</li>
+  <li><strong>la visualisation</strong> des résultats.</li>
+</ul>
+
+<p>Sans aller dans le détail, parmi ces technologies, on retrouve des solutions :</p>
+
+<ul>
+  <li><strong>de traitement de données</strong> dont le traitement peut être écrit dans un langage de programmation classique (MapReduce, Spark…) ou via un langage de script dédié (Pig…)</li>
+  <li><strong>de bases de données</strong> NoSQL orientés document, graphes, colonnes ou clé-valeur (MongoDB, Giraph, Neo4j, HBase, HCatalog…)</li>
+  <li><strong>d’interrogation de données</strong> en pseudo-SQL transformant la requête en traitement distribués sur des fichiers de données distribués (Hive, Impala, BigQuery, Drill, Spark SQL…)</li>
+  <li><strong>de <em>Machine Learning</em></strong> (Mahout, 0xdata H2O, Spark MLlib…)</li>
+  <li><strong>de traitement de flux</strong> de données en temps réel (Storm, Spark Streaming…)</li>
+</ul>
+
+<p>Cette liste est loin d’être exhaustive mais donne une bonne idées générale des différentes solutions.</p>
+
+<h3 id="distributions-hadoop"><a name="bigdata7"></a>Distributions Hadoop</h3>
+
+<p>Il n’est pas rare d’avoir besoin d’un ensemble d’outils de cet écosystème, et les dépendances et incompatibilités n’étant pas toujours simple à gérer, des entreprises fournissent des « distributions Hadoop », c’est-à-dire un écosystème Hadoop pré-packagé et préconfiguré permettant de ne pas avoir à se soucier de ce travail d’installation, de configuration, de résolution de dépendances et d’incompatibilités entre les composants, pouvant s’avérer très pénible quand on est pas un expert.</p>
+
+<p>Les principales distributions Hadoop sont celles de Cloudera, HortonWorks et MapR.</p>
+
+<h3 id="evolution-du-big-data-le-développement-de-spark-et-la-fin-de-mapreduce"><a name="bigdata8"></a>Evolution du <em>Big Data</em> : le développement de Spark et la fin de MapReduce</h3>
+
+<p>Chaque technologie de l’écosystème <em>Big Data</em> a son usage, ses avantages et ses inconvénients. Le milieu du <em>Big Data</em> étant en explosion et qui plus est un domaine où on cherche toujours à améliorer les performances des outils, le paysage technologique bouge très vite, et de nouvelles solutions naissent très régulièrement, avec pour objectif d’améliorer les technologies existantes.</p>
+
+<p>Je pense que les meilleurs exemples pour illustrer cette évolution sont MapReduce et Spark.</p>
+
+<p>MapReduce est un <em>pattern</em> décrit par Google en 2004, implémenté peu de temps après dans le projet Nutch de Yahoo qui deviendra le projet Apache Hadoop en 2008. Autant dire qu’à l’échelle du <em>Big Data</em>, MapReduce est un dinosaure. C’est un algorithme qui a l’avantage de supporter très bien d’énormes volumes de données, mais qui présente cependant des lenteurs, particulièrement visibles sur des volumes modestes.</p>
+
+<p>Ces lenteurs de MapReduce font qu’il commence à être abandonné par les solutions voulant proposer des traitements quasi-instantanés sur les volumes modestes. Pour l’anecdote, Google a annoncé lors de la Google I/O 2014 que le paradigme MapReduce a déjà eu deux successeurs en interne, dont le dernier vient d’être proposé en solution <em>SaaS</em> sous le nom Google Cloud Dataflow.</p>
+
+<p>On peut ainsi constater que toutes les solutions se voulant rapide n’utilisent pas MapReduce mais interrogent directement le système HDFS. La solution la plus emblématique est Spark, un outil qui permet d’écrire des applications distribués très simplement et qui propose des bibliothèques de traitement classique, mais également d’interrogation en SQL, de <em>Machine Learning</em>, de graphes, et de traitement en temps réel ; et qui peut travailler indifféremment sur des données sur disque ou en chargées en RAM pour de bien meilleures performances.</p>
+
+<p>Bien qu’encore jeune, Spark possède une communauté énorme et est un des projets Apache qui se développe le plus vite. Cette solution s’annonce un peu comme le successeur de MapReduce d’autant qu’il a l’avantage de centraliser une grande partie des outils nécessaires dans un <em>cluster</em> Hadoop.</p>
+
+<h3 id="hadoop-dans-le-cloud"><a name="bigdata9"></a>Hadoop dans le <em>cloud</em></h3>
+
+<p>Comme nous l’avons vu, il y a deux types d’infrastructures possibles pour supporter un <em>cluster</em> Hadoop : une infrastructure « <em>on-premise</em> » où les machines sont achetées, hébergées et gérées soi-même ; ou une infrastructure gérée dans le <em>cloud</em> type <em>Infrastructure as a Service (IaaS)</em> où on se contente de louer des machines sans se soucier de la gestion. Voyons plus en détail ce second cas.</p>
+
+<p>Pour faire du Big Data hébergé, il est possible de louer des serveurs chez des hébergeurs classiques (OVH, 1&amp;1, Netissime, etc.) qui louent des serveurs « standard » au mois. Cette approche est finalement identique à l’approche <em>on-premise</em> sauf que l’on a pas besoin de gérer les machines. Cela ne correspond pas selon moi à l’approche cloud.</p>
+
+<p>La « vraie » approche cloud passe par des hébergeurs spécialisés (Amazon et Google en particulier) qui proposent un panel de services destinés au traitement <em>scalable</em> de données et proposant la location de machines virtuelles à l’heure ou à la minute. Ces offres proposent un ensemble de services poussant en particulier à séparer le stockage qui est facturé au volume (Amazon S3, Google Cloud Storage) du <em>cluster</em> de traitement facturé au temps de traitement (Amazon Elastic Compute Cloud (EC2), Google Compute Engine). Ainsi, alors que le stockage est persistant, le <em>cluster</em> de traitement est lui éphémère et permet ainsi de provisionner dynamiquement le nombre de machines nécessaires pour l’exécution d’un traitement puis de les dé-provisionner.</p>
+
+<p>Cette nouvelle approche, bien plus souple permet de faire des économies importantes si le <em>cluster</em> a une charge très variable. Ainsi, MapR (fournisseur de distribution Hadoop) a fait la démonstration du déploiement d’un <em>cluster</em> de 2103 machines pour trier 1,5 To de données en 1 minute pour un coût de 20$.</p>
+
+<p>C’est une approche assez disruptive du modèle classique puisqu’il est nécessaire de prévoir des mécanismes de provisionnement et de configuration automatisés des machines, mais permet de profiter d’une souplesse exceptionnelle en capacité de traitement, inatteignable sur un modèle classique.</p>
+
+<p>Il est important de noter qu’Amazon s’est emparé de ce marché depuis plusieurs années, lançant par exemple Amazon EC2 en 2006 et Amazon Elastic MapReduce en 2009, et est actuellement en monopole sur les services de cloud Big Data. En comparaison, Google n’a lancé Google Compute Engine qu’en 2012. Amazon a donc une large avance commerciale dans le domaine, alors que Google, qui dispose pour ses besoins internes de technologies d’hébergement et de <em>Big Data</em> de pointe, commence à peine à les ouvrir au public. Il semble cependant que ce soit la direction que prend Google, qui rend petit à petit accessible au public des outils <em>Big Data</em> très intéressants et innovants utilisant des technologies internes comme BigQuery (interrogation de données très rapide en SQL) ou Google Cloud Dataflow (successeur interne à MapReduce).</p>
+
+        </div>
+    </div>
+
+</article>
+
+    </main>
+
+    <script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.parallax.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/trianglify.min.js"></script>
+<script src="/assets/js/particles.min.js"></script>
+<script src="/assets/js/main.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-12985376-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+  </body>
+
+</html>

@@ -1,0 +1,101 @@
+# Website title & description (the description is used in the HTML <head>, read by Google and co)
+title: Thomas Robert
+description: ""
+
+# Your personal infos (used for the sidebar)
+author:
+  # Site title
+  name: Thomas Robert
+  description: ""
+  photo: /data/images/photo.jpg
+  logo: /data/images/logo.png
+  # Contacts
+  email: thomas@thomas-robert.fr
+  twitter: ThomasR_Fr
+  linkedin: thomasrobertfr
+  github: ThomasRobertFr
+
+# Technical setup
+baseurl: "" # url of your webpage if not at the root of the domain (leading /, no trailing /)
+url: "http://www.thomas-robert.fr" # the base hostname & protocol for your site (no trailing /)
+header-default-style: trianglify # default page header style (see styles in user documentation)
+google-analytics: UA-12985376-1 # your google analytics code if you want visit stats (uncomment to enter)
+
+plugins:
+  - jekyll-redirect-from
+
+# Detailed technical setup
+sass:
+  sass_dir: /assets/css/
+  style: compressed
+timezone: Europe/Paris
+include: ['CNAME']
+permalink: /:title/
+destination: docs/
+
+collections:
+  - onepage_home_en
+  - onepage_home_fr
+  - onepage_resume_en
+  - onepage_resume_fr
+
+defaults:
+  # posts
+  - scope:
+      path: _posts
+    values:
+      layout: post
+  - scope:
+      path: _posts/fr
+    values:
+      permalink: /blog/fr/:year/:month/:day/:title/
+      lang: fr
+  - scope:
+      path: _posts/en
+    values:
+      permalink: /blog/en/:year/:month/:day/:title/
+      lang: en
+
+  # default layout for pages is "fr" and "en"
+  - scope:
+      path: en
+    values:
+      order: 50
+      layout: page
+      lang: en
+  - scope:
+      path: fr
+    values:
+      order: 50
+      layout: page
+      lang: fr
+  
+  # fiches scope
+  - scope:
+      path: fr/fiches/*
+    values:
+      parent: fiches.md
+      no-navlink: true
+      # redirect_from: /fiches/:title  # Does not work
+
+  # default layout for blocks is "onepage-block" collections
+  - scope:
+      type: onepage_home_en
+    values:
+      layout: onepage-block
+      lang: en
+  - scope:
+      type: onepage_home_fr
+    values:
+      layout: onepage-block
+      lang: fr
+  - scope:
+      type: onepage_resume_en
+    values:
+      layout: onepage-block
+      lang: en
+  - scope:
+      type: onepage_resume_fr
+    values:
+      layout: onepage-block
+      lang: fr

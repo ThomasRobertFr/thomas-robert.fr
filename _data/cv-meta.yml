@@ -1,0 +1,77 @@
+cv:
+  texts:
+    subtitle:
+      en: Here is a timeline of my experiences.<br> Feel free to do explore it thanks to the controls on the left.
+      fr: Voici la <em>timeline</em> de mes expériences.<br> N'hésitez pas à l'explorer grâce aux filtres sur la gauche.
+    help:
+      en: Click on a circle to toggle an item. Click on a label to focus on it only.
+      fr: Cliquez sur un cercle pour activer/désactiver l'élément. Cliquez sur un libellé pour se concentrer dessus uniquement.
+    type:
+      en: "Type of experience:"
+      fr: "Type d'expérience :"
+    tag:
+      en: "Keywords:"
+      fr: "Mot-clés :"
+    showall:
+      en: "Show all"
+      fr: "Tout afficher"
+    more:
+      en: Read more about my experiences
+      fr: Voir toutes mes expériences
+  types:
+    edu:
+      icon: graduation-cap
+      title:
+        en: Education
+        fr: Études
+    pro:
+      icon: briefcase
+      title:
+        en: Professional
+        fr: Professionnelle
+    asso:
+      icon: code
+      title:
+        en: Associative
+        fr: Associative
+    perso:
+      icon: users
+      title:
+        en: Personal project
+        fr: Projet personnel
+  tags:
+    ML:
+      title:
+        en: Machine Learning
+        fr: Machine Learning
+      color: color-1
+    research:
+      title:
+        en: Research
+        fr: Recherche
+      color: color-2
+    web:
+      title:
+        en: Web
+        fr: Web
+      color: color-3
+    bigdata:
+      title:
+        en: Big Data
+        fr: Big Data
+      color: color-4
+    stats:
+      title:
+        en: Statistics
+        fr: Statistiques
+      color: color-5
+    BI:
+      title:
+        en: Business Intelligence
+        fr: Business Intelligence
+      color: color-6
+    BPM:
+      title:
+        en: BPM
+        fr: BPM
+      color: color-7

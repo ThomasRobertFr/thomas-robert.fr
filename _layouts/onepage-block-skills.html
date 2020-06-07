@@ -1,0 +1,102 @@
+---
+layout: onepage-block
+---
+
+{% assign skills_meta = site.data['skills-meta'].skills %}
+{% assign lang = page.lang | default: "en" %}
+
+{% for skill_group in site.data[page.data-name] %}
+    {% if forloop.index == 3 and forloop.last %}
+        {% assign class_sm = "col-sm-12" %}
+    {% else %}
+        {% assign class_sm = "col-sm-6" %}
+    {% endif %}
+
+    {% if forloop.index == 4 %}
+        <div class="clearfix visible-md visible-lg"></div>
+    {% endif %}
+    {% if forloop.index == 3 or forloop.index == 5 %}
+        <div class="clearfix visible-sm"></div>
+    {% endif %}
+
+    <div class="service-box col-md-4 {{ class_sm }} col-xs-12">
+        <div class="service-box-icon"><span><i class="fa {{ skill_group.icon }} icon-custom-style"></i></span></div>
+        <div class="service-box-content">
+            <h3>{{ skill_group.title | get_lang: lang }}</h3>
+            {% if skill_group contains "groups" %}
+                
+                {% for skill_subgroup in skill_group.groups %}
+
+                    <h4><i class="fa fa-caret-right"></i> {{ skill_subgroup.title | get_lang: lang }}</h4>
+
+                    <ul class="{% unless skill_subgroup.no_level %}leaders{% endunless %}">
+                        {% for skill in skill_subgroup.content %}
+                        <li>
+                            <span
+                            {% if skill.tooltip %}
+                            data-placement="bottom" title="{{ skill.tooltip | get_lang: lang }}" data-toggle="tooltip"
+                            {% endif %}
+                            >{{ skill.title | get_lang: lang }}</span>
+                            {% if skill.level %}
+                            <span class="rating">
+                                {% for i in (1..3) %}
+                                {% if i > skill.level %}
+                                    <i class="fa fa-circle-thin"></i>
+                                {% else %}
+                                    <i class="fa fa-circle"></i>
+                                {% endif %}
+                                {% endfor %}
+                            </span>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                {% endfor %}
+
+            {% else %}
+
+                <!-- Repeated template above -->
+                <ul class="{% unless skill_group.no_level %}leaders{% endunless %}">
+                    {% for skill in skill_group.content %}
+                    <li>
+                        <span
+                        {% if skill.tooltip %}
+                        data-placement="bottom" title="{{ skill.tooltip | get_lang: lang }}" data-toggle="tooltip"
+                        {% endif %}
+                        >{{ skill.title | get_lang: lang }}</span>
+                        {% if skill.level %}
+                        <span class="rating">
+                            {% for i in (1..3) %}
+                                {% if i > skill.level %}
+                                    <i class="fa fa-circle-thin"></i>
+                                {% else %}
+                                    <i class="fa fa-circle"></i>
+                                {% endif %}
+                            {% endfor %}
+                        </span>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+                </ul>
+
+            {% endif %}
+        </div>
+    </div>
+{% endfor %}
+
+<div class="clearfix"></div>
+<div class="caption text-right col-xs-12">
+    <span class="rating"><i class="fa fa-circle"></i> <i class="fa fa-circle-thin"></i> <i class="fa fa-circle-thin"></i> </span> <span data-toggle="tooltip" title="{{ skills_meta.texts.beginner_info | get_lang: lang }}">{{ skills_meta.texts.beginner | get_lang: lang }}</span> /
+    <span class="rating"><i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle-thin"></i> </span> <span data-toggle="tooltip" title="{{ skills_meta.texts.proficient_info | get_lang: lang }}">{{ skills_meta.texts.proficient | get_lang: lang }}</span> /
+    <span class="rating"><i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </span> <span data-toggle="tooltip" title="{{ skills_meta.texts.advanced_info | get_lang: lang }}">{{ skills_meta.texts.advanced | get_lang: lang }}</span>
+</div>
+<div class="clearfix"></div>
+
+{% if page.more-skills-url %}
+<p class="text-center mrgtop30">
+    <a href="{% include url.html url=page.more-skills-url %}" class="btn btn-default">
+        {{ skills_meta.texts.more | get_lang: lang }}
+        <i class="fa fa-chevron-right fa-margin-left"></i>
+    </a>
+</p>
+{%endif%}

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>LogAnalysis: Open-Source Web Tool For Geographic Business Intelligence | Thomas Robert</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="http://www.thomas-robert.fr/blog/en/2015/03/17/loganalysis-open-source-web-tool-for-geographic-business-intelligence/">
+  <link rel="alternate" type="application/rss+xml" title="Thomas Robert" href="http://www.thomas-robert.fr/feed.xml">
+
+  <link rel="shortcut icon" href="/data/images/favicon.ico" />
+  <!-- <link rel="icon" type="image/png" href="/data/images/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/data/images/favicon-16x16.png" sizes="16x16"> -->
+</head>
+
+
+  <body data-spy="scroll" data-target="#header">
+
+    <nav id="header" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/en/">
+        <span class="navbar-brand-img"><img src="/data/images/logo.png" alt="" /></span>
+        <span class="navbar-brand-title">Thomas Robert</span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        
+          
+            <!-- unless page.layout == "onepage" and page.url == a_page.url or a_page.parent -->
+            
+            <li ><a href="/en/">Home</a></li>
+            
+          
+        
+          
+            <!-- unless page.layout == "onepage" and page.url == a_page.url or a_page.parent -->
+            
+            <li ><a href="/en/resume/">CV</a></li>
+            
+          
+        
+          
+            <!-- unless page.layout == "onepage" and page.url == a_page.url or a_page.parent -->
+            
+            <li ><a href="/en/publications/">Publications</a></li>
+            
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        <li class="lang-selector">
+          
+          <a href="/blog/fr/2015/03/17/loganalysis-outil-web-open-source-de-business-intelligence-gegraphique/">
+          
+            <img src="/assets/images/fr.png" alt="Français" title="Français">
+          </a>
+
+          
+          <a class="current-lang">
+          
+            <img src="/assets/images/en.png" alt="English" title="English">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <main id="main" class="layout-post">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <header class="post-header trianglify ">
+        <div class="background" ></div>
+        <div class="container-fluid">
+            <h1 class="post-title" itemprop="name headline">LogAnalysis: Open-Source Web Tool For Geographic Business Intelligence</h1>
+            <p class="post-meta color-emph-light">
+                <i class="fa fa-clock-o"></i>
+                <time datetime="2015-03-17T00:00:00+01:00" itemprop="datePublished">Mar 17, 2015</time>
+                
+            </p>
+            <div class="post-intro color-emph-light">
+                
+            </div>
+        </div>
+    </header>
+
+    <div class="post-content" itemprop="articleBody">
+        <div class="container-fluid">
+            <p class="text-center">
+<img src="/data/blog/loganalysis_prev.png" />
+</p>
+
+<h1 id="context">Context</h1>
+
+<p>I studied ASI (Architecture of Information Systems) at the INSA of Rouen, and during the second semester of the 4th year and the first semester of the 5th year, students work on a big R&amp;D-like industrial project (PIC, for INSA Certified Project) for a company, carried out by teams of students.</p>
+
+<p>5 projects are realized by 6 teams of 7 to 9 students during 1 scholar year, at a pace of 25 to 28 hours per week. One of those team work as a subcontractor for another team, and this team only exist during the first half of the project.</p>
+
+<h1 id="subject">Subject</h1>
+
+<p>The subject my team worked on was to make an Open Source web tool allowing each and every one to be able to do Geographical Business Intelligence (GeoBI) as easily as possible, without prior knowledge of the “theory” of GeoBI.</p>
+
+<p>This subject was proposed by our client, the Public Research Center Henri Tudor, based in Luxembourg, now called Luxembourg Institute for Science and Technology (LIST). The subcontractor team worked with mine on this subject.</p>
+
+<h1 id="geographical-business-intelligence">Geographical Business Intelligence</h1>
+
+<p>To summarize quickly, Business Intelligence (BI) allows you to analyze big quantities of data, usually structured around lots of dimensions. For example revenue as a function of time, geography, clients, business sector, products, etc.</p>
+
+<p>Business Intelligence allows you to analyze these masses of data, allowing you to make up your decisions based on those.</p>
+
+<p>We can split Business Intelligence into 3 big steps:</p>
+
+<ol>
+  <li>Collection of data to constitute a structured database</li>
+  <li>Selection and processing of data</li>
+  <li>Visualization of the results of the data processing</li>
+</ol>
+
+<h2 id="collection-of-data">Collection of data</h2>
+
+<p>This preliminary step of Business Intelligence was not part of the project and is specific to each Information System. The goal is to collect data coming from multiple sources in order to constitute the most accurate and complete database possible. These data are stored in <a href="http://en.wikipedia.org/wiki/Data_warehouse">data warehouses</a> and <a href="http://en.wikipedia.org/wiki/Data_mart">data marts</a>. They will constitute <a href="http://en.wikipedia.org/wiki/Online_analytical_processing">OLAP</a> databases.</p>
+
+<p><a href="/data/blog/loganalysis_dw.jpg"><img src="/data/blog/loganalysis_dw.jpg" alt="Data warehouse overview – Credits: Wikimedia" /></a></p>
+
+<h2 id="selection-and-processing-of-data">Selection and processing of data</h2>
+
+<p>The first step of any BI analysis is to select which part of the data is interesting regarding the study you want to do (e.g.: select data for France in 2014 only). This is an OLAP <em>slice</em>.</p>
+
+<p>Then, the most common data processing is to aggregate the data to get the most relevant results (e.g.: aggregate by month and department). This is an OLAP <em>dice</em>.</p>
+
+<p>This is – in a very simplistic way of course – the principle of OLAP: limit the range of data studied and aggregate those at the most relevant level.</p>
+
+<p><a href="/data/blog/loganalysis_slice_and_dice_en.png"><img src="/data/blog/loganalysis_slice_and_dice_en.png" alt="Slice &amp; Dice - Credits: Thomas Robert" /></a></p>
+
+<h2 id="visualization-of-the-results">Visualization of the results</h2>
+
+<p>The second step of a BI analysis is to render the data for the user. The easiest display is of course the table. However, it is not the most practical way to interpret the data. We therefore use graphics, choropleth map, etc.</p>
+
+<p><a href="/data/blog/loganalysis_bi.png"><img src="/data/blog/loganalysis_bi.png" alt="BI analysis results – Credits: http://apandre.wordpress.com/" /></a></p>
+
+<h1 id="goals-of-the-project--demonstration">Goals of the project &amp; demonstration</h1>
+
+<p>The project is developed as an Open Source web interface that integrates into the already existing web app <a href="http://geonode.org/">GeoNode</a>, it is available on <a href="https://github.com/ThomasRobertFr/analytics">GitHub</a>. The main goals of the project were to:</p>
+
+<ul>
+  <li>Load and process data using the OLAP database <a href="http://www.spatialytics.org/fr/projets/geomondrian/">GeoMondrian</a></li>
+  <li><strong>Display results on various charts:</strong> choropleth map, pie chart, bar chart, bubble chart, table, word cloud</li>
+  <li><strong>Allow interaction on the charts</strong> to let the user query the OLAP database and do BI analyses:
+    <ul>
+      <li>Filtering (OLAP <em>slice</em>) by clicking</li>
+      <li>Dimensional zooming (OLAP <em>drill-down</em> and <em>roll-up</em> allowing to change both <em>slice</em> and <em>dice</em>) by mouse scroll. For example, a <em>drill-down</em> on France will display data for regions of France. Different variations of drill-down are available: simple (on 1 element), multiple (on more than 1 element), partial (drill-down while keeping elements of the upper level to compare data of various levels)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Here is a quick demo of the final project that will help you visualize these goals more easily:</p>
+
+<h1 id="architecture">Architecture</h1>
+
+<h2 id="general-overview">General overview</h2>
+
+<p>On the following diagram, you can see the architecture of the solution developed:</p>
+
+<p><a href="/data/blog/loganalysis_architecture_loganalysis.png"><img src="/data/blog/loganalysis_architecture_loganalysis.png" alt="Architecture of LogAnalysis" /></a></p>
+
+<p>You can see the 4 main components:</p>
+
+<ul>
+  <li>The <strong>web interface</strong>, which role is to <strong>data visualization</strong>. It is composed of the packages:
+    <ul>
+      <li><em><a href="https://github.com/ThomasRobertFr/analytics-js">analytics.js</a></em>, a package developed that handles all the interface</li>
+      <li><em>QueryAPI</em>, a proxy of the interfaces of Mandoline, the SOLAP API</li>
+      <li><em><a href="http://square.github.io/crossfilter/">crossfilter</a></em>, a sort of small client side OLAP database</li>
+      <li><em><a href="https://github.com/ThomasRobertFr/crossfilter-server">crossfilter server</a></em>, a library we developed which allows us to do the same thing as we do with <em>crossfilter</em>, but delegate the OLAP computation to a SOLAP API for server side computation</li>
+      <li><em><a href="http://d3js.org/">d3.js</a></em>, a library for SVG renderings of charts</li>
+      <li><em><a href="https://github.com/ThomasRobertFr/dc.js">dc.js</a></em>, a modified version of the original <em><a href="http://dc-js.github.io/dc.js/">dc.js</a></em> for charts rendering of multidimensional crossfilter data</li>
+    </ul>
+  </li>
+  <li>The <strong>web app</strong> in Python, <em><a href="https://github.com/ThomasRobertFr/analytics">analytics</a></em>, delivering the data visualization interface, extending the existing web app <em><a href="http://geonode.org/">GeoNode</a></em></li>
+  <li>The <strong>SOLAP API</strong> in Java called <em><a href="https://github.com/ThomasRobertFr/mandoline">Mandoline</a></em>, with its dependency <em><a href="http://www.olap4j.org/">olap4j</a></em>, allowing us to query GeoMondrian easily in JSON</li>
+  <li>The <strong>OLAP</strong> <strong>database</strong> with a <em><a href="http://www.spatialytics.org/projects/geomondrian/">GeoMondrian</a></em> SOLAP server getting data from a <em><a href="http://www.postgresql.org/">PostgreSQL</a></em> database, doing the <strong>data processing</strong></li>
+</ul>
+
+<h2 id="analyticsjs">analytics.js</h2>
+
+<p>The <em>analytics.js</em> package represent the major part of the work that was done in this project. It is composed of various “namespaces”, each containing multiple “classes”. Of course, all this is JavaScript so “namespace” and “classes” are both objects. Here is the architecture of the package:</p>
+
+<p><a href="/data/blog/loganalysis_architecture_analytics_js.png"><img src="/data/blog/loganalysis_architecture_analytics_js.png" alt="Architecture of analytics.js" /></a></p>
+
+<p>You can see:</p>
+
+<ul>
+  <li><em>analytics.query</em> simplifies the interrogation of the SOLAP API through QueryAPI by offering specialized functions</li>
+  <li><em>analytics.data</em> offers data types representing OLAP elements and stores the data</li>
+  <li><em>analytics.state</em> stores and gives functions to modify the OLAP state of the current analysis (to simplify, which elements of which level of which dimensions are analyzed)</li>
+  <li><em>analytics.display</em> handles the interface (where is each chart and what is it displaying) and the interactions with the interface</li>
+  <li><em>analytics.charts</em> offers charts classes that can be instantiated when you want to create a chart</li>
+</ul>
+
+<h2 id="cross-filtering-and-crossfilter-serverjs">Cross-filtering and <em>crossfilter-server.js</em></h2>
+
+<p>One of the major “issue” we had to tackle was to provide an efficient cross-filtering on the interface. You can see this in the demonstration video above. Indeed, the filtering function is very useful for the user to be able to see how data are distributed across the elements of each dimension and explore the OLAP cube.</p>
+
+<p>This filtering function will therefore be highly solicited and should be very efficient while still being able to handle big volumes of data.</p>
+
+<p>There are actually two solutions to achieve this goal that can be represented on the following diagram:</p>
+
+<p><a href="/data/blog/loganalysis_crossfilter.png"><img src="/data/blog/loganalysis_crossfilter.png" alt="Cross-filtering solutions" /></a></p>
+
+<p>On this diagram, you can see the OLAP cube stored on the server on the left, and the charts we need to display on the right.</p>
+
+<h3 id="first-solution-crossfilter">First solution: <em>Crossfilter</em></h3>
+
+<p>The first solution is to ask our OLAP server, GeoMondrian, to compute a smaller cube of data containing what we are currently studying. Here on the diagram, the cube in the middle contains data for French regions, years and mode of transportation.</p>
+
+<p>This temporary cube is downloaded in the browser of the user and is then given to the library <em>crossfilter. Crossfilter</em> will then be capable of computing projections of the cube on each dimension, and these projections will be used by dc.js to display the charts.</p>
+
+<p>In this solution, the interface will be very responsive when filtering, because <em>crossfilter</em> already has got all the data he need to compute the projections while taking filters into account. It will take less than a second to compute new projections taking new filters into account.</p>
+
+<p>However, the defect of this solution is that the number of values in the temporary cube is the product of the number of elements studied in each dimension (e.g. for 6 regions, 2 years, 3 mode of transport we have 6 × 2 × 3 = 36 values), and this size grows exponentially. We will only support reasonable volumes because data will eventually become too big to be loaded in a reasonable time.</p>
+
+<h3 id="second-solution-crossfilter-server">Second solution: <em>Crossfilter Server</em></h3>
+
+<p>The alternative solution would be to ask <em>GeoMondrian</em> to directly compute the projection of the OLAP cube, after filtering, on each dimension studied, without computing the temporary cube that is too big.</p>
+
+<p>In that case, the size of the data we load is the sum of the number of elements in the dimensions we study (e.g. for 6 regions, 2 years, 3 mode of transport we have 6 + 2 + 3 = 11 values), and this size grows linearly. We will be able to support big volumes because we load much fewer data (as long as GeoMondrian can process those volumes of course).</p>
+
+<p>However, the drawback of this solution is that when the user changes the filters, we need to ask GeoMondrian to compute the projections on each dimension again, taking into account the new filters. This will significantly slow down the interface at each filtering because we need to query the server again while <em>crossfilter</em> only needed to do a few computations locally.</p>
+
+<p>Another issue with this solution is that our chart library, <em>dc.js</em>, is depending on <em>Crossfilter</em> as a data model. We can’t just give it some data.</p>
+
+<p>To solve this problem and make this alternative solution possible, we developed a small library that we called <em>Crossfilter Server</em>. This library has almost the same I/O interfaces as <em>Crossfilter</em> (only the initialization should differ). And <em>Crossfilter Server</em> will be able to reproduce <em>Crossfilter</em>’s behavior without having the full temporary cube, and by delegating all the computation to an API that will, in our case, call <em>GeoMondrian.</em></p>
+
+<p>Therefore, we can either use <em>dc.js</em> with <em>Crossfilter</em> or <em>Crossfilter Server</em>.</p>
+
+<h3 id="recap--final-solution">Recap &amp; final solution</h3>
+
+<p>To recap, we have 2 possibilities:</p>
+
+<p><a href="/data/blog/loganalysis_crossfilter.png"><img src="/data/blog/loganalysis_crossfilter.png" alt="Cross-filtering solutions" /></a></p>
+
+<p><strong>Crossfilter</strong></p>
+
+<ul>
+  <li><script type="math/tex">\mathcal{O}(n^p)</script> <script type="math/tex">\left(\prod_{i \in \mathcal{D}} n_i\right)</script><br />
+<strong><script type="math/tex">\Rightarrow</script> Resonable volumes</strong></li>
+  <li>Quick client side filtering &amp; aggregates (&lt; 10 ms)<br />
+<strong><script type="math/tex">\Rightarrow</script> Great responsivity</strong></li>
+</ul>
+
+<p><strong>Crossfilter Server</strong></p>
+
+<ul>
+  <li><script type="math/tex">\mathcal{O}(n\times p)</script> <script type="math/tex">\left(\sum_{i \in \mathcal{D}} n_i\right)</script><br />
+<strong><script type="math/tex">\Rightarrow</script> Important volumes</strong></li>
+  <li>Server side filtering &amp; aggregates, reload data (<script type="math/tex">\approx</script> 1s)<br />
+<strong><script type="math/tex">\Rightarrow</script> limited responsivity</strong></li>
+</ul>
+
+<p>Our final solution was to use both of these solutions, using one or the other depending on the volume of data you are studying, and switching dynamically from one to the other when needed.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>This article is of course a quick summary of a very long project. If you want to know more about this project, you can read the documentation available in <a href="https://github.com/ThomasRobertFr/analytics/wiki">the wiki of the GitHub repository</a> and take a look at the code of the components listed above. If you want, you can even contribute to the project by making pull-requests to it.</p>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous" />
+
+<!-- The loading of KaTeX is deferred to speed up page rendering -->
+<script defer="" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+<!-- To automatically render math in text elements, include the auto-render extension: -->
+<script defer="" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+        </div>
+    </div>
+
+</article>
+
+    </main>
+
+    <script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.parallax.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/trianglify.min.js"></script>
+<script src="/assets/js/particles.min.js"></script>
+<script src="/assets/js/main.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-12985376-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+  </body>
+
+</html>

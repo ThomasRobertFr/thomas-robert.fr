@@ -1,0 +1,336 @@
+- title: Ingénieur recherche en Deep Learning
+  at: Heuritech – Paris, France
+  date: "Nov. 2019 <em>Current</em>"
+  image: /data/cv/heuritech.png
+  type: pro
+  icon: flask
+  tags: [ML, research]
+  content: |
+    Dans le laboratoire R&D d'Heuritech, une _fashion tech company_ qui fourni des données de tendances à l'industrie de la mode.
+
+
+- title: Doctorat en Deep Learning
+  at: Sorbonne Université (ex Université Pierre and Marie Curie) – Paris
+  date: "2019 <em>3 ans</em>"
+  image: /data/cv/SU.png
+  type: edu
+  tags: [ML, research]
+  urls:
+    - url: https://hal.archives-ouvertes.fr/tel-02309812
+      title: Thesis
+    - url: /data/publis/TheseSlides_ThomasRobert.pdf
+      title: Slides
+  content: |
+    [_Amélioration des représentations latentes des ConvNets pour l'interprétation de données visuelles_](https://hal.archives-ouvertes.fr/tel-02309812/) - [Slides de soutenance](/data/publis/TheseSlides_ThomasRobert.pdf)
+
+    **Jury :**
+
+    * Encadrants : [Matthieu Cord](http://webia.lip6.fr/~cord/), [Nicolas Thome](http://cedric.cnam.fr/~thomen/)
+    * Rapporteurs : [Stéphane Canu](http://asi.insa-rouen.fr/enseignants/~scanu/), [Greg Mori](https://www.cs.sfu.ca/~mori/)
+    * Examinateurs : [Catherine Achard](http://www.isir.upmc.fr/?op=view_profil&lang=fr&id=7), [Karteek Alahari](https://lear.inrialpes.fr/people/alahari/), [David Picard](https://davidpicard.github.io/)
+
+
+- title: Ingénieur-recherche puis Doctorant en Deep Learning
+  at: Laboratoire LIP6, Sorbonne Université (ex Université Pierre and Marie Curie) – Paris
+  date: "<span>Nov. 2015 -</span> <span>Oct. 2019</span> <em>Actuel</em>"
+  image: /data/cv/LIP6.png
+  type: pro
+  icon: flask
+  urls:
+    - url: /fr/publications/
+      title: Publications
+    - url: /fr/teaching/
+      title: Cours
+  tags: [ML, research]
+  content: |
+    Encadré par [Matthieu Cord](http://webia.lip6.fr/~cord/) et [Nicolas Thome](http://cedric.cnam.fr/~thomen/)
+
+    Travail sur les projets ANR [projet VISIIR](http://visiir.univ-lr.fr); et [DeepVision](https://anr.fr/Projet-ANR-15-CE23-0029) en partenariat avec le LIRIS (INSA Lyon, France), Simon Fraser University (Canada) et l'University of Guelph (Canada).
+
+    - Travail sur la **classification de recettes de cuisines.** Réalisation d'un [site web de démonstration du classifieur](http://visiir.lip6.fr)
+    - **Mission d'enseignement** (64h / an) : encadrement de plusieurs cours, réalisation de sujets sur les réseaux convolutionnels
+    - Participation au **challenge _workflow_ du workshop [_M2CAI (MICCAI 2016)_](http://camma.u-strasbg.fr/m2cai2016/)**  avec [Remi Cadène](http://remicadene.com) : classification d'étapes d'opération basé sur des vidéos endoscopiques. 2e meilleur modèle soumis.
+    - **Régularisation des réseaux profonds** avec [Michael Blot](http://webia.lip6.fr/~blot/). Publication à ICIP 2018 (best paper award).  
+      _SHADE: Information-Based Regularization for Deep Learning_
+    - Amélioration de modèles **d'apprentissage semi-supervisé basé auto-encodeur.** Publication à ECCV 2018.  
+      _HybridNet: Classification and Reconstruction Cooperation for Semi-Supervised Learning_
+    - Travail sur un modèle de **disentangling pour la génération.**  
+      _DualDis: Dual-Branch Disentangling with Adversarial Learning_
+
+
+- title: DjLu
+  date: "2016"
+  image-big: /data/cv/djlu.png
+  type: perso
+  tags: [research, web]
+  urls:
+    - url: http://djlu.fr
+      title: Site web 
+  content: |
+    DjLu est un outil d'organisation de bibliographie simple, léger et open source développé avec Micael Carvalho et Rémi Cadène.
+
+    - **Outils utilisés :** HTML / CSS / Javascript / PHP / Git
+
+
+- title: Stage de recherche en Data Science
+  at: Conviva – Baie de San Francisco, Californie, USA
+  date: "Été 2015 <em>6 mois</em>"
+  image: /data/cv/conviva.png
+  type: pro
+  icon: youtube-play
+  tags: [ML, bigdata, stats, research]
+  content: |
+    Travail sur divers problèmes de recherche concernant l'**optimisation de la qualité de streaming vidéo**
+
+    - **Prédiction de la qualité vidéo optimale** d'une session en utilisant _Machine Learning_ et _A/B testing_
+    - Formulation et résolution d'un **problème d'optimisation mathématique pour déterminer les décisions optimales** que les produits de Conviva devraient prendre
+    - **Etude statistique de l'évolution de la bande passante** dans le contexte des produits de Conviva
+    - **Technologies utilisées :** Python, Hive, Hadoop MapReduce, Spark
+
+
+
+- title: Double diplôme d'ingénieur en Data Science
+  date: "2015 <em>5 ans</em>"
+  at: Institut National de Sciences Appliquées &amp; Université de Rouen
+  image: /data/cv/insa.png
+  type: edu
+  tags: [ML, stats]
+  content: |
+    Diplôme d'ingénieur en Architecture des Systèmes d'Information spécialisé en **Data Science**  
+    Master en Systèmes de Traitement de l'Information Multimédia (traitement d'images)
+
+    - Cycle préparatoire (2 ans)
+    - Cycle ingénieur au département ASI (3 ans)
+    - Cours de master (1 an en parallèle de l'INSA)
+
+
+
+- title: Stagiaire Data-Scientist
+  at: Creativedata – Rouen
+  date: "Été 2014 <em>14 semaines</em>"
+  image: /data/cv/creativedata.png
+  type: pro
+  tags: [ML, bigdata, stats]
+  icon: cogs
+  content: |
+    - **Auto-formation sur le Big Data** : concepts, architectures et technologies de l'écosystème Hadoop.
+    - **Déploiement de clusters Big Data** sur Google Cloud Platform.
+    - **Etude statistique** de données d'une plateforme e-commerce pour avoir un aperçu de l'état des boutiques.
+    - **Essai et comparaison d'algorithmes de Machine Learning** pour prédire le prochain élément d'une séquence d'achats pour un fournisseur de solutions self-scanning pour grande distribution (utilisation de Matlab & scikit-learn de Python). Lecture de publications de Machine Learning.
+
+
+
+- title: Développement d'un outil web de géo-analyse de données SOLAP - Projet scolaire
+  at: Pour le Luxembourg Institute of Science and Technology (LIST) – Luxembourg
+  date: "2014 <em>26 semaines</em> <em>27h/sem.</em>"
+  image: /data/cv/list.png
+  urls:
+    - url: /blog/fr/2015/03/17/loganalysis-outil-web-open-source-de-business-intelligence-gegraphique/
+      title: Article de blog
+    - url: http://thomasrobertfr.github.io/analytics.js
+      title: Démo 
+    - url: https://github.com/loganalysis
+      title: Page GitHub de l'organisation du projet 
+  type: pro
+  tags: [BI, web]
+  icon: bar-chart-o
+  content: |
+    - Développement d'une **solution web open-source et user-friendly** pour l'**analyse de données OLAP spatiales sur ses diverses dimensions**. Intégration au logiciel GeoNode.
+    - **Projet scolaire de Recherche & Développement** réalisé pour le compte du LIST.
+    - Projet réalisé en utilisant la méthode de **développement Agile** (Scrum) et **certifié ISO 9001**.
+    - Durant les 12 premières semaines, **chef d'équipe d'une équipe de 7 étudiants** avec le **rôle de client pour une équipe sous-traitante de 8 étudiants**.
+    - Utilisation de Git, JavaScript (d3.js, dc.js, crossfilter), Python (Django), Java, MDX, GeoMondrian.
+
+
+
+- title: PGPic
+  date: "2014"
+  image-big: /data/cv/pgpic.png
+  type: perso
+  tags: [web]
+  content: |
+    - Contribution au développement de PGPic, un **outil web permettant le suivi de la qualité et la gestion de projet**.
+    - Cet outil est utilisé quotidiennement par toutes les équipes PIC (les PIC sont les projets réalisés en ASI, tels que mon projet TUDOR présenté ci-dessus. Il y en a 6 par an).
+    - **Compétences développées :** HTML / CSS3 / PHP / MySQL / Javascript
+
+
+
+- title: Stage d'analyste-développeur
+  at: SOPRA Group – Agence Assurance – La Défense
+  date: "Été 2013 <em>9 semaines</em>"
+  image: /data/cv/sopra.png
+  type: pro
+  tags: [BPM]
+  content: |
+    - Dans le domaine du BPM (Business Process Modelling), **mission d'analyste développeur** dans un contexte métier de gestion d'épargne salariale en **soutien d'un consultant métier senior** en Assurance et Protection Sociale.
+    - **Participation aux ateliers avec la MOA** (2 jours par semaine) en compagnie du chef de projet MOA pour capter la matière.
+    - **Modélisation et optimisation des processus cœur de métier** à la norme BMPN 2.0.
+    - Rédaction des spécifications détaillées des diverses activités des processus.
+    - **Saisie des processus sur le logiciel de workflow Bonita**, et programmation de formulaires et scripts pour le suivi du processus et la saisie et vérification des données. Vérification de la cohérence des données saisies avec la base de données par exemple. _Utilisation de Groovy et MySQL._
+    - Réalisation d'un **outil de conversion de format de données** pour permettre l'insertion de données créées par les processus dans l'outil de gestion du client. _Utilisation de PHP, MySQL, jQuery, Bootstrap, FTP._
+
+
+
+- title: Secrétaire Général
+  at: AJIR (Association Junior INSA Rouen) – Rouen
+  date: "<span>Fév. 2013 -</span> <span>Fév. 2014</span> <em>1 an</em>"
+  image: /data/cv/ajir.png
+  type: asso
+  content: |
+    _L'AJIR est une association qui met en contact des étudiants et des entreprises afin de réaliser des projets professionnels en ingénierie (informatique, mécanique, énergétique, chimie, etc.)_
+
+    - Responsable de la **gestion associative et administrative** de la Junior-Entreprise
+    - Organisation des **Conseils d'Administration et des Assemblées Générales**
+    - Responsable des Ressources Humaines et du local
+    - Membre du bureau
+    - Achat des fournitures
+
+
+
+- title: Site web de l'AEI
+  date: "Fév. 2013"
+  image-big: /data/cv/site_aei.png
+  urls:
+    - url: http://aei-insa.fr
+      title: Voir le site 
+  type: perso
+  tags: [web]
+  content: |
+    - Réalisation du **site web** de l'Association des Elèves des INSA sous forme d'étude via l'AJIR avec un autre étudiant.
+    - Expérience de réalisation d'un projet pour un **vrai client**.
+    - Site réalisé sous forme de template Wordpress.
+    - **Compétences développées :** HTML / CSS3 / PHP / Javascript / Wordpress
+
+
+
+- title: Site web de l'AJIR
+  date: "2012"
+  urls:
+    - url: http://ajir.insa-rouen.fr/
+      title: Voir le site 
+  image-big: /data/cv/site_ajir.png
+  type: perso
+  tags: [web]
+  content: |
+    - Réalisation du **site web** de la Junior-Entreprise AJIR sous forme de template Wordpress.
+    - Création d'un plugin de **suivi du processus d'adhésion** (assez lourd en Junior-Entreprise) pour alléger le travail du RH.
+    - **Compétences développées :** HTML / CSS3 / PHP / Javascript / Wordpress
+
+
+
+- title: Directeur des Systèmes d’Information
+  at: AJIR (Association Junior INSA Rouen) – Rouen
+  date: "<span>Fév. 2012 -</span> <span>Fév. 2014</span> <em>2 ans</em>"
+  type: asso
+  icon: terminal
+  content: |
+    _L'AJIR est une association qui met en contact des étudiants et des entreprises afin de réaliser des projets professionnels en ingénierie (informatique, mécanique, énergétique, chimie, etc.)_
+
+    - **Maintien et amélioration** des Systèmes d’Information de la Junior-Entreprise.
+    - Refonte du site internet (voir projet ci-dessus).
+    - Travail d'$administration système$.
+    - Automatisation de certaines tâches par la création d'applications adaptées aux besoins de l'association.
+    - Expérience de la vie associative et de sa gestion.
+
+
+
+- title: Stage d’exécution
+  at: Technicentre SNCF de Rouen Quatre-Mares – Rouen
+  date: "Été 2011 <em>1 mois</em>"
+  image: /data/cv/sncf.png
+  type: pro
+  icon: wrench
+  content: |
+    Assistance de l’équipe frein dans son travail quotidien.
+
+
+
+
+- title: BookINSA
+  date: "2011"
+  image-big: /data/cv/bookinsa.png
+  type: perso
+  tags: [web]
+  icon: book
+  content: |
+    - Réalisation en groupe d’un site web simplifiant le prêt de livres entre étudiants. Réalisé en tant de projet scolaire.
+    - Utilisation de l'API Facebook pour la connexion et de nombreuses API pour récupérer les informations sur les livres à partir de l'ISBN.
+    - Requêtes SQL relativement complexes.
+    - **Compétences développées :** HTML / CSS3 / PHP / MySQL / Javascript
+
+
+
+- title: Employé en CDD aux Services Généraux
+  at: Sogécap (Société Générale) – La Défense
+  date: "Été 2010 <em>1 mois</em>"
+  image: /data/cv/sogecap.png
+  type: pro
+  icon: envelope
+  content: |
+    Assistance aux Moyens Généraux (distribution de courrier, gestion de commandes et des stocks, maintenance et gestion des locaux, etc.).
+
+
+
+- title: Baccalauréat Scientifique – Sciences de l’Ingénieur – Spécialité Mathématiques – Mention Bien
+  at: Lycée d’Arsonval – Saint-Maur-des-Fossés
+  date: "2010"
+  image: /data/cv/darsonval.png
+  type: edu
+
+- title: Fiches de cours
+  date: "2009-2015"
+  image-big: /data/cv/fiches.png
+  urls:
+    - url: /fr/fiches/
+      title: Voir les fiches 
+  type: perso
+  icon: pencil
+  content: |
+    - Rédaction (et publication) de fiches de cours depuis la terminale jusqu'à la fin de mes études d'ingénieur.
+    - **Compétences développées :** Word 2010 / Inkscape
+
+
+
+- title: Gadget iGoogle pour BetaSeries
+  date: "2010"
+  image-big: /data/cv/betaseries.png
+  type: perso
+  icon: video-camera
+  tags: [web]
+  content: |
+    - Gadget permet de **gérer son compte BetaSeries** (site web permettant de savoir quels épisodes de séries ont été vus) directement depuis iGoogle.
+    - **Compétences développées :** HTML / CSS / PHP / XML / Javascript
+
+
+
+- title: Trombinoscope
+  date: "2010"
+  image: /data/cv/trombi.png
+  type: perso
+  tags: [web]
+  icon: camera
+  content: |
+    - Réalisation d’un système de **trombinoscope professionnel interactif** pour Sogécap trié par ordre alphabétique ou par service.
+    - Pensé le plus simple possible pour les Ressources Humaines : les pages sont générées à partir des fichiers d'images nommés avec le nom et la position dans l'entreprise.
+    - Rendu HTML mis en cache pour plus de rapidité.
+    - **Compétences développées :** HTML / CSS / PHP
+
+
+
+- title: ThemeSgen
+  date: "2010"
+  type: perso
+  tags: [web]
+  icon: gamepad
+  content: |
+    - **Site bilingue référençant des thèmes et fond d'écran** pour toutes consoles.
+    - Site important permettant la **consultation de contenus divers** (actualités, thèmes, fonds d'écrans, sondages) chacun séparés en de nombreuses catégories.
+    - Création d'un **design original** proche de la charte graphique de l'univers Mediagen.
+    - Gestion de **nombreux caches** pour augmenter les performances.
+    - Mise en place d'un **forum phpBB** intégré dans le site.
+    - Interface d'administration complète permettant :
+      - Gestion du processus de rédaction (écriture, correction, validation)
+      - Gestion intelligence des fichiers (thèmes et images) permettant l'automatisation des traitements et d'une grande partie des tâches de rédaction.
+      - La gestion des droits entre rédacteurs, correcteurs, validateurs, etc.
+      - L'administration du site incluant les catégories, les utilisateurs, etc.
+    - **Compétences développées :** HTML / CSS / PHP / MySQL / Javascript

@@ -1,0 +1,65 @@
+---
+layout: onepage-block
+---
+
+{% for contact in page.contacts %}
+
+    {% if contact.type == "email" %}
+        {% unless contact.not-hidden %}
+            <a class="contact-block color-emph-light col-sm-3 col-xs-6 contact-show-email" href="#">
+                <i class="fa fa-at"></i> <button class="btn btn-default">{{ page.email_text | default: "Show my email address" }}</button>
+                <span class="hidden">{% obfuscate_email site.author.email %}</span>
+            </a>
+        {% else %}
+            <a class="contact-block color-emph-light col-sm-3 col-xs-6" href="mailto:{{ site.author.email }}">
+                <i class="fa fa-at"></i> {{ site.author.email }}
+            </a>
+        {% endunless %}
+    {% elsif contact.type == "phone" %}
+        <div class="contact-block color-emph-light col-sm-3 col-xs-6">
+            <i class="fa fa-phone"></i> {{ site.author.phone | newline_to_br }}
+        </div>
+    {% elsif contact.type == "address" %}
+        <div class="contact-block color-emph-light col-sm-3 col-xs-6">
+            <i class="fa fa-envelope"></i> {{ site.author.address | newline_to_br }}
+        </div>
+    {% elsif contact.type == "twitter" %}
+        <a class="contact-block color-emph-light col-sm-3 col-xs-6" href="https://www.twitter.com/{{ site.author.twitter }}">
+            <i class="fa fa-twitter"></i> @{{ site.author.twitter }}
+        </a>
+    {% elsif contact.type == "linkedin" %}
+        <a class="contact-block color-emph-light col-sm-3 col-xs-6" href="https://www.linkedin.com/in/{{ site.author.linkedin }}">
+            <i class="fa fa-linkedin"></i> {{ site.author.linkedin }}
+        </a>
+    {% elsif contact.type == "github" %}
+        <a class="contact-block color-emph-light col-sm-3 col-xs-6" href="https://www.github.com/{{ site.author.github }}">
+            <i class="fa fa-github"></i> {{ site.author.github }}
+        </a>
+    {% elsif contact.type == "google-plus" %}
+        <a class="contact-block color-emph-light col-sm-3 col-xs-6" href="https://plus.google.com/+{{ site.author.google-plus }}">
+            <i class="fa fa-google-plus"></i> +{{ site.author.google-plus }}
+        </a>
+    {% else %}
+        {% if contact.url %}
+        <a class="contact-block color-emph-light col-sm-3 col-xs-6" href="{% include url.html url=contact.url %}">
+        {%else%}
+        <div class="contact-block color-emph-light col-sm-3 col-xs-6">
+        {%endif%}
+            <i class="fa fa-{{ contact.icon }}"></i> {{ contact.text }}
+        {% if contact.url %}
+        </a>
+        {%else%}
+        </div>
+        {%endif%}
+    {% endif %}
+    
+    {% assign indexmod2 = forloop.index | modulo: 2 %}
+    {% assign indexmod4 = forloop.index | modulo: 4 %}
+    {% if indexmod2 == 0 %}
+        <div class="clearfix visible-xs"></div>
+    {% endif %}
+    {% if indexmod4 == 0 %}
+        <div class="clearfix visible-sm visible-lg"></div>
+    {% endif %}
+
+{% endfor %}

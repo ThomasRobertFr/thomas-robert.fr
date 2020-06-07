@@ -1,0 +1,23 @@
+skills:
+  texts:
+    beginner:
+      en: Beginner
+      fr: Débutant
+    beginner_info:
+      en: I used it a few times and know the basics
+      fr: Je l'ai un peu utilisé et connais les bases
+    proficient:
+      en: Proficient
+      fr: Maitrisé
+    proficient_info:
+      en: I used it on various projects and am comfortable with it
+      fr: Je l'ai utilisé sur plusieurs projets et suis à l'aise avec
+    advanced:
+      en: Advanced or expert
+      fr: Avancé ou expert
+    advanced_info:
+      en: I know it in depth and know advanced stuff
+      fr: Je le connais en profondeur et en maitrise les concepts avancés
+    more:
+      en: See all my skills
+      fr: Voir toutes mes compétences

@@ -1,0 +1,124 @@
+#main {
+    padding-top: 50px;
+}
+
+.navbar-default {
+    background-color: #fff;
+}
+
+.navbar-default .navbar-nav {
+	.dropdown-menu {
+		border-radius: 0;
+	}
+
+	>li > a {
+		padding: 20px 20px;
+		line-height: 25px;
+		transition: padding 0.2s ease-in-out 0;
+		font-size: 16px;
+		font-weight: normal;
+	}
+
+	.dropdown-menu > li > a {
+		padding: 10px 20px;
+		line-height: 25px;
+		transition: padding 0.2s ease-in-out 0;
+		font-size: 16px;
+		font-weight: normal;
+	}
+
+    >li.active, .dropdown-menu > li.active {
+		>a, >a:focus, a:hover {
+			color: #00c3c3;
+			background: #f4fafa;
+		}
+	}
+
+	>li.lang-selector {
+		padding: 17px 0 0 8px;
+		transition: padding 0.2s ease-in-out 0;
+		padding-top: 6px;
+		>a {
+			padding: 0px;
+			opacity: 0.6;
+		}
+		>a:hover {
+			opacity: 1;
+		}
+		>a.current-lang {
+			opacity: 1;
+		}
+		>a.no-translation, >a.no-translation:hover {
+			filter: grayscale(100%) contrast(60%); -moz-filter: grayscale(100%) contrast(60%); -ms-filter: grayscale(100%) contrast(60%); -o-filter: grayscale(100%) contrast(60%); filter: gray; -webkit-filter: grayscale(100%) contrast(60%);
+		}
+	}
+}
+.navbar-default .navbar-brand {
+	text-decoration: none;
+	color: #34495e;
+	transition: padding 0.2s ease-in-out 0;
+	padding-top: 13px;
+	padding-bottom: 0;
+	&:hover {
+		text-decoration: none;
+	}
+	span img {
+		height: 38px;
+	}
+	span {
+		display: inline-block;
+		font-size: 24px;
+		line-height: 24px;
+		margin-left: 5px;
+		vertical-align: middle;
+	}
+}
+
+@media (max-width: 1199px) {
+	.navbar-default .navbar-brand {
+		span {
+			font-size: 26px;
+			line-height: 22px;
+		}
+	}
+}
+@media (max-width: 991px) {
+	.navbar-default .navbar-nav {
+		>li {
+			>a {
+				padding: 15px 8px;
+			}
+		}
+		>li.lang-selector {
+			padding-left: 4px;
+			padding-top: 1px;
+		}
+	}
+
+	.navbar-default .navbar-brand {
+		padding-top: 15px;
+		span img {
+			height: 24px;
+		}
+		span {
+			font-size: 18px;
+			line-height: 18px;
+		}
+	}
+}
+@media (max-width: 767px) {
+	.navbar-default .navbar-nav {
+		>li {
+			>a {
+				padding: 8px 20px;
+			}
+		}
+	}
+	.navbar {
+		padding: 10px 0;
+	}
+	.navbar-brand {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}
