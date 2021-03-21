@@ -9,7 +9,7 @@
     - url: https://hal.archives-ouvertes.fr/tel-02309812
       title: Thesis
       style: primary
-    - url: /data/publis/TheseSlides_ThomasRobert.pdf
+    - url: data/publis/TheseSlides_ThomasRobert.pdf
       title: Slides
       style: info
 
@@ -35,6 +35,6 @@
     - url: https://arxiv.org/abs/1807.11407
       title: Paper
       style: primary
-    - url: /data/publis/HybridNet_poster.pdf
+    - url: data/publis/HybridNet_poster.pdf
       title: Poster
       style: info
