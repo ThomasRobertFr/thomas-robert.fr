@@ -2,7 +2,45 @@
 
 This site is based on the chordettes-webpage template I made. Below is the doc of this template, kept here for me for future ref.
 
+## Website deployment
+
+**GitHub Pages**
+
+* Built with `jekyll build` into the folder `/docs`
+* Deployed on Github Pages from the folder `/docs` in the master branch
+* The file `CNAME` indicates to Github Pages that we want a custom domain
+
+## DNS
+
+* Create a free Cloudflare account, add `thomasrobert.fr` and `thomas-robert.fr`
+* Make domains point to the DNS of Cloudflare
+* Set **DNS records**:
+  ```
+  # For thomas-robert.fr
+  CNAME thomas-robert.fr thomasrobertfr.github.io
+  CNAME www thomasrobertfr.github.io
+  # For thomasrobert.fr
+  CNAME thomasrobert.fr thomasrobertfr.github.io
+  CNAME www thomasrobertfr.github.io
+  ```
+* Set **page rules**:
+  ```
+  # For thomas-robert.fr
+  - thomas-robert.fr/*
+    URL de transfert (Code d’état: 301 - Redirection permanente, URL: https://www.thomas-robert.fr/$1)
+  - www.thomas-robert.fr/
+    Réécritures HTTPS automatiques: On
+  # For thomasrobert.fr
+  - *.thomasrobert.fr/*
+    URL de transfert (Code d’état: 301 - Redirection permanente, URL: https://$1.thomas-robert.fr/$2)
+  - thomasrobert.fr/*
+    URL de transfert (Code d’état: 301 - Redirection permanente, URL: https://www.thomas-robert.fr/$1)
+  ```
 ---
+
+# Documentation du template chordettes
+
+**/!\ pas totalement equivalent au template pour thomas-robert.fr**
 
 Cette page présente comment utiliser ce template pour réaliser un site personnel à destination majoritairement d'un utilisateur de ce template, et pas de quelqu'un qui voudrait en modifier son cœur. Ce n'est donc pas une documentation technique mais bien une documentation d'utilisateur.
 
