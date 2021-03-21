@@ -10,7 +10,7 @@ This site is based on the chordettes-webpage template I made. Below is the doc o
 * Deployed on Github Pages from the folder `/docs` in the master branch
 * The file `CNAME` indicates to Github Pages that we want a custom domain
 
-## DNS
+**DNS**
 
 * Create a free Cloudflare account, add `thomasrobert.fr` and `thomas-robert.fr`
 * Make domains point to the DNS of Cloudflare

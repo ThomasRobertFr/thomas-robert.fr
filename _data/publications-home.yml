@@ -35,3 +35,6 @@
     - url: https://arxiv.org/abs/1807.11407
       title: Paper
       style: primary
+    - url: /data/publis/HybridNet_poster.pdf
+      title: Poster
+      style: info

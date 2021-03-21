@@ -1,14 +1,29 @@
 
-- title: Small-Task Incremental Learning
+- title: "Insights from the Future for Continual Learning"
   authors: A. Douillard, M. Cord, C. Ollion, T. Robert, E. Valle
   type: conference
-  in: arXiv
+  in: arxiv
+  year: 2020
+  image: /data/publis/ghost.png
+  urls:
+    - url: https://arxiv.org/abs/2006.13748
+      title: Paper
+      style: primary
+
+- title: "PODNet: Pooled Outputs Distillation for Small-Tasks Incremental Learning"
+  authors: A. Douillard, M. Cord, C. Ollion, T. Robert, E. Valle
+  type: conference
+  in: European Conference on Computer Vision (ECCV)
   year: 2020
   image: /data/publis/stil.png
+  additional: 'Initially titled "Small-Task Incremental Learning"'
   urls:
     - url: https://arxiv.org/abs/2004.13513
       title: Paper
       style: primary
+    - url: https://github.com/arthurdouillard/incremental_learning.pytorch
+      title: Code
+      style: success
 
 - title: "Improving Latent Representations of ConvNets for Visual Understanding"
   authors: T. Robert
@@ -49,6 +64,12 @@
     - url: https://arxiv.org/abs/1807.11407
       title: Paper
       style: primary
+    - url: /data/publis/HybridNet_poster.pdf
+      title: Poster
+      style: info
+    - url: https://github.com/ThomasRobertFr/hybridnet
+      title: Code
+      style: success
 
 - title: "SHADE: Information-Based Regularization for Deep Learning"
   authors: M. Blot, T. Robert, N. Thome, M. Cord

@@ -46,7 +46,7 @@
 }
 
 /* CIRCLES */
-.cd-timeline-img { position: absolute; top: 0; left: 0; width: 40px; height: 40px; border-radius: 50%; box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.10); text-align: center; line-height: 43px; color: #FFF; font-size: 22px; behavior: url('/wp-content/themes/starter/js/PIE.htc'); }
+.cd-timeline-img { position: absolute; top: 0; left: 0; width: 40px; height: 40px; border-radius: 50%; box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.10); text-align: center; line-height: 43px; color: #FFF; font-size: 22px; behavior: url('/assets/js/PIE.htc'); }
 
 @media only screen and (min-width: 992px) {
 	.cd-offset .cd-timeline-img { left: 130px; }
@@ -60,7 +60,7 @@
 
 /* CONTENT */
 
-.cd-timeline-content { position: relative; margin-left: 60px; background: white; border-radius: 0.25em; padding: 15px; box-shadow: 0 4px 3px -1px rgba(0, 0, 0, 0.10); font-size: 0.9em; behavior: url('/wp-content/themes/starter/js/PIE.htc'); }
+.cd-timeline-content { position: relative; margin-left: 60px; background: white; border-radius: 0.25em; padding: 15px; box-shadow: 0 4px 3px -1px rgba(0, 0, 0, 0.10); font-size: 0.9em; behavior: url('/assets/js/PIE.htc'); }
 .cd-timeline-content:after { content: ""; display: table; clear: both; }
 
 .cd-timeline-content p { margin: 0 0 6px; }
@@ -79,7 +79,7 @@
 .cd-timeline-content .cd-tags img.big { max-width: 90px; max-height: 90px; }
 .cd-timeline-content .cd-tags img:hover { opacity: 1; -webkit-transition: opacity .3s ease-in; -moz-transition: opacity .3s ease-in; -o-transition: opacity .3s ease-in; transition: opacity .3s ease-in; }
 
-.cd-timeline-content .cd-read-more { font-size: 13px; text-transform: none; background: #EAECED; behavior: url('/wp-content/themes/starter/js/PIE.htc'); }
+.cd-timeline-content .cd-read-more { font-size: 13px; text-transform: none; background: #EAECED; behavior: url('/assets/js/PIE.htc'); }
 
 .no-touch .cd-timeline-content .cd-read-more:hover { background-color: #bac4cb; }
 .cd-timeline-content::before { content: ''; position: absolute; top: 16px; right: 100%; height: 0; width: 0; border: 7px solid transparent; border-right: 7px solid white; }
