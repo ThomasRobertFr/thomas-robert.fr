@@ -2,6 +2,16 @@
 
 This site is based on the chordettes-webpage template I made. Below is the doc of this template, kept here for me for future ref.
 
+## Build
+
+In case of errors saying Encoding::UndefinedConversionError, set the locales:
+
+```bash
+export LANGUAGE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+```
+
 ## Website deployment
 
 **GitHub Pages**
