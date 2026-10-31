@@ -18,6 +18,7 @@ author:
 baseurl: "" # url of your webpage if not at the root of the domain (leading /, no trailing /)
 url: "https://www.thomas-robert.fr" # the base hostname & protocol for your site (no trailing /)
 header-default-style: trianglify # default page header style (see styles in user documentation)
+google-analytics: G-ZT5Q4JLB04 # Google Analytics 4 measurement ID (comment out to disable visit stats)
 
 # X / Twitter account of the site (twitter:site in social previews)
 twitter:
