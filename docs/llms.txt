@@ -1,6 +1,6 @@
 # Thomas Robert
 
-> CTO of Heuritech, a Paris-based Luxurynsight AI technology that forecasts fashion trends through large-scale image analysis of social media. PhD in deep learning for computer vision from Sorbonne Université.
+> CTO of Heuritech, a Luxurynsight AI technology. Based in Paris, Heuritech forecasts fashion trends through large-scale image analysis of social media. PhD in Deep Learning for Computer Vision from Sorbonne Université, former lead of Heuritech's R&D team.
 
 This is the personal website of Thomas Robert, in French (main version) and English.
 
