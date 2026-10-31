@@ -8,8 +8,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="{{ "/" | prepend: site.baseurl }}{% if page.lang == 'en' %}en/{% endif %}">
-        <span class="navbar-brand-img"><img src="{{ site.author.logo | prepend: site.baseurl }}" alt="" /></span>
-        <span class="navbar-brand-title">{{ site.author.name }}</span>
+        <span class="navbar-brand-title" aria-label="{{ site.author.name }}"><span aria-hidden="true">T<span class="brand-more">homas </span>R<span class="brand-more">obert</span></span></span>
       </a>
     </div>
     <div class="collapse navbar-collapse">

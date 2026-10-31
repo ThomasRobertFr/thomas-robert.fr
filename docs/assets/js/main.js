@@ -108,11 +108,20 @@ $(document).ready(function () {
     return false;
   });
 
+  // HEADER BRAND: "TR" at the top of the page, full name once scrolled
+  function updateBrand() { $("body").toggleClass("scrolled", $(window).scrollTop() > 40); }
+  $(window).on("scroll", updateBrand);
+  updateBrand();
+
   // ANIMATE ANCHORS CLICKS
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      // this.hash can be percent-encoded (#comp%C3%A9tences), so decode it and
+      // look the id up directly instead of building a jQuery selector from it
+      var id = this.hash.slice(1);
+      try { id = decodeURIComponent(id); } catch (e) {}
+      var target = $(document.getElementById(id));
+      target = target.length ? target : $('[name="' + id.replace(/"/g, '\\"') + '"]');
       if (target.length) {
         $('html, body').animate({
           scrollTop: target.offset().top

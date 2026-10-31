@@ -62,26 +62,30 @@
 	&:hover {
 		text-decoration: none;
 	}
-	span img {
-		height: 38px;
-	}
 	span {
 		display: inline-block;
-		font-size: 24px;
-		line-height: 24px;
-		margin-left: 5px;
+		font-family: $font-family-pixel;
+		font-weight: 300;
+		font-size: 30px;
+		line-height: 40px;
 		vertical-align: middle;
 	}
-}
-
-@media (max-width: 1199px) {
-	.navbar-default .navbar-brand {
-		span {
-			font-size: 26px;
-			line-height: 22px;
-		}
+	// Collapsed to "TR" at the top of the page, opens to "Thomas Robert" once scrolled
+	.brand-more {
+		display: inline-block;
+		vertical-align: top;
+		overflow: hidden;
+		white-space: pre;
+		max-width: 0;
+		opacity: 0;
+		transition: max-width 0.5s ease-in-out, opacity 0.4s ease-in-out;
 	}
 }
+body.scrolled .navbar-default .navbar-brand .brand-more {
+	max-width: 3.6em;
+	opacity: 1;
+}
+
 @media (max-width: 991px) {
 	.navbar-default .navbar-nav {
 		>li {
@@ -96,14 +100,7 @@
 	}
 
 	.navbar-default .navbar-brand {
-		padding-top: 15px;
-		span img {
-			height: 24px;
-		}
-		span {
-			font-size: 18px;
-			line-height: 18px;
-		}
+		padding-top: 8px;
 	}
 }
 @media (max-width: 767px) {

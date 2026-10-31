@@ -8,10 +8,7 @@
         </div>
         <div class="text">
             {% if page.no-title != true %}
-            <h2>{{ page.title }}</h2>
-            {% endif %}
-            {% if page.subtitle %}
-            <p class="tagline">{{ page.subtitle }}</p>
+            <h1>{{ page.title }}</h1>
             {% endif %}
             <div class="content">
                 {{ content }}

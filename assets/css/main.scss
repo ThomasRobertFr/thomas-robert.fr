@@ -4,9 +4,10 @@
 
 $font-size-base: 16px;
 
-$font-family-sans-serif: 'Raleway', 'Helvetica Neue', 'Helvetica', sans-serif; // "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sans-serif: 'Chakra Petch', 'Helvetica Neue', 'Helvetica', sans-serif;
 $font-family-serif:       "Philosopher", Georgia, "Times New Roman", Times, serif;
 //$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+$font-family-pixel:       'Bitcount Single', $font-family-sans-serif;
 $headings-font-family:    $font-family-sans-serif;
 $headings-font-weight:    400;
 
@@ -39,10 +40,9 @@ $link-hover-decoration: none;
 
 $transition-time:       0.3s;
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,700');
+// Fonts (Chakra Petch, Bitcount Single) are loaded from _includes/head.html
 
 @import
-  // "font-muli",
   "font-awesome.min",
   "bootstrap/bootstrap",
   "syntax-highlighting",
@@ -54,3 +54,22 @@ $transition-time:       0.3s;
   "custom",
   "timeline"
 ;
+
+// Pixel font for titles on the one-page layouts only (not in posts / pages).
+// :where() keeps the specificity of a plain h1/h2 selector.
+:where(.layout-onepage) {
+    h1, h2 {
+        font-family: $font-family-pixel;
+        font-weight: 300;
+    }
+
+    h2 {
+        font-size: $font-size-h2 * 1.3;
+    }
+}
+
+h1.post-title {
+    font-family: $font-family-pixel;
+    font-weight: 300;
+    font-size: $font-size-h1 * 1.3;
+}

@@ -106,22 +106,18 @@
 
         .content {
             font-size: 150%;
-            font-weight: 200;
+            font-weight: 300;
         }
 
-        h2 {
+        h1 {
             text-align: left;
+            font-family: $font-family-pixel;
             font-size: 65px;
-            font-weight: 200;        
-        }
-
-        .tagline {
-            font-size: 17px;
-            font-weight: 200;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            margin: -30px 0 40px;
-            opacity: 0.85;
+            line-height: 1.1;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+            color: #ffffff;
         }
     }
 }
