@@ -5,18 +5,12 @@ layout: onepage-block
 {% assign skills_meta = site.data['skills-meta'].skills %}
 {% assign lang = page.lang | default: "en" %}
 
+<div class="cols">
 {% for skill_group in site.data[page.data-name] %}
     {% if forloop.index == 3 and forloop.last %}
         {% assign class_sm = "col-sm-12" %}
     {% else %}
         {% assign class_sm = "col-sm-6" %}
-    {% endif %}
-
-    {% if forloop.index == 4 %}
-        <div class="clearfix visible-md visible-lg"></div>
-    {% endif %}
-    {% if forloop.index == 3 or forloop.index == 5 %}
-        <div class="clearfix visible-sm"></div>
     {% endif %}
 
     <div class="service-box col-md-4 {{ class_sm }} col-xs-12">
@@ -83,8 +77,7 @@ layout: onepage-block
         </div>
     </div>
 {% endfor %}
-
-<div class="clearfix"></div>
+</div>
 
 {% if page.more-skills-url %}
 <p class="text-center mrgtop30">

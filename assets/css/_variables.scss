@@ -1,0 +1,74 @@
+@use "sass:color";
+@use "sass:math";
+
+$font-size-base: 16px;
+
+$font-family-sans-serif: 'Chakra Petch', 'Helvetica Neue', 'Helvetica', sans-serif;
+$font-family-serif:       "Philosopher", Georgia, "Times New Roman", Times, serif;
+$font-family-pixel:       'Bitcount Single', $font-family-sans-serif;
+$headings-font-family:    $font-family-sans-serif;
+$headings-font-weight:    400;
+
+$btn-default-bg:        #efefef; // because we remove borders
+
+$color-1:               #2b5b95;
+$color-1-light:         color.adjust($color-1, $lightness: 30%);
+$color-1-lighter:       color.adjust(color.adjust($color-1, $lightness: 53%), $saturation: -20%);
+$color-1-dark:          color.adjust(color.adjust($color-1, $lightness: -10%), $saturation: -20%);
+$color-2:               #00C3C3; // OLD #2288b1
+$color-2-light:         color.adjust($color-2, $lightness: 30%);
+$color-2-lighter:       color.adjust(color.adjust($color-2, $lightness: 53%), $saturation: -20%);
+$color-2-dark:          color.adjust(color.adjust($color-2, $lightness: -10%), $saturation: -20%);
+$color-3:               #46abb8;
+$color-3-light:         color.adjust($color-3, $lightness: 28%);
+$color-3-lighter:       color.adjust(color.adjust($color-3, $lightness: 43%), $saturation: -20%);
+$color-3-dark:          color.adjust(color.adjust($color-3, $lightness: -10%), $saturation: -20%);
+$color-4:               #4fbba2;
+$color-4-light:         color.adjust($color-4, $lightness: 25%);
+$color-4-lighter:       color.adjust(color.adjust($color-4, $lightness: 40%), $saturation: -20%);
+$color-4-dark:          color.adjust(color.adjust($color-4, $lightness: -10%), $saturation: -20%);
+$color-5:               #4f9827;
+$color-5-light:         color.adjust($color-5, $lightness: 37%);
+$color-5-lighter:       color.adjust(color.adjust($color-5, $lightness: 57%), $saturation: -20%);
+$color-5-dark:          color.adjust(color.adjust($color-5, $lightness: -10%), $saturation: -20%);
+
+$link-color:            $color-2;
+$link-hover-color:      color.adjust($link-color, $lightness: -8%);
+$link-hover-decoration: none;
+
+$transition-time:       0.3s;
+
+// Former Bootstrap 3 defaults still used by the stylesheets
+$gray-base:             #000;
+$gray-darker:           color.adjust($gray-base, $lightness: 13.5%); // #222
+$gray-dark:             color.adjust($gray-base, $lightness: 20%);   // #333
+$gray:                  color.adjust($gray-base, $lightness: 33.5%); // #555
+$gray-light:            color.adjust($gray-base, $lightness: 46.7%); // #777
+$gray-lighter:          color.adjust($gray-base, $lightness: 93.5%); // #eee
+
+$brand-primary:         color.adjust(#428bca, $lightness: -6.5%); // #337ab7
+$brand-success:         #5cb85c;
+$brand-info:            #5bc0de;
+$brand-warning:         #f0ad4e;
+$brand-danger:          #d9534f;
+
+$text-color:            $gray-dark;
+$font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
+$font-size-large:       math.ceil($font-size-base * 1.25);
+$font-size-small:       math.ceil($font-size-base * 0.85);
+$font-size-h1:          math.floor($font-size-base * 2.6);
+$font-size-h2:          math.floor($font-size-base * 2.15);
+$font-size-h3:          math.ceil($font-size-base * 1.7);
+$font-size-h4:          math.ceil($font-size-base * 1.25);
+$line-height-base:      1.428571429;
+$line-height-computed:  math.floor($font-size-base * $line-height-base);
+$border-radius-base:    4px;
+
+$grid-gutter-width:     30px;
+$screen-sm-min:         768px;
+$screen-md-min:         992px;
+$screen-lg-min:         1200px;
+$screen-xs-max:         $screen-sm-min - 1;
+
+$navbar-height:         50px;
+$navbar-default-border: color.adjust(#f8f8f8, $lightness: -6.5%);

@@ -3,6 +3,7 @@ layout: onepage-block
 ---
 
 {% assign col_width = 12 | divided_by: page.contacts.size %}
+<div class="cols">
 {% for contact in page.contacts %}
 
     {% if contact.type == "email" %}
@@ -24,10 +25,6 @@ layout: onepage-block
         <div class="contact-block color-emph-light col-sm-{{ col_width }} col-xs-6">
             <i class="fa fa-envelope"></i> {{ site.author.address | newline_to_br }}
         </div>
-    {% elsif contact.type == "twitter" %}
-        <a class="contact-block color-emph-light col-sm-{{ col_width }} col-xs-6" href="https://www.twitter.com/{{ site.author.twitter }}">
-            <i class="fa fa-twitter"></i> @{{ site.author.twitter }}
-        </a>
     {% elsif contact.type == "linkedin" %}
         <a class="contact-block color-emph-light col-sm-{{ col_width }} col-xs-6" href="https://www.linkedin.com/in/{{ site.author.linkedin }}">
             <i class="fa fa-linkedin"></i> {{ site.author.linkedin }}
@@ -35,10 +32,6 @@ layout: onepage-block
     {% elsif contact.type == "github" %}
         <a class="contact-block color-emph-light col-sm-{{ col_width }} col-xs-6" href="https://www.github.com/{{ site.author.github }}">
             <i class="fa fa-github"></i> {{ site.author.github }}
-        </a>
-    {% elsif contact.type == "google-plus" %}
-        <a class="contact-block color-emph-light col-sm-{{ col_width }} col-xs-6" href="https://plus.google.com/+{{ site.author.google-plus }}">
-            <i class="fa fa-google-plus"></i> +{{ site.author.google-plus }}
         </a>
     {% else %}
         {% if contact.url %}
@@ -53,14 +46,6 @@ layout: onepage-block
         </div>
         {%endif%}
     {% endif %}
-    
-    {% assign indexmod2 = forloop.index | modulo: 2 %}
-    {% assign indexmod4 = forloop.index | modulo: 4 %}
-    {% if indexmod2 == 0 %}
-        <div class="clearfix visible-xs"></div>
-    {% endif %}
-    {% if indexmod4 == 0 %}
-        <div class="clearfix visible-sm visible-lg"></div>
-    {% endif %}
 
 {% endfor %}
+</div>

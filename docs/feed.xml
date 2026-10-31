@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thomas Robert</title>
+    <description>Thomas Robert, CTO of Heuritech: data architecture, AI and computer vision. PhD in deep learning from Sorbonne Université.</description>
+    <link>https://www.thomas-robert.fr/</link>
+    <atom:link href="https://www.thomas-robert.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 31 Oct 2026 18:45:05 +0100</pubDate>
+    <lastBuildDate>Sat, 31 Oct 2026 18:45:05 +0100</lastBuildDate>
+    <generator>Jekyll v4.4.1</generator>
+    
+      <item>
+        <title>LogAnalysis : Outil Web Open-Source De Business Intelligence Gégraphique</title>
+        <description>&lt;p class=&quot;text-center&quot;&gt;
+&lt;img src=&quot;/data/blog/loganalysis_prev.png&quot; /&gt;
+&lt;/p&gt;
+
+&lt;h2 id=&quot;contexte&quot;&gt;Contexte&lt;/h2&gt;
+
+&lt;p&gt;En ASI (Architecture des Systèmes d’Information), à l’INSA de Rouen, le second semestre de 4ème année et le premier semestre de 5ème année sont l’occasion pour les étudiants de travailler sur un Projet INSA Certifié (PIC), un projet industriel type R&amp;amp;D commandé par une entreprise et réalisé par les étudiants.&lt;/p&gt;
+
+&lt;p&gt;5 sujets sont réalisés par 6 équipes de 7 à 9 étudiants durant 1 an scolaire à raison de 25 à 28h par semaine et par personne. Pour être exact, une des équipes n’existe que pendant le premier semestre de PIC et joue le rôle de sous-traitant pour une autre équipe. Cette équipe disparaît au second semestre de PIC pour permettre aux étudiants de partir à l’étranger.&lt;/p&gt;
+
+&lt;h2 id=&quot;sujet&quot;&gt;Sujet&lt;/h2&gt;
+
+&lt;p&gt;Le sujet sur lequel mon équipe à travaillé consiste à développer un outil open-source permettant de faire de Business Intelligence géographique, et surtout, de la rendre naturelle à l’utilisateur, accessible sans connaissance de la théorie de la « GeoBI ».&lt;/p&gt;
+
+&lt;p&gt;Ce sujet nous a été proposé par le Centre de Recherche Publique Henri Tudor, basé au Luxembourg, maintenant nommé Luxembourg Institute for Science and Technology (LIST). L’équipe sous-traitante a travaillé avec nous sur ce sujet.&lt;/p&gt;
+
+&lt;h2 id=&quot;la-business-intelligence&quot;&gt;La Business Intelligence&lt;/h2&gt;
+
+&lt;p&gt;En très résumé, la Business Intelligence (BI) ou informatique décisionnelle, c’est le fait de pouvoir analyser des grandes quantités de données généralement structurées selon un grand nombre de dimensions. Par exemple, le chiffre d’affaire en fonction des dimensions temps, espace, client, secteur d’activité, produit, etc.&lt;/p&gt;
+
+&lt;p&gt;La Business Intelligence à pour but de permettre d’analyser ces masses de données structurées afin d’en faire émerger une décision éclairée.&lt;/p&gt;
+
+&lt;p&gt;On peut décomposer la Business Intelligence entre 3 grandes étapes :&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Collecte des données afin de constituer une base de données structurées&lt;/li&gt;
+  &lt;li&gt;Sélection et traitement des données&lt;/li&gt;
+  &lt;li&gt;Affichage des données à l’utilisateur&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;collecte-des-données&quot;&gt;Collecte des données&lt;/h3&gt;
+
+&lt;p&gt;Cette étape préliminaire à la Business Intelligence n’est pas traitée dans le cadre du PIC car elle est spécifique à chaque entité désirant faire de la Business Intelligence. Son but est de collecter les données venant de multiples sources afin de constituer une base de données la plus précis et complète possible. Ces données sont alors stockées dans des &lt;a href=&quot;http://fr.wikipedia.org/wiki/Entrep%C3%B4t_de_donn%C3%A9es&quot;&gt;data warehouses&lt;/a&gt; et &lt;a href=&quot;http://fr.wikipedia.org/wiki/Datamart&quot;&gt;datamarts&lt;/a&gt;. Cela constitue alors des bases de données &lt;a href=&quot;http://fr.wikipedia.org/wiki/Online_Analytical_Processing&quot;&gt;OLAP&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p class=&quot;text-center&quot;&gt;&lt;a href=&quot;/data/blog/loganalysis_dw.jpg&quot;&gt;&lt;img src=&quot;/data/blog/loganalysis_dw.jpg&quot; alt=&quot;Data warehouse overview – Credits: Wikimedia&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;sélection-et-traitement-des-données&quot;&gt;Sélection et traitement des données&lt;/h3&gt;
+
+&lt;p&gt;La première étape d’une analyse de BI est la sélection des données intéressantes à l’étude que l’utilisateur veut mener (ex : sélection des données de la France en 2014 uniquement). C’est le &lt;em&gt;slice&lt;/em&gt; OLAP.&lt;/p&gt;
+
+&lt;p&gt;Le traitement de données le plus courant est ensuite de choisir comment agréger les données afin d’en obtenir des résultats pertinents (ex : agrégation par mois et par département). C’est le &lt;em&gt;dice&lt;/em&gt; OLAP.&lt;/p&gt;
+
+&lt;p&gt;C’est – de façon réductrice bien sûr – le principe de l’OLAP : limiter le champ de données et l’agréger aux niveaux les plus pertinents.&lt;/p&gt;
+
+&lt;p class=&quot;text-center&quot;&gt;&lt;a href=&quot;/data/blog/loganalysis_slice_and_dice_en.png&quot;&gt;&lt;img src=&quot;/data/blog/loganalysis_slice_and_dice.png&quot; alt=&quot;Slice &amp;amp; Dice&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;affichage-des-données&quot;&gt;Affichage des données&lt;/h3&gt;
+
+&lt;p&gt;La deuxième étape d’une analyse de BI est l’affichage des données à l’utilisateur. L’affichage le plus simple est l’affichage d’un tableau. Ce n’est cependant pas la façon la plus simple pour réussir à interpréter les données. On introduit alors des graphiques, des cartes choroplèthes, etc.&lt;/p&gt;
+
+&lt;p class=&quot;text-center&quot;&gt;&lt;a href=&quot;/data/blog/loganalysis_bi.png&quot;&gt;&lt;img src=&quot;/data/blog/loganalysis_bi.png&quot; alt=&quot;BI analysis results – Credits: http://apandre.wordpress.com/&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;objectifs-du-projet-démonstration&quot;&gt; Objectifs du projet &amp;amp; démonstration&lt;/h2&gt;
+
+&lt;p&gt;Ce projet avait donc pour but de développer une interface web permettant de réaliser des analyses de BI géographique en s’intégrant à &lt;a href=&quot;http://geonode.org/&quot;&gt;GeoNode&lt;/a&gt;, plateforme qui offre déjà des outils de gestion de données géographiques. Le tout a été développé sous licence Open Source (GPLv3) est est &lt;a href=&quot;https://github.com/ThomasRobertFr/analytics&quot;&gt;disponible sur GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Les objectifs du projets étaient les suivants :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Traitement et récupération des données&lt;/strong&gt; depuis la base de données OLAP &lt;a href=&quot;http://www.spatialytics.org/fr/projets/geomondrian/&quot;&gt;GeoMondrian&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Affichage des résultats sous la forme de divers graphiques :&lt;/strong&gt; carte choroplèthe, diagramme en secteur &lt;em&gt;(pie chart)&lt;/em&gt;, en barres &lt;em&gt;(bar chart)&lt;/em&gt;, à bulles &lt;em&gt;(bubble chart)&lt;/em&gt;, tableau, nuage de mots &lt;em&gt;(word cloud)&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Interaction avec les graphiques&lt;/strong&gt; permettant a l’utilisateur d’interroger la base de données OLAP et de réaliser son analyse de BI de façon intuitive et naturelle :
+    &lt;ul&gt;
+      &lt;li&gt;Filtrage dynamique (&lt;em&gt;slice&lt;/em&gt; OLAP) au clic ;&lt;/li&gt;
+      &lt;li&gt;Zoom dimensionnel (&lt;em&gt;drill-down&lt;/em&gt; et &lt;em&gt;roll-up&lt;/em&gt; OLAP modifiant donc à la fois le &lt;em&gt;slice&lt;/em&gt; et le &lt;em&gt;dice&lt;/em&gt;) au zoom molette. Par exemple, un drill-down sur la France affichera les régions de France. Différentes version du &lt;em&gt;drill-down&lt;/em&gt; sont possible : simple (sur 1 élément), multiple (plusieurs éléments), partiel (drill-down sur un élément tout en conservant les éléments du niveau supérieur permettant de comparer des données de différents niveaux, par exemples les régions de France et les autres pays d’Europe)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Voici une démonstration rapide de l’application permettant d’avoir un aperçu rapide des objectifs :&lt;/p&gt;
+
+&lt;h1 id=&quot;architecture&quot;&gt;Architecture&lt;/h1&gt;
+
+&lt;h2 id=&quot;architecture-globale&quot;&gt;Architecture globale&lt;/h2&gt;
+
+&lt;p&gt;Le diagramme ci-dessous décrit l’architecture globale de la solution développée :&lt;/p&gt;
+
+&lt;p class=&quot;text-center&quot;&gt;&lt;a href=&quot;/data/blog/loganalysis_architecture_loganalysis.png&quot;&gt;&lt;img src=&quot;/data/blog/loganalysis_architecture_loganalysis.png&quot; alt=&quot;Architecture of LogAnalysis&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;On y retrouve 4 composants :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;L’&lt;strong&gt;interface web&lt;/strong&gt; permettant la &lt;strong&gt;visualisation des données&lt;/strong&gt;. Elle se compose de plusieurs éléments :
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;&lt;a href=&quot;https://github.com/ThomasRobertFr/analytics-js&quot;&gt;analytics.js&lt;/a&gt;&lt;/em&gt;, le package développé pour gérer l’interface&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;QueryAPI&lt;/em&gt;, un proxy des interfaces de Mandoline, l’API SOLAP&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;&lt;a href=&quot;http://square.github.io/crossfilter/&quot;&gt;crossfilter&lt;/a&gt;&lt;/em&gt;, une sorte de petit serveur OLAP côté client&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;&lt;a href=&quot;https://github.com/ThomasRobertFr/crossfilter-server&quot;&gt;crossfilter server&lt;/a&gt;&lt;/em&gt;, une librairie développée pour permettre de réaliser les mêmes operations que &lt;em&gt;crossfilter&lt;/em&gt;, mais déléguant les calculs OLAP au serveur via une API&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;&lt;a href=&quot;http://d3js.org/&quot;&gt;d3.js&lt;/a&gt;&lt;/em&gt;, une librairie utilisée pour les rendus SVG&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;&lt;a href=&quot;https://github.com/ThomasRobertFr/dc.js&quot;&gt;dc.js&lt;/a&gt;&lt;/em&gt;, une version modifiée du &lt;em&gt;&lt;a href=&quot;http://dc-js.github.io/dc.js/&quot;&gt;dc.js&lt;/a&gt;&lt;/em&gt; original pour réaliser des rendus de graphiques interactifs de données dimensionnelles&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Une &lt;strong&gt;application web&lt;/strong&gt; en Python, &lt;em&gt;&lt;a href=&quot;https://github.com/ThomasRobertFr/analytics&quot;&gt;analytics&lt;/a&gt;&lt;/em&gt;, délivrant l’interface web, étendant l’application web existante &lt;em&gt;&lt;a href=&quot;http://geonode.org/&quot;&gt;GeoNode&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Une &lt;strong&gt;API SOLAP&lt;/strong&gt; en Java nommée &lt;em&gt;&lt;a href=&quot;https://github.com/ThomasRobertFr/mandoline&quot;&gt;Mandoline&lt;/a&gt;&lt;/em&gt;, et sa dépendance &lt;em&gt;&lt;a href=&quot;http://www.olap4j.org/&quot;&gt;olap4j&lt;/a&gt;&lt;/em&gt;, nous permettant d’interroger GeoMondrian simplement en JSON&lt;/li&gt;
+  &lt;li&gt;La &lt;strong&gt;base de données OLAP&lt;/strong&gt; avec le serveur SOLAP &lt;em&gt;&lt;a href=&quot;http://www.spatialytics.org/projects/geomondrian/&quot;&gt;GeoMondrian&lt;/a&gt;&lt;/em&gt; récupérant les données depuis une base &lt;em&gt;&lt;a href=&quot;http://www.postgresql.org/&quot;&gt;PostgreSQL&lt;/a&gt;&lt;/em&gt;, réalisant le &lt;strong&gt;traitement des données&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;analyticsjs&quot;&gt;analytics.js&lt;/h2&gt;
+
+&lt;p&gt;Le package &lt;em&gt;analytics.js&lt;/em&gt; représente la majeure partie du travail réalisé sur ce projet. Il est composé de divers « namespaces », chacun contenant diverses et « classes », ces appellation étant utilisé pour la compréhension du propos puisqu’étant en JavaScript, ces types d’éléments n’existent pas et sont dans notre cas des objets.&lt;/p&gt;
+
+&lt;p&gt;Voici l’architecture du package :&lt;/p&gt;
+
+&lt;p class=&quot;text-center&quot;&gt;&lt;a href=&quot;/data/blog/loganalysis_architecture_analytics_js.png&quot;&gt;&lt;img src=&quot;/data/blog/loganalysis_architecture_analytics_js.png&quot; alt=&quot;Architecture of analytics.js&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;On y trouve les namespaces :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;analytics.query&lt;/em&gt; qui simplifie l’interrogation de l’API SOLAP via QueryAPI en offrant des fonctions spécialisées&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;analytics.data&lt;/em&gt; qui offre des types de données permettant de représenter les éléments OLAP, et qui stocke les données reçues&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;analytics.state&lt;/em&gt; qui stocke et offre des fonctions permettant de modifier l’état OLAP de l’analyse en cours (pour simplifier, quels éléments de quels niveaux sont en cours d’étude)&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;analytics.display&lt;/em&gt; gère l’interface (où est chaque graphique et qu’affiche-t-il) et les interactions avec celle-ci&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;analytics.charts&lt;/em&gt; offre des classes pour chaque type de graphique qui peuvent être instanciées pour chaque nouveau graphique&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;cross-filtering-and-crossfilter-serverjs&quot;&gt;Cross-filtering and &lt;em&gt;crossfilter-server.js&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;Une des problématiques majeures du projet est de fournir un filtrage croisé efficace sur l’interface. On peut voir cette fonctionnalité dans la vidéo de démonstration. En effet, ce filtrage est très pratique pour l’utilisateur car elle lui permet de voir simplement comment les données se distribuent parmi les divers éléments d’une dimension et d’explorer le cube OLAP.&lt;/p&gt;
+
+&lt;p&gt;Cette fonction de filtrage est donc fortement sollicitée et se doit d’être particulièrement efficace tout en supportant de fort volumes de données.&lt;/p&gt;
+
+&lt;p&gt;Il y a en fait deux solutions permettant de mettre en oeuvre cette fonctionnalité, représentées sur ce schéma :&lt;/p&gt;
+
+&lt;p class=&quot;text-center&quot;&gt;&lt;a href=&quot;/data/blog/loganalysis_crossfilter.png&quot;&gt;&lt;img src=&quot;/data/blog/loganalysis_crossfilter.png&quot; alt=&quot;Cross-filtering solutions&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;On voit sur ce graphique le cube OLAP à gauche qui stocke les données, et à droite des graphiques que l’utilisateur veut visualiser.&lt;/p&gt;
+
+&lt;h3 id=&quot;première-solution-crossfilter&quot;&gt;Première solution : &lt;em&gt;Crossfilter&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;La première possibilité est de demander au serveur OLAP, GeoMondrian, de calculer un cube de données plus petit contenant ce que l’on est en train d’étudier. Sur le diagramme, ce cube intermédiaire est situé au centre et contient les données par région de France, années et mode de transport.&lt;/p&gt;
+
+&lt;p&gt;Ce cube temporaire est téléchargé dans le navigateur de l’utilisateur et fourni a &lt;em&gt;crossfilter&lt;/em&gt;. &lt;em&gt;Crossfilter&lt;/em&gt; pourra ensuite calculer les projections de ce cube sur chaque dimension, et ces projections seront utilisées par &lt;em&gt;dc.js&lt;/em&gt; pour réaliser les rendus.&lt;/p&gt;
+
+&lt;p&gt;Dans cette solution, l’interface sera très réactive au filtrage, car &lt;em&gt;crossfilter&lt;/em&gt; possède déjà toutes les données dont il a besoin pour calculer les projections en tenant compte des filtres, et pourra réaliser les calculs en moins d’une seconde.&lt;/p&gt;
+
+&lt;p&gt;Cependant, le défaut de cette solution est le nombre de valeurs dans le cube, qui est le produit du nombre d’éléments étudiés dans chaque dimension (par exemple pour 6 régions, 2 ans et 3 modes de transport on a 6 × 2 × 3 = 36 valeurs), et cette taille augmente donc exponentiellement. On ne pourra donc supporter que des volumes raisonnables car le cube finira par devenir trop lourd pour être téléchargé en un temps raisonnable.&lt;/p&gt;
+
+&lt;h3 id=&quot;seconde-solution--crossfilter-server&quot;&gt;Seconde solution : &lt;em&gt;Crossfilter Server&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;L’alternative consiste à demander à &lt;em&gt;GeoMondiran&lt;/em&gt; de calculer directement les projections du cube OLAP, après filtrage, sur chaque dimension étudiée sans calculer le cube temporaire.&lt;/p&gt;
+
+&lt;p&gt;Dans ce cas, la taille des données chargés est la somme du nombre d’éléments étudiés dans chaque dimension (par exemple pour 6 régions, 2 ans et 3 modes de transport on a 6 + 2 + 3 = 11 valeurs), et cette taille augmente linéairement. On sera donc capable de supporter des volumes importants car on charge bien moins de données (tant que &lt;em&gt;GeoMondrian&lt;/em&gt; supporte ces volumes bien sûr).&lt;/p&gt;
+
+&lt;p&gt;Cependant, l’inconvenient de cette solution est que quand l’utilisateur change de filtres, on doit demander à nouveau à GeoMondrian les projections sur chaque dimension en prenant en compte les nouveaux filtres. Cela ralenti donc le temps de réaction lors du filtrage car on doit interroger le serveur là ou &lt;em&gt;crossfilter&lt;/em&gt; faisait les calculs localement.&lt;/p&gt;
+
+&lt;p&gt;Un autre problème de cette solution est que notre librairie d’affichage, &lt;em&gt;dc.js&lt;/em&gt;, est dépendante de &lt;em&gt;crossfilter&lt;/em&gt; en tant que modèle de données, on ne peut pas lui donner directement des données.&lt;/p&gt;
+
+&lt;p&gt;Pour répondre à ce problème et rendre cette alternative possible, nous avons développé une petite librairie nommée &lt;em&gt;Crossfilter Server&lt;/em&gt;. Cette librairie a presque les même interfaces d’I/O que &lt;em&gt;Crossfilter&lt;/em&gt; (seule l’initialisation change). &lt;em&gt;Crossfilter Server&lt;/em&gt; va donc reproduire le fonctionnement de &lt;em&gt;Crossfilter&lt;/em&gt; sans posséder les données (le cube intermédiaire), il va déléguer les calculs à une API qui va, dans notre cas, interroger &lt;em&gt;GeoMondrian&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ainsi, nous pouvons utiliser &lt;em&gt;dc.js&lt;/em&gt; indifféremment avec &lt;em&gt;Crossfilter&lt;/em&gt; ou &lt;em&gt;Crossfilter Server.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;récapitulatif--solution&quot;&gt;Récapitulatif &amp;amp; solution&lt;/h3&gt;
+
+&lt;p&gt;Pour résumé, nous avons 2 solutions :&lt;/p&gt;
+
+&lt;p class=&quot;text-center&quot;&gt;&lt;a href=&quot;/data/blog/loganalysis_crossfilter.png&quot;&gt;&lt;img src=&quot;/data/blog/loganalysis_crossfilter.png&quot; alt=&quot;Cross-filtering solutions&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Crossfilter&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;\(\mathcal{O}(n^p)\) \(\left(\prod_{i \in \mathcal{D}} n_i\right)\)&lt;br /&gt;
+&lt;strong&gt;\(\Rightarrow\) Volumes raisonnables&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Filtrage &amp;amp; agrégats côté client rapide (&amp;lt; 10 ms)&lt;br /&gt;
+&lt;strong&gt;\(\Rightarrow\) Excellente réactivité&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Crossfilter Server&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;\(\mathcal{O}(n\times p)\) \(\left(\sum_{i \in \mathcal{D}} n_i\right)\)&lt;br /&gt;
+&lt;strong&gt;\(\Rightarrow\) Volumes importants&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Filtrage &amp;amp; agrégats côté serveur, rechargement (≈≈\approx 1s)&lt;br /&gt;
+&lt;strong&gt;\(\Rightarrow\) Réactivité réduite&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Notre solution définitive consiste a utiliser ces deux solutions, en utilisant l’une ou l’autre selon le volume de données en cours d’étude, en passant dynamiquement de l’une à l’autre selon les besoin.&lt;/p&gt;
+
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;Cet article est bien sûr un résumé rapide d’un projet conséquent. Si vous voulez davantage d’informations, vous pouvez consulter l documentation du projet disponible sur le &lt;a href=&quot;https://github.com/ThomasRobertFr/analytics/wiki&quot;&gt;wiki du dépôt GitHub&lt;/a&gt; ou jeter un oeil au code des composants listés précédemment. Si vous voulez, vous pouvez même contribuer à ce projet en faisant une pull-request !&lt;/p&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css&quot; integrity=&quot;sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq&quot; crossorigin=&quot;anonymous&quot; /&gt;
+
+&lt;!-- The loading of KaTeX is deferred to speed up page rendering --&gt;
+&lt;script defer=&quot;&quot; src=&quot;https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js&quot; integrity=&quot;sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+&lt;!-- To automatically render math in text elements, include the auto-render extension: --&gt;
+&lt;script defer=&quot;&quot; src=&quot;https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js&quot; integrity=&quot;sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI&quot; crossorigin=&quot;anonymous&quot; onload=&quot;renderMathInElement(document.body);&quot;&gt;&lt;/script&gt;
+
+</description>
+        <pubDate>Tue, 17 Mar 2015 00:00:00 +0100</pubDate>
+        <link>https://www.thomas-robert.fr/blog/fr/2015/03/17/loganalysis-outil-web-open-source-de-business-intelligence-gegraphique/</link>
+        <guid isPermaLink="true">https://www.thomas-robert.fr/blog/fr/2015/03/17/loganalysis-outil-web-open-source-de-business-intelligence-gegraphique/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>LogAnalysis: Open-Source Web Tool For Geographic Business Intelligence</title>
+        <description>&lt;p class=&quot;text-center&quot;&gt;
+&lt;img src=&quot;/data/blog/loganalysis_prev.png&quot; /&gt;
+&lt;/p&gt;
+
+&lt;h1 id=&quot;context&quot;&gt;Context&lt;/h1&gt;
+
+&lt;p&gt;I studied ASI (Architecture of Information Systems) at the INSA of Rouen, and during the second semester of the 4th year and the first semester of the 5th year, students work on a big R&amp;amp;D-like industrial project (PIC, for INSA Certified Project) for a company, carried out by teams of students.&lt;/p&gt;
+
+&lt;p&gt;5 projects are realized by 6 teams of 7 to 9 students during 1 scholar year, at a pace of 25 to 28 hours per week. One of those team work as a subcontractor for another team, and this team only exist during the first half of the project.&lt;/p&gt;
+
+&lt;h1 id=&quot;subject&quot;&gt;Subject&lt;/h1&gt;
+
+&lt;p&gt;The subject my team worked on was to make an Open Source web tool allowing each and every one to be able to do Geographical Business Intelligence (GeoBI) as easily as possible, without prior knowledge of the “theory” of GeoBI.&lt;/p&gt;
+
+&lt;p&gt;This subject was proposed by our client, the Public Research Center Henri Tudor, based in Luxembourg, now called Luxembourg Institute for Science and Technology (LIST). The subcontractor team worked with mine on this subject.&lt;/p&gt;
+
+&lt;h1 id=&quot;geographical-business-intelligence&quot;&gt;Geographical Business Intelligence&lt;/h1&gt;
+
+&lt;p&gt;To summarize quickly, Business Intelligence (BI) allows you to analyze big quantities of data, usually structured around lots of dimensions. For example revenue as a function of time, geography, clients, business sector, products, etc.&lt;/p&gt;
+
+&lt;p&gt;Business Intelligence allows you to analyze these masses of data, allowing you to make up your decisions based on those.&lt;/p&gt;
+
+&lt;p&gt;We can split Business Intelligence into 3 big steps:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Collection of data to constitute a structured database&lt;/li&gt;
+  &lt;li&gt;Selection and processing of data&lt;/li&gt;
+  &lt;li&gt;Visualization of the results of the data processing&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;collection-of-data&quot;&gt;Collection of data&lt;/h2&gt;
+
+&lt;p&gt;This preliminary step of Business Intelligence was not part of the project and is specific to each Information System. The goal is to collect data coming from multiple sources in order to constitute the most accurate and complete database possible. These data are stored in &lt;a href=&quot;http://en.wikipedia.org/wiki/Data_warehouse&quot;&gt;data warehouses&lt;/a&gt; and &lt;a href=&quot;http://en.wikipedia.org/wiki/Data_mart&quot;&gt;data marts&lt;/a&gt;. They will constitute &lt;a href=&quot;http://en.wikipedia.org/wiki/Online_analytical_processing&quot;&gt;OLAP&lt;/a&gt; databases.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/data/blog/loganalysis_dw.jpg&quot;&gt;&lt;img src=&quot;/data/blog/loganalysis_dw.jpg&quot; alt=&quot;Data warehouse overview – Credits: Wikimedia&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;selection-and-processing-of-data&quot;&gt;Selection and processing of data&lt;/h2&gt;
+
+&lt;p&gt;The first step of any BI analysis is to select which part of the data is interesting regarding the study you want to do (e.g.: select data for France in 2014 only). This is an OLAP &lt;em&gt;slice&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Then, the most common data processing is to aggregate the data to get the most relevant results (e.g.: aggregate by month and department). This is an OLAP &lt;em&gt;dice&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is – in a very simplistic way of course – the principle of OLAP: limit the range of data studied and aggregate those at the most relevant level.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/data/blog/loganalysis_slice_and_dice_en.png&quot;&gt;&lt;img src=&quot;/data/blog/loganalysis_slice_and_dice_en.png&quot; alt=&quot;Slice &amp;amp; Dice - Credits: Thomas Robert&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;visualization-of-the-results&quot;&gt;Visualization of the results&lt;/h2&gt;
+
+&lt;p&gt;The second step of a BI analysis is to render the data for the user. The easiest display is of course the table. However, it is not the most practical way to interpret the data. We therefore use graphics, choropleth map, etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/data/blog/loganalysis_bi.png&quot;&gt;&lt;img src=&quot;/data/blog/loganalysis_bi.png&quot; alt=&quot;BI analysis results – Credits: http://apandre.wordpress.com/&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;goals-of-the-project--demonstration&quot;&gt;Goals of the project &amp;amp; demonstration&lt;/h1&gt;
+
+&lt;p&gt;The project is developed as an Open Source web interface that integrates into the already existing web app &lt;a href=&quot;http://geonode.org/&quot;&gt;GeoNode&lt;/a&gt;, it is available on &lt;a href=&quot;https://github.com/ThomasRobertFr/analytics&quot;&gt;GitHub&lt;/a&gt;. The main goals of the project were to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Load and process data using the OLAP database &lt;a href=&quot;http://www.spatialytics.org/fr/projets/geomondrian/&quot;&gt;GeoMondrian&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Display results on various charts:&lt;/strong&gt; choropleth map, pie chart, bar chart, bubble chart, table, word cloud&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Allow interaction on the charts&lt;/strong&gt; to let the user query the OLAP database and do BI analyses:
+    &lt;ul&gt;
+      &lt;li&gt;Filtering (OLAP &lt;em&gt;slice&lt;/em&gt;) by clicking&lt;/li&gt;
+      &lt;li&gt;Dimensional zooming (OLAP &lt;em&gt;drill-down&lt;/em&gt; and &lt;em&gt;roll-up&lt;/em&gt; allowing to change both &lt;em&gt;slice&lt;/em&gt; and &lt;em&gt;dice&lt;/em&gt;) by mouse scroll. For example, a &lt;em&gt;drill-down&lt;/em&gt; on France will display data for regions of France. Different variations of drill-down are available: simple (on 1 element), multiple (on more than 1 element), partial (drill-down while keeping elements of the upper level to compare data of various levels)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here is a quick demo of the final project that will help you visualize these goals more easily:&lt;/p&gt;
+
+&lt;h1 id=&quot;architecture&quot;&gt;Architecture&lt;/h1&gt;
+
+&lt;h2 id=&quot;general-overview&quot;&gt;General overview&lt;/h2&gt;
+
+&lt;p&gt;On the following diagram, you can see the architecture of the solution developed:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/data/blog/loganalysis_architecture_loganalysis.png&quot;&gt;&lt;img src=&quot;/data/blog/loganalysis_architecture_loganalysis.png&quot; alt=&quot;Architecture of LogAnalysis&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You can see the 4 main components:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The &lt;strong&gt;web interface&lt;/strong&gt;, which role is to &lt;strong&gt;data visualization&lt;/strong&gt;. It is composed of the packages:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;&lt;a href=&quot;https://github.com/ThomasRobertFr/analytics-js&quot;&gt;analytics.js&lt;/a&gt;&lt;/em&gt;, a package developed that handles all the interface&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;QueryAPI&lt;/em&gt;, a proxy of the interfaces of Mandoline, the SOLAP API&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;&lt;a href=&quot;http://square.github.io/crossfilter/&quot;&gt;crossfilter&lt;/a&gt;&lt;/em&gt;, a sort of small client side OLAP database&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;&lt;a href=&quot;https://github.com/ThomasRobertFr/crossfilter-server&quot;&gt;crossfilter server&lt;/a&gt;&lt;/em&gt;, a library we developed which allows us to do the same thing as we do with &lt;em&gt;crossfilter&lt;/em&gt;, but delegate the OLAP computation to a SOLAP API for server side computation&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;&lt;a href=&quot;http://d3js.org/&quot;&gt;d3.js&lt;/a&gt;&lt;/em&gt;, a library for SVG renderings of charts&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;&lt;a href=&quot;https://github.com/ThomasRobertFr/dc.js&quot;&gt;dc.js&lt;/a&gt;&lt;/em&gt;, a modified version of the original &lt;em&gt;&lt;a href=&quot;http://dc-js.github.io/dc.js/&quot;&gt;dc.js&lt;/a&gt;&lt;/em&gt; for charts rendering of multidimensional crossfilter data&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The &lt;strong&gt;web app&lt;/strong&gt; in Python, &lt;em&gt;&lt;a href=&quot;https://github.com/ThomasRobertFr/analytics&quot;&gt;analytics&lt;/a&gt;&lt;/em&gt;, delivering the data visualization interface, extending the existing web app &lt;em&gt;&lt;a href=&quot;http://geonode.org/&quot;&gt;GeoNode&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;The &lt;strong&gt;SOLAP API&lt;/strong&gt; in Java called &lt;em&gt;&lt;a href=&quot;https://github.com/ThomasRobertFr/mandoline&quot;&gt;Mandoline&lt;/a&gt;&lt;/em&gt;, with its dependency &lt;em&gt;&lt;a href=&quot;http://www.olap4j.org/&quot;&gt;olap4j&lt;/a&gt;&lt;/em&gt;, allowing us to query GeoMondrian easily in JSON&lt;/li&gt;
+  &lt;li&gt;The &lt;strong&gt;OLAP&lt;/strong&gt; &lt;strong&gt;database&lt;/strong&gt; with a &lt;em&gt;&lt;a href=&quot;http://www.spatialytics.org/projects/geomondrian/&quot;&gt;GeoMondrian&lt;/a&gt;&lt;/em&gt; SOLAP server getting data from a &lt;em&gt;&lt;a href=&quot;http://www.postgresql.org/&quot;&gt;PostgreSQL&lt;/a&gt;&lt;/em&gt; database, doing the &lt;strong&gt;data processing&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;analyticsjs&quot;&gt;analytics.js&lt;/h2&gt;
+
+&lt;p&gt;The &lt;em&gt;analytics.js&lt;/em&gt; package represent the major part of the work that was done in this project. It is composed of various “namespaces”, each containing multiple “classes”. Of course, all this is JavaScript so “namespace” and “classes” are both objects. Here is the architecture of the package:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/data/blog/loganalysis_architecture_analytics_js.png&quot;&gt;&lt;img src=&quot;/data/blog/loganalysis_architecture_analytics_js.png&quot; alt=&quot;Architecture of analytics.js&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You can see:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;analytics.query&lt;/em&gt; simplifies the interrogation of the SOLAP API through QueryAPI by offering specialized functions&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;analytics.data&lt;/em&gt; offers data types representing OLAP elements and stores the data&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;analytics.state&lt;/em&gt; stores and gives functions to modify the OLAP state of the current analysis (to simplify, which elements of which level of which dimensions are analyzed)&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;analytics.display&lt;/em&gt; handles the interface (where is each chart and what is it displaying) and the interactions with the interface&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;analytics.charts&lt;/em&gt; offers charts classes that can be instantiated when you want to create a chart&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;cross-filtering-and-crossfilter-serverjs&quot;&gt;Cross-filtering and &lt;em&gt;crossfilter-server.js&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;One of the major “issue” we had to tackle was to provide an efficient cross-filtering on the interface. You can see this in the demonstration video above. Indeed, the filtering function is very useful for the user to be able to see how data are distributed across the elements of each dimension and explore the OLAP cube.&lt;/p&gt;
+
+&lt;p&gt;This filtering function will therefore be highly solicited and should be very efficient while still being able to handle big volumes of data.&lt;/p&gt;
+
+&lt;p&gt;There are actually two solutions to achieve this goal that can be represented on the following diagram:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/data/blog/loganalysis_crossfilter.png&quot;&gt;&lt;img src=&quot;/data/blog/loganalysis_crossfilter.png&quot; alt=&quot;Cross-filtering solutions&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;On this diagram, you can see the OLAP cube stored on the server on the left, and the charts we need to display on the right.&lt;/p&gt;
+
+&lt;h3 id=&quot;first-solution-crossfilter&quot;&gt;First solution: &lt;em&gt;Crossfilter&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;The first solution is to ask our OLAP server, GeoMondrian, to compute a smaller cube of data containing what we are currently studying. Here on the diagram, the cube in the middle contains data for French regions, years and mode of transportation.&lt;/p&gt;
+
+&lt;p&gt;This temporary cube is downloaded in the browser of the user and is then given to the library &lt;em&gt;crossfilter. Crossfilter&lt;/em&gt; will then be capable of computing projections of the cube on each dimension, and these projections will be used by dc.js to display the charts.&lt;/p&gt;
+
+&lt;p&gt;In this solution, the interface will be very responsive when filtering, because &lt;em&gt;crossfilter&lt;/em&gt; already has got all the data he need to compute the projections while taking filters into account. It will take less than a second to compute new projections taking new filters into account.&lt;/p&gt;
+
+&lt;p&gt;However, the defect of this solution is that the number of values in the temporary cube is the product of the number of elements studied in each dimension (e.g. for 6 regions, 2 years, 3 mode of transport we have 6 × 2 × 3 = 36 values), and this size grows exponentially. We will only support reasonable volumes because data will eventually become too big to be loaded in a reasonable time.&lt;/p&gt;
+
+&lt;h3 id=&quot;second-solution-crossfilter-server&quot;&gt;Second solution: &lt;em&gt;Crossfilter Server&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;The alternative solution would be to ask &lt;em&gt;GeoMondrian&lt;/em&gt; to directly compute the projection of the OLAP cube, after filtering, on each dimension studied, without computing the temporary cube that is too big.&lt;/p&gt;
+
+&lt;p&gt;In that case, the size of the data we load is the sum of the number of elements in the dimensions we study (e.g. for 6 regions, 2 years, 3 mode of transport we have 6 + 2 + 3 = 11 values), and this size grows linearly. We will be able to support big volumes because we load much fewer data (as long as GeoMondrian can process those volumes of course).&lt;/p&gt;
+
+&lt;p&gt;However, the drawback of this solution is that when the user changes the filters, we need to ask GeoMondrian to compute the projections on each dimension again, taking into account the new filters. This will significantly slow down the interface at each filtering because we need to query the server again while &lt;em&gt;crossfilter&lt;/em&gt; only needed to do a few computations locally.&lt;/p&gt;
+
+&lt;p&gt;Another issue with this solution is that our chart library, &lt;em&gt;dc.js&lt;/em&gt;, is depending on &lt;em&gt;Crossfilter&lt;/em&gt; as a data model. We can’t just give it some data.&lt;/p&gt;
+
+&lt;p&gt;To solve this problem and make this alternative solution possible, we developed a small library that we called &lt;em&gt;Crossfilter Server&lt;/em&gt;. This library has almost the same I/O interfaces as &lt;em&gt;Crossfilter&lt;/em&gt; (only the initialization should differ). And &lt;em&gt;Crossfilter Server&lt;/em&gt; will be able to reproduce &lt;em&gt;Crossfilter&lt;/em&gt;’s behavior without having the full temporary cube, and by delegating all the computation to an API that will, in our case, call &lt;em&gt;GeoMondrian.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Therefore, we can either use &lt;em&gt;dc.js&lt;/em&gt; with &lt;em&gt;Crossfilter&lt;/em&gt; or &lt;em&gt;Crossfilter Server&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;recap--final-solution&quot;&gt;Recap &amp;amp; final solution&lt;/h3&gt;
+
+&lt;p&gt;To recap, we have 2 possibilities:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/data/blog/loganalysis_crossfilter.png&quot;&gt;&lt;img src=&quot;/data/blog/loganalysis_crossfilter.png&quot; alt=&quot;Cross-filtering solutions&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Crossfilter&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;\(\mathcal{O}(n^p)\) \(\left(\prod_{i \in \mathcal{D}} n_i\right)\)&lt;br /&gt;
+&lt;strong&gt;\(\Rightarrow\) Resonable volumes&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Quick client side filtering &amp;amp; aggregates (&amp;lt; 10 ms)&lt;br /&gt;
+&lt;strong&gt;\(\Rightarrow\) Great responsivity&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Crossfilter Server&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;\(\mathcal{O}(n\times p)\) \(\left(\sum_{i \in \mathcal{D}} n_i\right)\)&lt;br /&gt;
+&lt;strong&gt;\(\Rightarrow\) Important volumes&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Server side filtering &amp;amp; aggregates, reload data (\(\approx\) 1s)&lt;br /&gt;
+&lt;strong&gt;\(\Rightarrow\) limited responsivity&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Our final solution was to use both of these solutions, using one or the other depending on the volume of data you are studying, and switching dynamically from one to the other when needed.&lt;/p&gt;
+
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;This article is of course a quick summary of a very long project. If you want to know more about this project, you can read the documentation available in &lt;a href=&quot;https://github.com/ThomasRobertFr/analytics/wiki&quot;&gt;the wiki of the GitHub repository&lt;/a&gt; and take a look at the code of the components listed above. If you want, you can even contribute to the project by making pull-requests to it.&lt;/p&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css&quot; integrity=&quot;sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq&quot; crossorigin=&quot;anonymous&quot; /&gt;
+
+&lt;!-- The loading of KaTeX is deferred to speed up page rendering --&gt;
+&lt;script defer=&quot;&quot; src=&quot;https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js&quot; integrity=&quot;sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+&lt;!-- To automatically render math in text elements, include the auto-render extension: --&gt;
+&lt;script defer=&quot;&quot; src=&quot;https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js&quot; integrity=&quot;sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI&quot; crossorigin=&quot;anonymous&quot; onload=&quot;renderMathInElement(document.body);&quot;&gt;&lt;/script&gt;
+
+</description>
+        <pubDate>Tue, 17 Mar 2015 00:00:00 +0100</pubDate>
+        <link>https://www.thomas-robert.fr/blog/en/2015/03/17/loganalysis-open-source-web-tool-for-geographic-business-intelligence/</link>
+        <guid isPermaLink="true">https://www.thomas-robert.fr/blog/en/2015/03/17/loganalysis-open-source-web-tool-for-geographic-business-intelligence/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Mon Résumé Des Concepts Du Big Data</title>
+        <description>&lt;p class=&quot;text-center&quot;&gt;
+&lt;img src=&quot;/data/blog/bigdata_prev.png&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Cet été, j’ai fait un stage dans une jeune startup normande : Creative Data. Un des sujets de mon stage a été de travailler sur les technologies du Big Data, et j’ai donc passé un certain temps à apprendre des choses sur le Big Data. Ce post présente les concepts principaux et quelques avis concernant ce domaine.&lt;/p&gt;
+
+&lt;p&gt;Au programme :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#bigdata3&quot;&gt;Pourquoi le &lt;em&gt;Big Data&lt;/em&gt; ?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bigdata4&quot;&gt;Vers une approche distribuée et « simplifiée »&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bigdata5&quot;&gt;Hadoop&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bigdata6&quot;&gt;Résumé des technologies &lt;em&gt;Big Data&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bigdata7&quot;&gt;Distributions Hadoop&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bigdata8&quot;&gt;Evolution du &lt;em&gt;Big Data&lt;/em&gt; : le développement de Spark et la fin de MapReduce&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bigdata9&quot;&gt;Hadoop dans le &lt;em&gt;cloud&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;pourquoi-le-big-data&quot;&gt;&lt;a name=&quot;bigdata3&quot;&gt;&lt;/a&gt;Pourquoi le &lt;em&gt;Big Data&lt;/em&gt; ?&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Tout d’abord, notons que dans ce post « technologies actuelles » signifie technologies non-Big Data, ce qui n’est bien sur pas vrai.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;La problématique à laquelle répond le &lt;em&gt;Big Data&lt;/em&gt; est souvent illustrée par la règle des 3V, décrivant trois composantes auxquelles le &lt;em&gt;Big Data&lt;/em&gt; doit répondre :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Volume :&lt;/strong&gt; Les volumes de données à traiter sont de plus en plus importants et les solutions de traitement actuelles, majoritairement peu &lt;em&gt;scalable&lt;/em&gt; ne permettent plus de répondre à une telle augmentation des volumes. Les solutions étant généralement centralisées sur une seule machine, il arrive en effet un moment où l’augmentation des capacités d’une machine n’est plus possible pour des raisons techniques ou des raisons de coût.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Variété :&lt;/strong&gt; Les données ne sont plus seulement issues de systèmes structurées (bases relationnelles) mais sont de plus en plus semi-structurées voire non-structurées (données textuelles, images, logs serveurs, etc.), alors que les outils de traitement traditionnels sont souvent prévus pour fonctionner avec des données structurées.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Vélocité :&lt;/strong&gt; Les temps de traitement sont parfois cruciaux, et les solutions actuelles peuvent avoir du mal à répondre en un temps suffisant, toujours pour des raisons de non-_scalabilité_.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Les solutions regroupées sous le terme de « &lt;em&gt;Big Data&lt;/em&gt; » permettent de répondre efficacement a au moins une voire généralement plusieurs de ces composantes. Dans ce sens, je considère que le « &lt;em&gt;Big Data&lt;/em&gt; » n’apporte pas en soi de nouveauté dans les concepts de traitement de données, mais plutôt dans leur implémentation permettant de répondre à de nouvelles contraintes.&lt;/p&gt;
+
+&lt;h3 id=&quot;vers-une-approche-distribuée-et-simplifiée&quot;&gt;&lt;a name=&quot;bigdata4&quot;&gt;&lt;/a&gt;Vers une approche distribuée et « simplifiée »&lt;/h3&gt;
+
+&lt;p&gt;Nous avons vu que les défauts des technologies actuelles face aux problématiques du &lt;em&gt;Big Data&lt;/em&gt; sont liées à leur rigueur dans le format des données (« Variété ») et à la non-_scalabilité_ des outils (« Volume » et « Vélocité »).&lt;/p&gt;
+
+&lt;p&gt;Pour répondre à ces problématiques, les solutions &lt;em&gt;Big Data&lt;/em&gt; sont hautement distribuées afin de répartir les traitements sur un &lt;em&gt;cluster&lt;/em&gt; de machines travaillant de concert. Cette approche distribuée permet de répondre « simplement » aux besoins de &lt;em&gt;scalabilité&lt;/em&gt; du &lt;em&gt;Big Data&lt;/em&gt; puisqu’il suffit de cumuler un ensemble de machines modestes jusqu’à atteindre les performances voulues, et d’en rajouter si les besoins augmentent, au lieu de modifier des machines existantes.&lt;/p&gt;
+
+&lt;p&gt;Par ailleurs, pour répondre à la problématique de variété, l’approche &lt;em&gt;Big Data&lt;/em&gt; est « simplifiée » dans le sens où elle est plus souple que les outils traditionnels tels que les systèmes de gestion de bases de données relationnelles (SGBDR). Par exemple, la plupart des solutions &lt;em&gt;Big Data&lt;/em&gt; permettant la lecture de données tabulaires appliquent le schéma à la lecture &lt;em&gt;(schema-on-read)&lt;/em&gt; : c’est lors de la lecture des données qu’on fait correspondre les données à un schéma de table ; à l’opposé des SGBDR fonctionnant en schéma à l’écriture : le schéma est appliqué aux données lors de l’écriture et les données sont enregistrées selon ce schéma.&lt;/p&gt;
+
+&lt;p&gt;Suivant le même principe de souplesse et de simplicité, la grande majorité des solutions de &lt;em&gt;Big Data&lt;/em&gt; laissent à l’utilisateur le soin de gérer le format de stockage des données, pouvant être un format brut type CSV ou un format sérialisé et/ou compressé comme le Parquet ; à l’opposé de la majorité des outils classiques tels les SGBDR qui gèrent elles même le stockage.&lt;/p&gt;
+
+&lt;h3 id=&quot;hadoop&quot;&gt;&lt;a name=&quot;bigdata5&quot;&gt;&lt;/a&gt;Hadoop&lt;/h3&gt;
+
+&lt;p&gt;Quelques recherches permettent de se rendre rapidement compte qu’Hadoop est la base de l’écosystème de technologies du &lt;em&gt;Big Data&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Inspiré des publications de Google sur GoogleFS et MapReduce, Hadoop est un framework en Java servant de socle à la plupart des technologies de &lt;em&gt;Big Data&lt;/em&gt;. Ce framework est constitué de deux éléments principaux :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Hadoop File System (HDFS) :&lt;/strong&gt; un système de fichier distribué permettant de stocker des fichiers sur le &lt;em&gt;cluster&lt;/em&gt; de machines comme s’il s’agissait d’un seul disque.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Hadoop MapReduce :&lt;/strong&gt; une implémentation du paradigme MapReduce permettant par héritage d’écrire simplement des traitements distribués sur les données stockées dans HDFS.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;La quasi-totalité des technologies de &lt;em&gt;Big Data&lt;/em&gt; utilisent HDFS, et une grande partie utilise également MapReduce.&lt;/p&gt;
+
+&lt;h3 id=&quot;résumé-des-technologies-big-data&quot;&gt;&lt;a name=&quot;bigdata6&quot;&gt;&lt;/a&gt;Résumé des technologies &lt;em&gt;Big Data&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;L’ensemble de ces technologies, plus ou moins interdépendantes et complémentaires, constituent un « écosystème Hadoop » énorme, que je vais présenter rapidement.&lt;/p&gt;
+
+&lt;p class=&quot;text-center&quot;&gt;&lt;img src=&quot;/data/blog/BigDataTechnologies.png&quot; alt=&quot;Technologies Big Data&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;La figure ci dessus présente le schéma récapitulatif décrivant les dépendances des différentes technologies. On y distingue plusieurs couches :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;l’infrastructure&lt;/strong&gt; c’est-à-dire les machines, pouvant être « &lt;em&gt;on-premise&lt;/em&gt; » donc gérées soi-même localement, ou louées et hébergées dans le &lt;em&gt;cloud&lt;/em&gt; ;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;le stockage&lt;/strong&gt; qui peut être HDFS ou d’autres systèmes de fichiers distribués offrant les mêmes interfaces ;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;l’interrogation / analyse&lt;/strong&gt; par diverses solutions se basant pour certaines sur MapReduce ;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;la visualisation&lt;/strong&gt; des résultats.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sans aller dans le détail, parmi ces technologies, on retrouve des solutions :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;de traitement de données&lt;/strong&gt; dont le traitement peut être écrit dans un langage de programmation classique (MapReduce, Spark…) ou via un langage de script dédié (Pig…)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;de bases de données&lt;/strong&gt; NoSQL orientés document, graphes, colonnes ou clé-valeur (MongoDB, Giraph, Neo4j, HBase, HCatalog…)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;d’interrogation de données&lt;/strong&gt; en pseudo-SQL transformant la requête en traitement distribués sur des fichiers de données distribués (Hive, Impala, BigQuery, Drill, Spark SQL…)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;de &lt;em&gt;Machine Learning&lt;/em&gt;&lt;/strong&gt; (Mahout, 0xdata H2O, Spark MLlib…)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;de traitement de flux&lt;/strong&gt; de données en temps réel (Storm, Spark Streaming…)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Cette liste est loin d’être exhaustive mais donne une bonne idées générale des différentes solutions.&lt;/p&gt;
+
+&lt;h3 id=&quot;distributions-hadoop&quot;&gt;&lt;a name=&quot;bigdata7&quot;&gt;&lt;/a&gt;Distributions Hadoop&lt;/h3&gt;
+
+&lt;p&gt;Il n’est pas rare d’avoir besoin d’un ensemble d’outils de cet écosystème, et les dépendances et incompatibilités n’étant pas toujours simple à gérer, des entreprises fournissent des « distributions Hadoop », c’est-à-dire un écosystème Hadoop pré-packagé et préconfiguré permettant de ne pas avoir à se soucier de ce travail d’installation, de configuration, de résolution de dépendances et d’incompatibilités entre les composants, pouvant s’avérer très pénible quand on est pas un expert.&lt;/p&gt;
+
+&lt;p&gt;Les principales distributions Hadoop sont celles de Cloudera, HortonWorks et MapR.&lt;/p&gt;
+
+&lt;h3 id=&quot;evolution-du-big-data-le-développement-de-spark-et-la-fin-de-mapreduce&quot;&gt;&lt;a name=&quot;bigdata8&quot;&gt;&lt;/a&gt;Evolution du &lt;em&gt;Big Data&lt;/em&gt; : le développement de Spark et la fin de MapReduce&lt;/h3&gt;
+
+&lt;p&gt;Chaque technologie de l’écosystème &lt;em&gt;Big Data&lt;/em&gt; a son usage, ses avantages et ses inconvénients. Le milieu du &lt;em&gt;Big Data&lt;/em&gt; étant en explosion et qui plus est un domaine où on cherche toujours à améliorer les performances des outils, le paysage technologique bouge très vite, et de nouvelles solutions naissent très régulièrement, avec pour objectif d’améliorer les technologies existantes.&lt;/p&gt;
+
+&lt;p&gt;Je pense que les meilleurs exemples pour illustrer cette évolution sont MapReduce et Spark.&lt;/p&gt;
+
+&lt;p&gt;MapReduce est un &lt;em&gt;pattern&lt;/em&gt; décrit par Google en 2004, implémenté peu de temps après dans le projet Nutch de Yahoo qui deviendra le projet Apache Hadoop en 2008. Autant dire qu’à l’échelle du &lt;em&gt;Big Data&lt;/em&gt;, MapReduce est un dinosaure. C’est un algorithme qui a l’avantage de supporter très bien d’énormes volumes de données, mais qui présente cependant des lenteurs, particulièrement visibles sur des volumes modestes.&lt;/p&gt;
+
+&lt;p&gt;Ces lenteurs de MapReduce font qu’il commence à être abandonné par les solutions voulant proposer des traitements quasi-instantanés sur les volumes modestes. Pour l’anecdote, Google a annoncé lors de la Google I/O 2014 que le paradigme MapReduce a déjà eu deux successeurs en interne, dont le dernier vient d’être proposé en solution &lt;em&gt;SaaS&lt;/em&gt; sous le nom Google Cloud Dataflow.&lt;/p&gt;
+
+&lt;p&gt;On peut ainsi constater que toutes les solutions se voulant rapide n’utilisent pas MapReduce mais interrogent directement le système HDFS. La solution la plus emblématique est Spark, un outil qui permet d’écrire des applications distribués très simplement et qui propose des bibliothèques de traitement classique, mais également d’interrogation en SQL, de &lt;em&gt;Machine Learning&lt;/em&gt;, de graphes, et de traitement en temps réel ; et qui peut travailler indifféremment sur des données sur disque ou en chargées en RAM pour de bien meilleures performances.&lt;/p&gt;
+
+&lt;p&gt;Bien qu’encore jeune, Spark possède une communauté énorme et est un des projets Apache qui se développe le plus vite. Cette solution s’annonce un peu comme le successeur de MapReduce d’autant qu’il a l’avantage de centraliser une grande partie des outils nécessaires dans un &lt;em&gt;cluster&lt;/em&gt; Hadoop.&lt;/p&gt;
+
+&lt;h3 id=&quot;hadoop-dans-le-cloud&quot;&gt;&lt;a name=&quot;bigdata9&quot;&gt;&lt;/a&gt;Hadoop dans le &lt;em&gt;cloud&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;Comme nous l’avons vu, il y a deux types d’infrastructures possibles pour supporter un &lt;em&gt;cluster&lt;/em&gt; Hadoop : une infrastructure « &lt;em&gt;on-premise&lt;/em&gt; » où les machines sont achetées, hébergées et gérées soi-même ; ou une infrastructure gérée dans le &lt;em&gt;cloud&lt;/em&gt; type &lt;em&gt;Infrastructure as a Service (IaaS)&lt;/em&gt; où on se contente de louer des machines sans se soucier de la gestion. Voyons plus en détail ce second cas.&lt;/p&gt;
+
+&lt;p&gt;Pour faire du Big Data hébergé, il est possible de louer des serveurs chez des hébergeurs classiques (OVH, 1&amp;amp;1, Netissime, etc.) qui louent des serveurs « standard » au mois. Cette approche est finalement identique à l’approche &lt;em&gt;on-premise&lt;/em&gt; sauf que l’on a pas besoin de gérer les machines. Cela ne correspond pas selon moi à l’approche cloud.&lt;/p&gt;
+
+&lt;p&gt;La « vraie » approche cloud passe par des hébergeurs spécialisés (Amazon et Google en particulier) qui proposent un panel de services destinés au traitement &lt;em&gt;scalable&lt;/em&gt; de données et proposant la location de machines virtuelles à l’heure ou à la minute. Ces offres proposent un ensemble de services poussant en particulier à séparer le stockage qui est facturé au volume (Amazon S3, Google Cloud Storage) du &lt;em&gt;cluster&lt;/em&gt; de traitement facturé au temps de traitement (Amazon Elastic Compute Cloud (EC2), Google Compute Engine). Ainsi, alors que le stockage est persistant, le &lt;em&gt;cluster&lt;/em&gt; de traitement est lui éphémère et permet ainsi de provisionner dynamiquement le nombre de machines nécessaires pour l’exécution d’un traitement puis de les dé-provisionner.&lt;/p&gt;
+
+&lt;p&gt;Cette nouvelle approche, bien plus souple permet de faire des économies importantes si le &lt;em&gt;cluster&lt;/em&gt; a une charge très variable. Ainsi, MapR (fournisseur de distribution Hadoop) a fait la démonstration du déploiement d’un &lt;em&gt;cluster&lt;/em&gt; de 2103 machines pour trier 1,5 To de données en 1 minute pour un coût de 20$.&lt;/p&gt;
+
+&lt;p&gt;C’est une approche assez disruptive du modèle classique puisqu’il est nécessaire de prévoir des mécanismes de provisionnement et de configuration automatisés des machines, mais permet de profiter d’une souplesse exceptionnelle en capacité de traitement, inatteignable sur un modèle classique.&lt;/p&gt;
+
+&lt;p&gt;Il est important de noter qu’Amazon s’est emparé de ce marché depuis plusieurs années, lançant par exemple Amazon EC2 en 2006 et Amazon Elastic MapReduce en 2009, et est actuellement en monopole sur les services de cloud Big Data. En comparaison, Google n’a lancé Google Compute Engine qu’en 2012. Amazon a donc une large avance commerciale dans le domaine, alors que Google, qui dispose pour ses besoins internes de technologies d’hébergement et de &lt;em&gt;Big Data&lt;/em&gt; de pointe, commence à peine à les ouvrir au public. Il semble cependant que ce soit la direction que prend Google, qui rend petit à petit accessible au public des outils &lt;em&gt;Big Data&lt;/em&gt; très intéressants et innovants utilisant des technologies internes comme BigQuery (interrogation de données très rapide en SQL) ou Google Cloud Dataflow (successeur interne à MapReduce).&lt;/p&gt;
+</description>
+        <pubDate>Sat, 06 Sep 2014 00:00:00 +0200</pubDate>
+        <link>https://www.thomas-robert.fr/blog/fr/2014/09/06/mon-resume-des-concepts-du-big-data/</link>
+        <guid isPermaLink="true">https://www.thomas-robert.fr/blog/fr/2014/09/06/mon-resume-des-concepts-du-big-data/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>My Sum-Up Of Big Data Concepts</title>
+        <description>&lt;p class=&quot;text-center&quot;&gt;
+&lt;img src=&quot;/data/blog/bigdata_prev.png&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;This summer, I carried out an internship in a young startup in Rouen, Normandy, France: Creative Data. Part of the subject of my internship was to work on Big Data technologies so I spent quite some time learning things about Big Data. This post sums up the main concepts and my thoughts about this.&lt;/p&gt;
+
+&lt;p&gt;We will see:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#bigdata3&quot;&gt;Why Big Data?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bigdata4&quot;&gt;To a distributed and simplified approach&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bigdata5&quot;&gt;Hadoop&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bigdata6&quot;&gt;Sum-up of Big Data technologies&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bigdata7&quot;&gt;Hadoop distributions&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bigdata8&quot;&gt;Big Data evolution: the progression of Spark and the end of MapReduce&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bigdata9&quot;&gt;Hadoop in the cloud&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;bigdata3&quot;&gt;Why Big Data?&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Note that in this post, by “current technologies”, I mean non-Big Data technologies, which is of course not true.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;People often say that Big Data answers at least one of the 3V problems, that is:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; The volume of data that we need to process increase dramatically, and classical solutions often don’t scale well and have problems with this volume increase. Current solutions run on one machine and adding capacity to one machine isn’t possible for technical and cost reasons.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Variety:&lt;/strong&gt; Data aren’t always structured (coming from relational databases (RDBMS)) but more and more semi-structured or even not-structured (texts, images, logs, etc.). Current solutions often works with structured data.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Velocity:&lt;/strong&gt; Time can be crucial, and classical solutions can be slow, still for scalability reasons.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Big Data solutions aim to respond to at least one, and often more of these components. I personally consider that Big Data do not bring new data processing techniques (techniques such as Business Intelligence or Data Mining), but rather new implementations of those general techniques to comply with new constrains due to Big Data.&lt;/p&gt;
+
+&lt;h3 id=&quot;bigdata4&quot;&gt;To a distributed and simplified approach&lt;/h3&gt;
+
+&lt;p&gt;We have seen that the problems with current solutions is that they are too strict concerning data format (Variety) and non-scalable (Volume and Velocity).&lt;/p&gt;
+
+&lt;p&gt;To meet the requirements we’ve seen, Big Data technologies are highly distributed to run processes on a cluster of multiple servers working together. This distrusted approach allows to “simply” meet scalability requirement and allows to cumulate modest servers and add new machines up to the point when you meet the performance that you want for your cluster.&lt;/p&gt;
+
+&lt;p&gt;To meet the variety requirement, Big Data approach are often “simplified” in the sense that it is much more flexible than RDBMS. For example, most Big Data solution use a schema-on-read approach that is to say you match your raw data to your schema when to read the data, whereas RDBMS often are schema-on-write so your data must match a predefined schema when you write it.&lt;/p&gt;
+
+&lt;p&gt;Still in the same idea of simplicity, most of Big Data solutions let the user choose in which format data is stored, either a raw format such as CSV or a serialized/compressed one like Parquet, whereas most RDBMS handle data storage in their own way.&lt;/p&gt;
+
+&lt;h3 id=&quot;bigdata5&quot;&gt;Hadoop&lt;/h3&gt;
+
+&lt;p&gt;A few research allows you to realize that Hadoop is the core of the Big Data ecosystem.&lt;/p&gt;
+
+&lt;p&gt;Inspired by Google publications about GoogleFS and MapReduce, Hadoop is a Java framework used by most Big Data technologies. This framework is composed of:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Hadoop File System (HDFS):&lt;/strong&gt; a distributed file system that allows you to store files on a cluster of servers like if it were just one disk&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Hadoop MapReduce:&lt;/strong&gt; an implementation of MapReduce paradigm that allows you to write distrusted data processes by simple inheritance. The data processed are stored on HDFS.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Almost all Big Data technologies use HDFS, and a lot of also use MapReduce.&lt;/p&gt;
+
+&lt;h3 id=&quot;bigdata6&quot;&gt;Sum-up of Big Data technologies&lt;/h3&gt;
+
+&lt;p&gt;All those technologies constitute a huge Hadoop ecosystem that I will present quickly. This figure below present the most important Big Data solutions in the Hadoop ecosystem and the dependencies between them.&lt;/p&gt;
+
+&lt;p class=&quot;text-center&quot;&gt;&lt;img src=&quot;/data/blog/BigDataTechnologiesEn.png&quot; alt=&quot;Big Data Technologies&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can see four layers:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;The infrastructure&lt;/strong&gt; that is to say machines that can either be on-premise (managed locally) or rented and hosted in the cloud.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;The storage&lt;/strong&gt; that can either be HDFS or another distributed file system that implements the same interfaces.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;The interrogation / analysis&lt;/strong&gt; through various solutions using MapReduce or not.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;The visualization&lt;/strong&gt; of the results.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Without going into details, we can find solutions for:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Data processing&lt;/strong&gt; with classical programming (MapReduce, Spark, …) or through a dedicated language (Pig, …)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;NoSQL databases&lt;/strong&gt; document oriented, graph oriented, column oriented, key-value oriented (MongoDB, Giraph, Neo4j, HBase, HCatalog, …)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Data interrogation&lt;/strong&gt; in pseudo-SQL, translating the request in a distributed data process (Hive, Impala BigQuery, Drill, Spark SQL, …)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Machine Learning&lt;/strong&gt; (Mahout, 0xdata H2O, Spark MLlib, …)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Dataflow processing&lt;/strong&gt; in real-time (Storm, Spark Streaming…)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This list of technologies is far from being exhaustive but it give a quite good overview of the various solutions.&lt;/p&gt;
+
+&lt;h3 id=&quot;bigdata7&quot;&gt;Hadoop distributions&lt;/h3&gt;
+
+&lt;p&gt;It is common to need more than one of these tools, and the dependencies and incompatibilities aren’t always easy to handle. That is why companies provide “Hadoop distributions” that is to say a prepackaged and preconfigured Hadoop ecosystem that allows you not to care about all this work of installation, configuration, dependencies and incompatibilities handling that can be quite unpleasant when you’re not an expert.&lt;/p&gt;
+
+&lt;p&gt;The main Hadoop distributions are made by Cloudera, HortonWorks and MapR.&lt;/p&gt;
+
+&lt;h3 id=&quot;bigdata8&quot;&gt;Big Data evolution: the progression of Spark and the end of MapReduce&lt;/h3&gt;
+
+&lt;p&gt;Each technology in the Big Data ecosystem has its usage, its pros and cons. Because of the boom of Big Data and the fact that it’s a field where we always look for better performance, the ecosystem evolves very quickly and new solutions appears regularly, aiming to improve the existing technologies.&lt;/p&gt;
+
+&lt;p&gt;I think that the best examples to illustrate this evolution are MapReduce and Spark.&lt;/p&gt;
+
+&lt;p&gt;MapReduce is a pattern described by Google in 2004, implemented quickly in Yahoo’s Nutch project that will become Apache Hadoop in 2008. In the history of Big Data, MapReduce is a dinosaur. It’s an algorithm that scales well on big volumes but it has some slowness, particularly visible on modest volumes.&lt;/p&gt;
+
+&lt;p&gt;Because of slowness of MapReuce, the solutions that wants to offer short processing time on modest volumes do not use MapReduce. Just for the anecdote, during Google I/O 2014, Google said that  MapReduce paradigm already had 2 successors internally. The last one have been made available in SaaS under the name Google Cloud Dataflow.&lt;/p&gt;
+
+&lt;p&gt;We can therefore notice that all solutions that claim to be quick do not use MapReduce and use HDFS directly instead. The most significant example is Spark, a tool that allows you to write distrusted data processes very easily. It offers libraries for classical data processing, but also SQL interrogation, Machine Learning, graphs and real-time processing. It can either work on HDFS or with data in RAM for much better performance.&lt;/p&gt;
+
+&lt;p&gt;Even if Spark is still young, it has a huge community and is one of the most active Apache projects. This solution appears to be the successor of MapReduce and has advantage of centralizing most of the tools necessary in a Hadoop cluster.&lt;/p&gt;
+
+&lt;h3 id=&quot;bigdata9&quot;&gt;Hadoop in the cloud&lt;/h3&gt;
+
+&lt;p&gt;As we’ve seen, there are two ways for a Hadoop infrastructure: an on-premise infrastructure where you buy, host and maintain multiple servers (various activities that require skills and represent a cost); an infrastructure in the cloud with IaaS (Infrastructure as a Service) model where you rent servers that are hosted and managed for you. Let’s see this second case with more details.&lt;/p&gt;
+
+&lt;p&gt;For hosted Big Data, we can rent servers from classic hosters (for example 1&amp;amp;1) that rent servers for a month. However, this approach is technically identical to the on-premise approach except that you don’t have to manage the servers. According to me, this is not a real cloud approach.&lt;/p&gt;
+
+&lt;p&gt;The “true” cloud way comes from specialized hosting platform (particularly from Amazon and Google) that propose various services for scalable data processing, especially the rent of virtual machines for hours or even minutes if you want. Those offers include multiple services that pushes you into splitting the storage billed for the volume (Amazon S3, Google Cloud Storage) and the processing cluster billed for the processing time (Amazon Elastic Compute Cloud (EC2), Google Compute Engine). Therefore, whereas the storage is persistent, the processing cluster is ephemeral, allowing you to provision the necessary number of virtual machines for a process and delete those VMs once the process is finished.&lt;/p&gt;
+
+&lt;p&gt;This new approach is much more flexible and allows important saving if your cluster has a variable load. For example, MapR (Hadoop distribution provider) deployed 2103 VMs to sort 1.5 TB of data in 1 minutes for a cost of $20.&lt;/p&gt;
+
+&lt;p&gt;It is a quite disruptive approach because you need to prepare some automated deployment and configuration tools, but it offers an exceptional flexibility regarding the processing capacity of your cluster, impossible to reach with a standard approach.&lt;/p&gt;
+
+&lt;p&gt;It is important to notice that Amazon took this market a few years ago, launching Amazon EC2 in 2006 and Amazon Elastic MapReduce in 2009. Amazon currently trust Big Data cloud services. In comparison, Google launched Google Compute Engine in 2012. Amazon therefore have a big commercial advantage, whereas Google is just starting opening their incredibly powerful internal technologies to the public. However, it seems that’s the way Google is taking, because we can see various great Big Data tools opening to the public, such as BigQuery (very quick SQL interrogation of data) or Google Cloud Dataflow (internal successor to MapReduce).&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 06 Sep 2014 00:00:00 +0200</pubDate>
+        <link>https://www.thomas-robert.fr/blog/en/2014/09/06/my-sum-up-of-big-data-concepts/</link>
+        <guid isPermaLink="true">https://www.thomas-robert.fr/blog/en/2014/09/06/my-sum-up-of-big-data-concepts/</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

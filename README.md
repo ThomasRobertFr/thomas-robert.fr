@@ -462,7 +462,6 @@ On peut choisir parmi les styles suivants :
 
 * `style-gray` pour un style gris (par défaut fond gris clair), suivi éventuellement des variateurs `darken` (fond gris un peu plus foncé), `dark` (fond sombre) ou `darker` (fond très sombre) (ex : `header-style: style-gray dark`)
 * `style-color-<X>` pour un fond coloré (avec `<X>` entre `1` et `5`), par défaut le texte est foncé sur fond clair, on peut avoir l'inverse avec le variateur `dark` (ex : `header-style: style-color-2 dark`)
-* `particles` pour avoir un nuage de particules animé
 * `trianglify` pour avoir un fond constitué d'une sorte de dégradé de triangles, ce fond est généré aléatoirement et sera donc unique et différent pour chaque page
 * `cover-image` pour indiquer que l'on veut mettre une image "de couverture" en fond du bloc d'en-tête, on peut ajouter le variateur `cover-image-process` pour que l'image indiquée soit traitée pour que le texte inscrit dessus soit plus lisible (flou, diminution du contraste, changement de luminosité). On peut ajouter le variateur `dark` pour que le texte soit clair dans le cas où l'image de fond est sombre. L'URL de l'image à utiliser en fond doit être indiqué dans le paramètre `header-image`. (ex : `header-style: cover-image dark` et `header-image: images/headers/supercomputer1.jpg`) _Note : des fonds vous sont proposés dans le dossier images/headers_
 * On peut ajouter le variateur `large` pour avoir un en-tête avec plus de marge en haut et en bas, pratique si on veut mettre davantage en valeur une image de fond par exemple (ex : `cover-image dark large`)
@@ -504,7 +503,7 @@ Comme indiqué précédemment le contenu du fichier d'une page `onepage` devrait
 * `title-short` : Titre pour le menu
 * `no-navlink` _(def : false)_ : Ne pas afficher dans le menu
 * `no-title` _(def : false)_ : Ne page afficher le titre dans le bloc
-* `class` _(optionnel)_ : Style du bloc à utiliser, similaire au `header-style` du layout `page`, sauf qu'il s'agit ici du style de tout le bloc et pas juste du titre. Les styles sont les même que pour `page`, sauf `trianglify` et `particles` qui ne sont pas disponibles.  
+* `class` _(optionnel)_ : Style du bloc à utiliser, similaire au `header-style` du layout `page`, sauf qu'il s'agit ici du style de tout le bloc et pas juste du titre. Les styles sont les même que pour `page`, sauf `trianglify` qui n'est pas disponible.  
   Pour le style `cover-image` l'URL de l'image est à indiquer dans le paramètre `bg-image` au lieu de `header-image`.  
   Par défaut il n'y a pas de style particulier donc le texte est noir sur fond blanc.  
   **En bref styles possibles : (`style-gray + [ darken | dark | darker]`, `style-color-<1-5> + [dark]`, `cover-image`, `+ [large]`)**  
@@ -533,17 +532,15 @@ contacts:
   - type: email
   - type: phone
   - type: address
-  - type: twitter
   - type: linkedin
   - type: github
-  - type: google-plus
   - type: custom
     icon: soundcloud
     text: Soundcloud
     url: http://soundcloud.com/username
 ```
 
-Chaque élément de la liste contient donc la valeur `type` qui indique le type de contact, si c'est un contact `email`, `phone`, `address`, `twitter`, `linkedin`, `github` ou `google-plus` les infos seront cherchées dans le dictionnaire `author` du fichier `_config.yml` qui doit avoir le format suivant :
+Chaque élément de la liste contient donc la valeur `type` qui indique le type de contact, si c'est un contact `email`, `phone`, `address`, `linkedin` ou `github` les infos seront cherchées dans le dictionnaire `author` du fichier `_config.yml` qui doit avoir le format suivant :
 
 ```yaml
 # Portion fichier _config.yml
@@ -552,10 +549,8 @@ author:
   email: firstname.lastname@lip6.fr
   phone: 01 23 45 67 89 # Si fax, mettre "Tel: 01 23 45 67 89 \n Fax: 01 23 45 67 89"
   address: "Couloir 26-00, Bureau 525 \n 4, place Jussieu \n 75005 Paris \n France"
-  twitter: username
   linkedin: username
   github: username
-  google-plus: username
 ```
 
 Vous pouvez ajouter des contacts à la main comme indiqué dans l'exemple ci dessus :
@@ -597,7 +592,7 @@ _"<" : indique qu'un template "hérite" les paramètres d'un autre_
     * `intro` : Abstract
     * `parent` : Nom du fichier de la page parent
     * `show-children` _(def : false)_ : Afficher la liste des pages enfants
-    * `header-style`  _(def : trianglify sauf si changé dans config)_ : Style de l'en-tête (`style-gray + [ darken | dark | darker]`, `style-color-<1-5> + [dark]`, `cover-image`, `trianglify`, `particles`, `+ [large]`)
+    * `header-style`  _(def : trianglify sauf si changé dans config)_ : Style de l'en-tête (`style-gray + [ darken | dark | darker]`, `style-color-<1-5> + [dark]`, `cover-image`, `trianglify`, `+ [large]`)
     * `header-image` si `header-style: cover-image` : URL de l'image, cf `images/headers` pour des suggestions
 * **post** < **page**
     * `date` : format `YYYY-MM-DD HH:MM:SS ±TZ` ou `YYYY-MM-DD HH:MM` ou `YYYY-MM-DD`
@@ -641,10 +636,10 @@ Les fichiers de données YAML contenant les publications doivent contenir une li
   urls:
     - url: /pdfs/publis/mantra.pdf # URL du lien
       title: Papier # Titre du lien
-      style: primary # Style bootstrap du bouton (default : gris, primary (par defaut) : bleu foncé, info : bleu clair, success: vert, warning : orange, danger : rouge)
+      style: primary # Style du bouton (default : gris, primary (par defaut) : bleu foncé, info : bleu clair, success: vert, warning : orange, danger : rouge)
     - url: http://... # URL du lien
       title: Demo video # Titre du lien
-      style: info # Style bootstrap du bouton (default : gris, primary (par defaut) : bleu foncé, info : bleu clair, success: vert, warning : orange, danger : rouge)
+      style: info # Style du bouton (default : gris, primary (par defaut) : bleu foncé, info : bleu clair, success: vert, warning : orange, danger : rouge)
     # ...
   # Entrée BibTex (optionnel)
   bibtex: |
@@ -681,9 +676,9 @@ Les fichiers de données YAML contenant les projets doivent contenir une liste d
   urls:
     - url: http://... # URL du lien
       title: Site du projet # Titre du lien
-      style: default # Style bootstrap du bouton (default : gris, primary (par defaut) : bleu foncé, info : bleu clair, success: vert, warning : orange, danger : rouge)
+      style: default # Style du bouton (default : gris, primary (par defaut) : bleu foncé, info : bleu clair, success: vert, warning : orange, danger : rouge)
     - url: http://... # URL du lien
       title: Site du projet # Titre du lien
-      style: default # Style bootstrap du bouton (default : gris, primary (par defaut) : bleu foncé, info : bleu clair, success: vert, warning : orange, danger : rouge)
+      style: default # Style du bouton (default : gris, primary (par defaut) : bleu foncé, info : bleu clair, success: vert, warning : orange, danger : rouge)
     # ...
 ```

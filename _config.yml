@@ -1,6 +1,6 @@
 # Website title & description (the description is used in the HTML <head>, read by Google and co)
 title: Thomas Robert
-description: ""
+description: "Thomas Robert, CTO of Heuritech: data architecture, AI and computer vision. PhD in deep learning from Sorbonne Université."
 
 # Your personal infos (used for the sidebar)
 author:
@@ -15,19 +15,18 @@ author:
 
 # Technical setup
 baseurl: "" # url of your webpage if not at the root of the domain (leading /, no trailing /)
-url: "http://www.thomas-robert.fr" # the base hostname & protocol for your site (no trailing /)
+url: "https://www.thomas-robert.fr" # the base hostname & protocol for your site (no trailing /)
 header-default-style: trianglify # default page header style (see styles in user documentation)
-google-analytics: UA-12985376-1 # your google analytics code if you want visit stats (uncomment to enter)
 
 plugins:
   - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Detailed technical setup
 sass:
   sass_dir: /assets/css/
   style: compressed
-  # old Bootstrap 3 / SCSS syntax: hide dart-sass deprecation noise
-  silence_deprecations: [import, global-builtin, color-functions, slash-div, if-function]
 timezone: Europe/Paris
 include: ['CNAME']
 exclude: ['README.md']
