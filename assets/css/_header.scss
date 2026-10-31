@@ -123,6 +123,27 @@ body.scrolled .navbar-default .navbar-brand .brand-more {
 		padding-top: 8px;
 	}
 }
+// Tablet: full-width bar and a smaller name once opened, so the menu stays on one line
+@media (min-width: 768px) and (max-width: 991px) {
+	#header .container {
+		width: auto;
+	}
+	// Keep the T and R initials at full size, shrink only the letters that slide in
+	.navbar-default .navbar-brand .brand-more {
+		font-size: 22px;
+		position: relative;
+		top: 2px; // centered in the same 40px line, so its baseline sits 2px above the initials'
+	}
+	.navbar-default .navbar-nav {
+		>li > a {
+			padding-left: 6px;
+			padding-right: 6px;
+		}
+		>li.lang-selector {
+			padding-right: 15px;
+		}
+	}
+}
 @media (max-width: 767px) {
 	.navbar-default .navbar-nav {
 		>li {
