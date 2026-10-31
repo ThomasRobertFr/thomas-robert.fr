@@ -1,5 +1,6 @@
 ---
 title: My Sum-Up Of Big Data Concepts
+description: "A summary of the main Big Data concepts (Hadoop, MapReduce, NoSQL…) written after an internship working on Big Data technologies."
 lang-ref: my-sum-up-of-big-data-concepts
 redirect_from: /en/my-sum-up-of-big-data-concepts/
 ---

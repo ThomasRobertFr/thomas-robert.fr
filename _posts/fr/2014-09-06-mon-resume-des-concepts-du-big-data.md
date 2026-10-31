@@ -1,5 +1,6 @@
 ---
 title: Mon Résumé Des Concepts Du Big Data
+description: "Résumé des principaux concepts du Big Data (Hadoop, MapReduce, NoSQL…), écrit après un stage sur les technologies Big Data."
 lang-ref: my-sum-up-of-big-data-concepts
 redirect_from: /mon-resume-des-concepts-du-big-data/
 ---

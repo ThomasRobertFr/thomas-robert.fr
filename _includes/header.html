@@ -33,7 +33,7 @@
           {% if a_page.title and a_page.no-title != true and a_page.no-navlink != true %}
             <!-- unless page.layout == "onepage" and page.url == a_page.url or a_page.parent -->
             {% unless a_page.parent %}
-            <li {% if page.url == a_page.url %}class="active"{% endif %}><a href="{{ a_page.url | prepend: site.baseurl }}">{{ a_page.title | escape }}</a></li>
+            <li {% if page.url == a_page.url %}class="active"{% endif %}><a href="{{ a_page.url | prepend: site.baseurl }}">{{ a_page.nav-title | default: a_page.title | escape }}</a></li>
             {% endunless %}
           {% endif %}
         {% endfor %}

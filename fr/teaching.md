@@ -1,5 +1,6 @@
 ---
 title: Cours
+description: "Cours et TP donnés par Thomas Robert : deep learning et vision par ordinateur (M2), réseaux convolutionnels (M2) et Java (L2), avec sujets et code."
 lang: fr
 lang-ref: teaching
 layout: page

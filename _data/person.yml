@@ -1,0 +1,28 @@
+# Structured data (schema.org Person) output on the home pages, see _includes/person-jsonld.html
+# LinkedIn, GitHub & X come from `author` in _config.yml
+
+description:
+  en: CTO of Heuritech (a Luxurynsight AI technology), working on data architecture, AI and computer vision. PhD in deep learning for computer vision from Sorbonne Université.
+  fr: CTO d'Heuritech (une technologie IA de Luxurynsight), spécialisé en architecture data, IA et computer vision. Docteur en deep learning pour la vision par ordinateur de Sorbonne Université.
+
+job-title:
+  en: CTO
+  fr: CTO
+
+works-for:
+  name: Heuritech
+  url: https://www.heuritech.com/
+
+alumni-of:
+  - name: Sorbonne Université
+    url: https://www.sorbonne-universite.fr/
+  - name: INSA Rouen Normandie
+    url: https://www.insa-rouen.fr/
+
+knows-about:
+  en: [Data architecture, Data engineering, Artificial intelligence, Computer vision, Deep learning, Machine learning, Cloud infrastructure]
+  fr: [Architecture data, Data engineering, Intelligence artificielle, Vision par ordinateur, Deep learning, Machine learning, Infrastructure cloud]
+
+# Other profiles about the same person (Google Scholar, ORCID, theses.fr...)
+same-as:
+  - https://scholar.google.com/citations?user=v6oayvkAAAAJ

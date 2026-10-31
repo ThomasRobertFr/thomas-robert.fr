@@ -4,6 +4,7 @@
 
   <title>{% if page.head-title %}{{ page.head-title | escape }}{% unless page.no-site-title %} | {% endunless %}{% elsif page.title %}{% unless page.url == "/" or page.url == "/index.html" %}{{ page.title | escape }}{% unless page.no-site-title %} | {% endunless %}{% endunless %}{% endif %}{% unless page.no-site-title %}{{ site.title | escape }}{% endunless %}</title>
   {% seo title=false %}
+  {% if page.lang-ref == "home" %}{% include person-jsonld.html %}{% endif %}
 
   {% comment %} hreflang alternates: pages / posts sharing the same lang-ref {% endcomment %}
   {% if page.lang-ref %}
@@ -14,6 +15,9 @@
     {% if translations.size > 1 %}
       {% for translation in translations %}
   <link rel="alternate" hreflang="{{ translation.lang }}" href="{{ translation.url | prepend: site.baseurl | prepend: site.url }}">
+        {% if translation.lang == "fr" %}
+  <link rel="alternate" hreflang="x-default" href="{{ translation.url | prepend: site.baseurl | prepend: site.url }}">
+        {% endif %}
       {% endfor %}
     {% endif %}
   {% endif %}

@@ -1,5 +1,6 @@
 ---
 title: Fiches
+description: "Fiches de révision gratuites en PDF : Terminale S / Bac S, INSA Rouen (STPI, ASI) et code de la route, rédigées par Thomas Robert pendant ses études."
 lang: fr
 lang-ref: fiches
 layout: page

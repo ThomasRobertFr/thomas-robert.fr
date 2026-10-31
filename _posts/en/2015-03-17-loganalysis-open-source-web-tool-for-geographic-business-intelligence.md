@@ -1,5 +1,6 @@
 ---
 title: "LogAnalysis: Open-Source Web Tool For Geographic Business Intelligence"
+description: "LogAnalysis, an open-source web tool making geographic business intelligence (GeoBI) easy, built as an INSA Rouen industrial student project."
 lang-ref: loganalysis-open-source-web-tool-for-geographic-business-intelligence
 redirect_from: /en/loganalysis-open-source-web-tool-for-geographic-business-intelligence/
 ---

@@ -4,7 +4,7 @@
     {% if page.class contains "cover-image" %}style="background-image: url('{{ page.bg-image | prepend: site.baseurl }}')"{% endif %}>
     <div class="container onepage-block-header">
         <div class="picture">
-            <img src="{{ site.author.photo | prepend: site.baseurl }}" alt="" />
+            <img src="{{ site.author.photo | prepend: site.baseurl }}" alt="{{ site.author.name }}" width="200" height="200" />
         </div>
         <div class="text">
             {% if page.no-title != true %}

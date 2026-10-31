@@ -12,11 +12,16 @@ author:
   email: thomas@thomas-robert.fr
   linkedin: thomasrobertfr
   github: ThomasRobertFr
+  twitter: ThomasR_Fr # X handle, used for twitter:creator
 
 # Technical setup
 baseurl: "" # url of your webpage if not at the root of the domain (leading /, no trailing /)
 url: "https://www.thomas-robert.fr" # the base hostname & protocol for your site (no trailing /)
 header-default-style: trianglify # default page header style (see styles in user documentation)
+
+# X / Twitter account of the site (twitter:site in social previews)
+twitter:
+  username: ThomasR_Fr
 
 plugins:
   - jekyll-redirect-from
@@ -40,6 +45,15 @@ collections:
   - onepage_resume_fr
 
 defaults:
+  # social preview (jekyll-seo-tag): photo unless a page sets its own `image`,
+  # square so the small "summary" card
+  - scope:
+      path: ""
+    values:
+      image: /data/images/photo.jpg
+      twitter:
+        card: summary
+
   # posts
   - scope:
       path: _posts
@@ -50,11 +64,13 @@ defaults:
     values:
       permalink: /blog/fr/:year/:month/:day/:title/
       lang: fr
+      locale: fr_FR
   - scope:
       path: _posts/en
     values:
       permalink: /blog/en/:year/:month/:day/:title/
       lang: en
+      locale: en_US
 
   # default layout for pages is "fr" and "en"
   - scope:
@@ -63,12 +79,14 @@ defaults:
       order: 50
       layout: page
       lang: en
+      locale: en_US
   - scope:
       path: fr
     values:
       order: 50
       layout: page
       lang: fr
+      locale: fr_FR
   
   # fiches scope
   - scope:
