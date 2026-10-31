@@ -6,7 +6,6 @@ class: large cover-image parallax
 layout: onepage-block-contact
 contacts:
   - type: email
-  - type: twitter
   - type: linkedin
   - type: github
 ---

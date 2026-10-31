@@ -1,5 +1,4 @@
 body {
-    text-align: justify;
     position: relative;
     line-height: 1.5em;
     font-weight: 300;
@@ -128,6 +127,11 @@ a {
         max-width: 90%;
         @media (min-width: 992px) { max-width: 75%; }
     }
+}
+
+// justified text only for long-form blog articles
+.post .post-content p {
+    text-align: justify;
 }
 
 .post-excerpt-entry {

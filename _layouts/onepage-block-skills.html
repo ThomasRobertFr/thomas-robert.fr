@@ -85,12 +85,6 @@ layout: onepage-block
 {% endfor %}
 
 <div class="clearfix"></div>
-<div class="caption text-right col-xs-12">
-    <span class="rating"><i class="fa fa-circle"></i> <i class="fa fa-circle-thin"></i> <i class="fa fa-circle-thin"></i> </span> <span data-toggle="tooltip" title="{{ skills_meta.texts.beginner_info | get_lang: lang }}">{{ skills_meta.texts.beginner | get_lang: lang }}</span> /
-    <span class="rating"><i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle-thin"></i> </span> <span data-toggle="tooltip" title="{{ skills_meta.texts.proficient_info | get_lang: lang }}">{{ skills_meta.texts.proficient | get_lang: lang }}</span> /
-    <span class="rating"><i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </span> <span data-toggle="tooltip" title="{{ skills_meta.texts.advanced_info | get_lang: lang }}">{{ skills_meta.texts.advanced | get_lang: lang }}</span>
-</div>
-<div class="clearfix"></div>
 
 {% if page.more-skills-url %}
 <p class="text-center mrgtop30">

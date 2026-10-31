@@ -10,6 +10,9 @@
             {% if page.no-title != true %}
             <h2>{{ page.title }}</h2>
             {% endif %}
+            {% if page.subtitle %}
+            <p class="tagline">{{ page.subtitle }}</p>
+            {% endif %}
             <div class="content">
                 {{ content }}
             </div>
