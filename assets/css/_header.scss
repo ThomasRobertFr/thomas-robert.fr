@@ -37,21 +37,39 @@
 	}
 
 	>li.lang-selector {
-		padding: 17px 0 0 8px;
-		transition: padding 0.2s ease-in-out 0;
-		padding-top: 6px;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		height: 65px;
+		padding-left: 12px;
+		transition: height 0.2s ease-in-out 0;
 		>a {
-			padding: 0px;
-			opacity: 0.6;
+			display: block;
+			padding: 0;
+			line-height: 0;
 		}
-		>a:hover {
+		.flag {
+			display: block;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			box-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.25);
+			opacity: 0.5;
+			filter: grayscale(60%);
+			transition: opacity $transition-time, filter $transition-time, box-shadow $transition-time;
+		}
+		>a:hover .flag {
 			opacity: 1;
+			filter: none;
 		}
-		>a.current-lang {
+		>a.current-lang .flag {
 			opacity: 1;
+			filter: none;
+			box-shadow: 0 0 0 2px #fff, 0 0 0 3.5px $color-2;
 		}
-		>a.no-translation, >a.no-translation:hover {
-			filter: grayscale(100%) contrast(60%); -moz-filter: grayscale(100%) contrast(60%); -ms-filter: grayscale(100%) contrast(60%); -o-filter: grayscale(100%) contrast(60%); filter: gray; -webkit-filter: grayscale(100%) contrast(60%);
+		>a.no-translation .flag, >a.no-translation:hover .flag {
+			opacity: 0.35;
+			filter: grayscale(100%) contrast(60%);
 		}
 	}
 }
@@ -96,8 +114,8 @@ body.scrolled .navbar-default .navbar-brand .brand-more {
 			}
 		}
 		>li.lang-selector {
+			height: 55px;
 			padding-left: 4px;
-			padding-top: 1px;
 		}
 	}
 
@@ -111,6 +129,10 @@ body.scrolled .navbar-default .navbar-brand .brand-more {
 			>a {
 				padding: 8px 20px;
 			}
+		}
+		>li.lang-selector {
+			height: auto;
+			padding: 10px 20px;
 		}
 	}
 	.navbar {
