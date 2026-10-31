@@ -1,30 +1,45 @@
-- title: CTO
-  at: Heuritech – Paris, France
-  date: "Oct. 2023 <em>Current</em>"
-  image: /data/cv/heuritech.png
+- title: Chief Technology Officer (CTO)
+  at: Heuritech, a Luxurynsight company – Paris, France
+  date: "<span>Oct. 2023 -</span> <span>Now</span>"
+  image: /data/cv/heuritech-ly.png
   type: pro
   icon: cogs
-  tags: [ML]
+  tags: [ML, DE, web, mgmt]
   content: |
-    CTO of [Heuritech](https://www.heuritech.com/), a [Luxurynsight](https://www.luxurynsight.com/) AI technology providing trends data to the fashion industry.
+    CTO of [Heuritech](https://www.heuritech.com/), a [Luxurynsight](https://www.luxurynsight.com/) AI technology providing trend data to the fashion industry.
+
+    - **Modernization strategy:** audited a stack that had barely changed in 6 years while data volumes doubled every year and could no longer scale. Defined and led a multi-year modernization roadmap focused on the main bottlenecks and risks, around the data architecture and the overall infrastructure.
+    - **New data architecture:**
+      - Introduced Snowflake as the central data warehouse, replacing a 50-node Elasticsearch 2.4 cluster, not suited to our needs and that could no longer scale. Secured the main critical pipeline that turns AI predictions into trend data.
+      - Moved all data flows from unmaintained frameworks to scalable processes in Airflow and Celery.
+    - **AI inference at scale:** built a new inference stack on NVIDIA Triton. It can process 10 billion images in a few weeks, where the legacy stack would have needed 2 years of continuous compute.
+    - **Cloud migration:** moved from 100+ unmaintained on-premise Kubernetes nodes to AWS (EKS & MongoDB Atlas), redesigning workloads for the cloud. Delivered under budget, without service interruption.
+    - **Maintained product delivery:** shipped the full roadmap alongside the migration.
+    - **Team:** restructured the tech organization around key senior hires (DevOps, data engineering, data science, backend), with almost no turnover.
+    - **AI adoption:** drove the adoption of AI-assisted engineering.
 
 
 - title: R&D Team Lead & Research engineer in Deep Learning
   at: Heuritech – Paris, France
-  date: "2023 <em>4 years</em>"
+  date: "<span>Nov. 2019 -</span> <span>Oct. 2023</span> <em>4 years</em>"
   image: /data/cv/heuritech.png
   type: pro
   icon: flask
-  tags: [ML, research]
+  tags: [ML, research, mgmt]
   content: |
-    Working in the R&D lab of Heuritech on the AI vision models.
+    Working in the R&D lab of Heuritech on the AI vision models. R&D Team Lead from June 2020.
 
-    R&D Team Lead from June 2020.
+    - **MLOps:** rebuilt the computer vision training stack from the ground up, automating the full training process.
+    - **Models:** continuous R&D on model backbones and training. Designed and industrialized a new object localizer.
+    - **Reliable evaluation:** worked on active learning and on measuring model performance reliably when training data differs from production data.
+    - **Client project:** built a SKU similarity algorithm to help a luxury client's collection buyers.
+    - **Team:** led the R&D team with very low turnover, and contributed to the tech organization.
+    - **Engineering practices:** pushed tech-wide improvements to the Python stack, git workflow and repo structure, and CI/CD.
 
 
 - title: PhD in Deep Learning
   at: LIP6 lab, Sorbonne University (prev. Pierre and Marie Curie University) – Paris, France
-  date: "2019 <em>3 years</em>"
+  date: "2019"
   image: /data/cv/SU.png
   type: edu
   tags: [ML, research]
@@ -40,12 +55,12 @@
 
     * Supervisors: [Matthieu Cord](https://cord.isir.upmc.fr/), [Nicolas Thome](https://thome.isir.upmc.fr/)
     * Reviewers: [Stéphane Canu](https://stephanecanu.github.io/Pages_perso/), [Greg Mori](https://www.cs.sfu.ca/~mori/)
-    * Examinators: [Catherine Achard](https://sites.google.com/view/catherine-achard/home), [Karteek Alahari](https://lear.inrialpes.fr/people/alahari/), [David Picard](https://davidpicard.github.io/)
+    * Examiners: [Catherine Achard](https://sites.google.com/view/catherine-achard/home), [Karteek Alahari](https://lear.inrialpes.fr/people/alahari/), [David Picard](https://davidpicard.github.io/)
 
 
-- title: Research engineer then PhD student in Deep Learning
+- title: PhD student in Deep Learning
   at: LIP6 lab, Sorbonne University (prev. Pierre and Marie Curie University) – Paris, France
-  date: "2019 <em>4 years</em>"
+  date: "<span>Nov. 2015 -</span> <span>Nov. 2019</span> <em>4 years</em>"
   image: /data/cv/LIP6.png
   type: pro
   icon: flask
@@ -58,16 +73,16 @@
   content: |
     Supervised by [Matthieu Cord](https://cord.isir.upmc.fr/) and [Nicolas Thome](https://thome.isir.upmc.fr/)
 
-    Work on the ANR projects VISIIR and [DeepVision](https://anr.fr/Projet-ANR-15-CE23-0029) in partnership with the LIRIS (INSA Lyon, France), the Simon Fraser University (Canada) and the University of Guelph (Canada).
+    Work on the ANR projects VISIIR and [DeepVision](https://anr.fr/Projet-ANR-15-CE23-0029) in partnership with LIRIS (INSA Lyon, France), Simon Fraser University (Canada) and the University of Guelph (Canada).
 
-    - Work on **recipe image classification**. Creation of a demonstration website of the classifier
-    - **Teaching work** (64h / year): in charge of multiple courses, writing of convolutional networks practical sessions subjects
-    - Submission to the **_workflow_ challenge of the [_M2CAI (MICCAI 2016)_](http://camma.u-strasbg.fr/m2cai2016/) workshop** with [Remi Cadène](http://remicadene.com) : classification of surgical operation step based on endosopic videos. 2nd best model submitted.
+    - Work on **recipe image classification**. Creation of a demonstration website of the classifier.
+    - **Teaching work** (64h / year): in charge of multiple courses, wrote practical session assignments on convolutional networks.
+    - Submission to the **_workflow_ challenge of the [_M2CAI (MICCAI 2016)_](http://camma.u-strasbg.fr/m2cai2016/) workshop** with [Rémi Cadène](http://remicadene.com): classification of surgical steps based on endoscopic videos. 2nd best model submitted.
     - **Regularization of deep neural networks** with [Michael Blot](https://scholar.google.com/citations?user=rxK3-OwAAAAJ&hl=fr). Published at ICIP 2018 (best paper award).  
       _SHADE: Information-Based Regularization for Deep Learning_
     - Improvement of **semi-supervised learning models based on auto-encoders**. Published at ECCV 2018.  
       _HybridNet: Classification and Reconstruction Cooperation for Semi-Supervised Learning_
-    - Work on **disentangling model for generation.**  
+    - Work on **disentangling models for generation**.  
       _DualDis: Dual-Branch Disentangling with Adversarial Learning_
 
 
@@ -80,40 +95,40 @@
     - url: http://djlu.fr
       title: Website 
   content: |
-    DjLu is a simple and open source tool to organize for bibliographical library. It has been developed with Micael Carvalho and Rémi Cadène.
+    DjLu is a simple, open-source tool to organize your bibliography. It has been developed with Micael Carvalho and Rémi Cadène.
 
     - **Tools used:** HTML / CSS / Javascript / PHP / Git
 
 
 - title: Data Science research internship
-  at: Conviva – San Francisco Bay, California, USA
+  at: Conviva – San Francisco Bay Area, California, USA
   date: "2015  <em>6 months</em>"
   image: /data/cv/conviva.png
   type: pro
   icon: youtube-play
-  tags: [ML, bigdata, stats, research]
+  tags: [ML, DE, DS, research]
   content: |
     Work on various research problems about **video streaming quality optimization** using data science
 
-    - **Prediction of the optimal video quality** for a given session using _Machine Learning_ and _A/B testing_
-    - Formulation and resolution of an **optimization problem to determine optimal decisions Conviva's products should take*
-    - **Statistical study of bandwidth evolution** in the context of Conviva's products
+    - **Prediction of the optimal video quality** for a given session using _Machine Learning_ and _A/B testing_.
+    - Formulation and resolution of an **optimization problem to determine optimal decisions** Conviva's products should take.
+    - **Statistical study of bandwidth evolution** in the context of Conviva's products.
     - **Technologies:** Python, Hive, Hadoop MapReduce, Spark
 
 
-- title: Double degree in Data Science
+- title: Double Master's degree in Data Science
   at: National Institute of Applied Sciences & University of Rouen, France
-  date: "2015  <em>5 years</em>"
+  date: "2015"
   image: /data/cv/insa.png
   type: edu
-  tags: [ML, stats]
+  tags: [ML, DS]
   content: |
     Master’s degree (“diplôme d’ingénieur”) in **Data Science**  
-    Master’s degree in **Multimedia Information Processing** System
+    Master’s degree in **Multimedia Information Processing** Systems
 
-    - Preparatory cycle (2 years)
-    - Engineering cycle in ASI department (3 years)
-    - Master's complementary classes (1 year in parallel of INSA)
+    - Preparatory cycle (2 years).
+    - Engineering cycle in ASI department (3 years).
+    - Master's complementary classes (1 year in parallel with INSA).
 
 
 - title: Data-scientist intern
@@ -121,7 +136,7 @@
   date: "Summer 2014  <em>14 weeks</em>"
   image: /data/cv/creativedata.png
   type: pro
-  tags: [ML, bigdata, stats, research]
+  tags: [ML, DE, DS, research]
   icon: cogs
   content: |
     - **Self-training on Big Data** concepts, architectures and technologies (Hadoop ecosystem).
@@ -142,14 +157,14 @@
     - url: https://github.com/loganalysis
       title: GitHub organization for the project 
   type: pro
-  tags: [BI, web]
+  tags: [DS, web, mgmt]
   icon: bar-chart-o
   content: |
     - Development of an **open-source user-friendly web solution** to **analyze geographical SOLAP data** over its various dimensions. Integration inside the GeoNode software.
     - **Academic Research & Development project** carried out for the LIST as client.
     - Project carried out with **agile software development** method (Scrum) with **ISO 9001 quality standard**.
-    - **Leader of a group of 7 students** and responsible of **relations with a subcontractor team** of 8 students during half of the project. Developer during the other half.
-    - Use of Git, JavaScript (d3.js, dc.js, crossfilter),  Python (Django), Java, MDX, GeoMondrian.
+    - **Leader of a group of 7 students** and responsible for **relations with a subcontractor team** of 8 students during half of the project. Developer during the other half.
+    - Use of Git, JavaScript (d3.js, dc.js, crossfilter), Python (Django), Java, MDX, GeoMondrian.
 
 
 - title: PGPic
@@ -159,7 +174,7 @@
   tags: [web]
   content: |
     - Contribution to the development of PGPic, a **web tool for quality and project management**.
-    - Used by all PIC teams on a daily basis (PICs are professional projects such as TUDOR project presented above. There is 6 PIC projects each year.)
+    - Used by all PIC teams on a daily basis (PICs are professional projects such as the LIST project presented above. There are 6 PIC projects each year.).
     - **Developed skills:** HTML / CSS3 / PHP / MySQL / Javascript
 
 
@@ -168,14 +183,14 @@
   date: "Summer 2013  <em>9 weeks</em>"
   image: /data/cv/sopra.png
   type: pro
-  tags: [BPM]
+  tags: [web]
   content: |
-    - In the domain of BPM (Business Process Modelling) mission of **analyst-developer** in a buisness context of employee savings management. **Support of a senior business consultant**.
-    - **Participation to work groups with the client** (2 days a week) to determine their needs.
-    - **Modeling and optimization of core businesses processes** in accordance with BMPN 2.0 standard.
-    - Writing of detailled specifications of the activities.
-    - **Input of processes on the workflow software Bonita**, and programming of forms and scripts to follow the process and validate the input data in accordance with the database. _Use of Groovy and MySQL._
-    - Creation of a **web conversion tool** beetween the output format of the process and the input format of the client's management software. _Use of PHP, MySQL, jQuery, Bootstrap and FTP._
+    - In the domain of BPM (Business Process Modelling) mission of **analyst-developer** in a business context of employee savings management. **Support of a senior business consultant**.
+    - **Participation in work groups with the client** (2 days a week) to determine their needs.
+    - **Modeling and optimization of core businesses processes** in accordance with BPMN 2.0 standard.
+    - Writing of detailed specifications of the activities.
+    - **Input of processes on the workflow software Bonita**, and programming of forms and scripts to follow the process and validate the input data in accordance with the database. _Use of Groovy and MySQL._.
+    - Creation of a **web conversion tool** between the output format of the process and the input format of the client's management software. _Use of PHP, MySQL, jQuery, Bootstrap and FTP._.
 
 
 - title: General Secretary
@@ -183,14 +198,15 @@
   date: "<span>Feb. 2013 -</span><span> Feb. 2014</span> <em>1 year</em>"
   image: /data/cv/ajir.png
   type: asso
+  tags: [mgmt]
   content: |
     _AJIR is an association that puts in touch students and companies to carry out professional projects in engineering fields (IT, mechanics, energetics, chemistry, etc.)._
 
-    - Responsible of **association and administrative management*
-    - Responsible of **Board of Directors meetings*
-    - Humain Ressources Manager
-    - Administrative paperwork
-    - etc.
+    - Responsible for the **association and administrative management** of the Junior-Enterprise.
+    - Organization of the **Board of Directors meetings and General Assemblies**.
+    - Human Resources and office manager.
+    - Board member.
+    - Purchase of supplies.
 
 
 - title: Website of AEI
@@ -202,8 +218,8 @@
   type: perso
   tags: [web]
   content: |
-    - Creation of a **website** for Association of INSA Students (AEI) throw AJIR with another student.
-    - Experience of the realisation of a project for a **real client**.
+    - Creation of a **website** for Association of INSA Students (AEI) through AJIR with another student.
+    - Experience of the realization of a project for a **real client**.
     - Website created as a Wordpress template.
     - **Developed skills:** HTML / CSS3 / PHP / Javascript / Wordpress
 
@@ -218,8 +234,8 @@
   type: perso
   tags: [web]
   content: |
-    - Creation of the **website** for AJIR (Junior-Entreprise association) as a Wordpress template.
-    - Creation of a plugin to **manage membership workflow** (quite heavy in Junior-Enterprises) in order to lighten HR work
+    - Creation of the **website** for AJIR (Junior-Enterprise association) as a Wordpress template.
+    - Creation of a plugin to **manage membership workflow** (quite heavy in Junior-Enterprises) in order to lighten HR work.
     - **Developed skills:** HTML / CSS3 / PHP / Javascript / Wordpress
 
 
@@ -231,7 +247,7 @@
   content: |
     _AJIR is an association that puts in touch students and companies to carry out professional projects in engineering fields (IT, mechanics, energetics, chemistry, etc.)._
 
-    **Support and improvement of the Information System** of the Junior-Entreprise (sysadmin work & developpement of a new website).
+    **Support and improvement of the Information System** of the Junior-Enterprise (sysadmin work & development of a new website).
 
 
 - title: Worker training period
@@ -241,7 +257,7 @@
   type: pro
   icon: wrench
   content: |
-    Support of the brake team in its daily work. Discover of the working world.
+    Support of the brake team in its daily work. Discovery of the working world.
 
 
 - title: BookINSA
@@ -252,7 +268,7 @@
   icon: book
   content: |
     - Creation of a website simplifying the loan of books between students. Realized as a school project with a team.
-    - Use of Facebook API for login and several API to get informations on the books from the ISBNs.
+    - Use of Facebook API for login and several APIs to get information on the books from the ISBNs.
     - Relatively complex SQL queries.
     - **Developed skills:** HTML / CSS3 / PHP / MySQL / Javascript
 
@@ -264,7 +280,7 @@
   type: pro
   icon: envelope
   content: |
-    Support of the facility management department (mail delivery in the office, orders, stock handing, etc.).
+    Support of the facility management department (mail delivery in the office, orders, stock handling, etc.).
 
 
 - title: High-school scientific diploma (“baccalauréat scientifique”) with honors
@@ -283,32 +299,7 @@
   type: perso
   icon: pencil
   content: |
-    - Writing (and publishing) of revision recaps of almost all my courses since last year of high-school until Master's degree.
-    - **Developed skills:** Word 2010 / Inkscape
-
-
-- title: iGoogle plugin for BetaSeries
-  date: "2010"
-  image-big: /data/cv/betaseries.png
-  type: perso
-  icon: video-camera
-  tags: [web]
-  content: |
-    - Plugin to **manage a BetaSeries account** (website to check which episodes of your series you have seen or not) for iGoogle.
-    - **Developed skills:** HTML / CSS / PHP / XML / Javascript
-
-
-- title: Who's who
-  date: "2010"
-  image-big: /data/cv/trombi.png
-  type: perso
-  icon: camera
-  tags: [web]
-  content: |
-    - Creation of a **visual and interactive “who’s who”** of the employees of Sogecap sorted alphabetically or by department.
-    - Thought as simple as possible for HR: the pages are generated from pictures files named with people name and position in the compagny.
-    - Cached HTML output for optimization.
-    - **Developed skills:** HTML / CSS / PHP
+    - Writing (and publishing) of revision recaps of almost all my courses, from my last year of high school to my Master's degree.
 
 
 - title: ThemeSgen
@@ -317,14 +308,14 @@
   tags: [web]
   icon: gamepad
   content: |
-    - **Bilingual website listing themes and wallpapers** for all video games consoles.
-    - **Important website** allowing to read **different contents** (news, themes, wallpapers, surveys), each separated in categories.
+    - **Bilingual website listing themes and wallpapers** for all video game consoles.
+    - **Large website** allowing to read **different contents** (news, themes, wallpapers, surveys), each separated in categories.
     - Creation of an **original design** in accordance with Mediagen corporate identity.
     - Cache handling for performance.
     - Integration of a **phpBB** forum in the website.
     - Complete **administration backend** allowing:
-      - Content production workflow (writing, correction, validation)
-      - Smart files (themes and images) processing to reduce production time
-      - Fine grain user access rights handling
+      - Content production workflow (writing, correction, validation).
+      - Smart files (themes and images) processing to reduce production time.
+      - Fine grain user access rights handling.
       - Etc.
     - **Developed skills:** HTML / CSS / PHP / MySQL / Javascript

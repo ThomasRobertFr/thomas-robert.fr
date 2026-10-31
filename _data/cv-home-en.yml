@@ -1,30 +1,37 @@
-- title: CTO
-  at: Heuritech – Paris, France
-  date: "Oct. 2023 <em>Current</em>"
-  image: /data/cv/heuritech.png
+- title: Chief Technology Officer (CTO)
+  at: Heuritech, a Luxurynsight company – Paris, France
+  date: "<span>Oct. 2023 -</span> <span>Now</span>"
+  image: /data/cv/heuritech-ly.png
   type: pro
   icon: cogs
-  tags: [ML]
+  tags: [ML, DE, web, mgmt]
   content: |
-    CTO of [Heuritech](https://www.heuritech.com/), a [Luxurynsight](https://www.luxurynsight.com/) AI technology providing trends data to the fashion industry.
+    CTO of [Heuritech](https://www.heuritech.com/), a [Luxurynsight](https://www.luxurynsight.com/) AI technology providing trend data to the fashion industry.
+
+    - **Modernization:** defined and led a multi-year roadmap to rebuild a stack that could no longer scale.
+    - **Data architecture:** Snowflake as the central data warehouse, data flows on Airflow and Celery.
+    - **Cloud & AI at scale:** migration to AWS without service interruption, and new inference stack processing 10 billion images in a few weeks.
+    - **Team:** restructured the tech organization around key senior hires, with almost no turnover.
 
 
 - title: R&D Team Lead & Research engineer in Deep Learning
   at: Heuritech – Paris, France
-  date: "2023 <em>4 years</em>"
+  date: "<span>Nov. 2019 -</span> <span>Oct. 2023</span> <em>4 years</em>"
   image: /data/cv/heuritech.png
   type: pro
   icon: flask
-  tags: [ML, research]
+  tags: [ML, research, mgmt]
   content: |
-    Working in the R&D lab of Heuritech on the AI vision models.
+    R&D lab of Heuritech, working on the AI vision models. Team Lead from June 2020.
 
-    R&D Team Lead from June 2020.
+    - Rebuilt the computer vision training stack (MLOps) and designed a new object localizer.
+    - Research on active learning and reliable model evaluation.
+    - Led the R&D team and pushed tech-wide engineering practices.
 
 
 - title: PhD in Deep Learning
   at: LIP6 lab, Sorbonne University (prev. Pierre and Marie Curie University) – Paris, France
-  date: "2019 <em>3 years</em>"
+  date: "2019"
   image: /data/cv/SU.png
   type: edu
   tags: [ML, research]
@@ -40,12 +47,12 @@
 
     * Supervisors: [Matthieu Cord](https://cord.isir.upmc.fr/), [Nicolas Thome](https://thome.isir.upmc.fr/)
     * Reviewers: [Stéphane Canu](https://stephanecanu.github.io/Pages_perso/), [Greg Mori](https://www.cs.sfu.ca/~mori/)
-    * Examinators: [Catherine Achard](https://sites.google.com/view/catherine-achard/home), [Karteek Alahari](https://lear.inrialpes.fr/people/alahari/), [David Picard](https://davidpicard.github.io/)
+    * Examiners: [Catherine Achard](https://sites.google.com/view/catherine-achard/home), [Karteek Alahari](https://lear.inrialpes.fr/people/alahari/), [David Picard](https://davidpicard.github.io/)
 
 
-- title: Research engineer then PhD student in Deep Learning
+- title: PhD student in Deep Learning
   at: LIP6 lab, Sorbonne University (prev. Pierre and Marie Curie University) – Paris, France
-  date: "2019 <em>4 years</em>"
+  date: "<span>Nov. 2015 -</span> <span>Nov. 2019</span> <em>4 years</em>"
   image: /data/cv/LIP6.png
   type: pro
   icon: flask
@@ -54,17 +61,7 @@
       title: Publications and courses 
   tags: [ML, research]
   content: |
-    Supervised by [Matthieu Cord](https://cord.isir.upmc.fr/) and [Nicolas Thome](https://thome.isir.upmc.fr/)
+    Supervised by [Matthieu Cord](https://cord.isir.upmc.fr/) and [Nicolas Thome](https://thome.isir.upmc.fr/) at LIP6.
 
-    Work on the ANR projects VISIIR and [DeepVision](https://anr.fr/Projet-ANR-15-CE23-0029) in partnership with the LIRIS (INSA Lyon, France), the Simon Fraser University (Canada) and the University of Guelph (Canada).
-
-    - Work on **recipe image classification**. Creation of a demonstration website of the classifier
-    - **Teaching work** (64h / year): in charge of multiple courses, writing of convolutional networks practical sessions subjects
-    - Submission to the **_workflow_ challenge of the [_M2CAI (MICCAI 2016)_](http://camma.u-strasbg.fr/m2cai2016/) workshop** with [Remi Cadène](http://remicadene.com) : classification of surgical operation step based on endosopic videos. 2nd best model submitted.
-    - **Regularization of deep neural networks** with [Michael Blot](https://scholar.google.com/citations?user=rxK3-OwAAAAJ&hl=fr). Published at ICIP 2018 (best paper award).  
-      _SHADE: Information-Based Regularization for Deep Learning_
-    - Improvement of **semi-supervised learning models based on auto-encoders**. Published at ECCV 2018.  
-      _HybridNet: Classification and Reconstruction Cooperation for Semi-Supervised Learning_
-    - Work on **disentangling model for generation.**  
-      _DualDis: Dual-Branch Disentangling with Adversarial Learning_
-
+    - Publications at ECCV 2018 and ICIP 2018 (best paper award).
+    - Teaching deep learning and computer vision (64h / year).

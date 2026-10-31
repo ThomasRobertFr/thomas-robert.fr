@@ -640,17 +640,15 @@
                 
                 <li data-dim="tags" data-filter="ML" class="color-1 active"><span class="btn-circle"></span> <span class="keyword">Machine Learning</span></li>
                 
-                <li data-dim="tags" data-filter="research" class="color-2 active"><span class="btn-circle"></span> <span class="keyword">Recherche</span></li>
+                <li data-dim="tags" data-filter="DE" class="color-2 active"><span class="btn-circle"></span> <span class="keyword">Data Engineering</span></li>
                 
-                <li data-dim="tags" data-filter="web" class="color-3 active"><span class="btn-circle"></span> <span class="keyword">Web</span></li>
+                <li data-dim="tags" data-filter="DS" class="color-3 active"><span class="btn-circle"></span> <span class="keyword">Data Science</span></li>
                 
-                <li data-dim="tags" data-filter="bigdata" class="color-4 active"><span class="btn-circle"></span> <span class="keyword">Big Data</span></li>
+                <li data-dim="tags" data-filter="web" class="color-4 active"><span class="btn-circle"></span> <span class="keyword">Web</span></li>
                 
-                <li data-dim="tags" data-filter="stats" class="color-5 active"><span class="btn-circle"></span> <span class="keyword">Statistiques</span></li>
+                <li data-dim="tags" data-filter="research" class="color-6 active"><span class="btn-circle"></span> <span class="keyword">Recherche</span></li>
                 
-                <li data-dim="tags" data-filter="BI" class="color-6 active"><span class="btn-circle"></span> <span class="keyword">Business Intelligence</span></li>
-                
-                <li data-dim="tags" data-filter="BPM" class="color-7 active"><span class="btn-circle"></span> <span class="keyword">BPM</span></li>
+                <li data-dim="tags" data-filter="mgmt" class="color-7 active"><span class="btn-circle"></span> <span class="keyword">Management</span></li>
                 
                 <li data-dim="tags" data-filter="" class="color-8 active"><span class="btn-circle"></span> <span class="keyword">None</span></li>
             </ul>
@@ -665,7 +663,7 @@
         ">
     
 
-        <div id="experience-0" class="cd-timeline-block cd-enter" data-type="pro"  data-tags="ML">
+        <div id="experience-0" class="cd-timeline-block cd-enter" data-type="pro"  data-tags="ML,DE,web,mgmt">
             <div class="cd-timeline-img cd-type-pro">
                 
                 <i class="fa fa-cogs"></i>
@@ -680,17 +678,44 @@
                         <span class="color-1">Machine Learning</span>
                         
                     
+                        
+                        <span class="color-2">Data Engineering</span>
+                        
+                    
+                        
+                        <span class="color-4">Web</span>
+                        
+                    
+                        
+                        <span class="color-7">Management</span>
+                        
+                    
 
                     
-                    <img src="/data/cv/heuritech.png" />
+                    <img src="/data/cv/heuritech-ly.png" />
                     
                 </div>
                 
                 
-                <h3>CTO</h3>
-                <p class="subtitle">Heuritech – Paris, France</p>
-                <p class="cd-date">Oct. 2023 <em>Actuel</em></p>
+                <h3>Chief Technology Officer (CTO)</h3>
+                <p class="subtitle">Heuritech, une entreprise Luxurynsight – Paris, France</p>
+                <p class="cd-date"><span>Oct. 2023 -</span> <span>Aujourd'hui</span></p>
                 <p>CTO d’<a href="https://www.heuritech.com/">Heuritech</a>, une technologie IA de <a href="https://www.luxurynsight.com/">Luxurynsight</a> qui fournit des données de tendances à l’industrie de la mode.</p>
+
+<ul>
+  <li><strong>Stratégie de modernisation :</strong> audit d’une stack quasiment inchangée depuis 6 ans, alors que les volumes de données doublaient chaque année et qu’elle ne pouvait plus passer à l’échelle. Définition et pilotage d’une roadmap de modernisation sur plusieurs années, centrée sur les principaux goulots d’étranglement et risques, autour de l’architecture data et de l’infrastructure globale.</li>
+  <li><strong>Nouvelle architecture data :</strong>
+    <ul>
+      <li>Mise en place de Snowflake comme data warehouse central, en remplacement d’un cluster Elasticsearch 2.4 de 50 nœuds, peu adapté à nos besoins et qui ne pouvait plus passer à l’échelle. Sécurisation du principal pipeline critique, qui transforme les prédictions IA en données de tendances.</li>
+      <li>Migration de tous les flux de données depuis des frameworks non maintenus vers des process scalables sous Airflow et Celery.</li>
+    </ul>
+  </li>
+  <li><strong>Inférence IA à grande échelle :</strong> construction d’une nouvelle stack d’inférence sur NVIDIA Triton, capable de traiter 10 milliards d’images en quelques semaines, là où l’ancienne stack aurait eu besoin de 2 ans de calcul continu.</li>
+  <li><strong>Migration cloud :</strong> migration de plus de 100 nœuds Kubernetes on-premise non maintenus vers AWS (EKS &amp; MongoDB Atlas), en repensant les workloads pour le cloud. Livrée sous le budget, sans interruption de service.</li>
+  <li><strong>Maintien des livraisons produit :</strong> livraison de toute la roadmap produit en parallèle de la migration.</li>
+  <li><strong>Équipe :</strong> restructuration de l’organisation tech autour de recrutements seniors clés (DevOps, data engineering, data science, backend), avec un turnover quasi nul.</li>
+  <li><strong>Adoption de l’IA :</strong> accompagnement de l’adoption de l’ingénierie assistée par IA.</li>
+</ul>
 
 
                 
@@ -699,7 +724,7 @@
 
     
 
-        <div id="experience-1" class="cd-timeline-block cd-enter" data-type="pro"  data-tags="ML,research">
+        <div id="experience-1" class="cd-timeline-block cd-enter" data-type="pro"  data-tags="ML,research,mgmt">
             <div class="cd-timeline-img cd-type-pro">
                 
                 <i class="fa fa-flask"></i>
@@ -715,7 +740,11 @@
                         
                     
                         
-                        <span class="color-2">Recherche</span>
+                        <span class="color-6">Recherche</span>
+                        
+                    
+                        
+                        <span class="color-7">Management</span>
                         
                     
 
@@ -725,12 +754,19 @@
                 </div>
                 
                 
-                <h3>Responsable de l'équipe R&D & Ingénieur recherche en Deep Learning</h3>
+                <h3>Responsable de l'équipe R&D & Ingénieur de recherche en Deep Learning</h3>
                 <p class="subtitle">Heuritech – Paris, France</p>
-                <p class="cd-date">2023 <em>4 ans</em></p>
-                <p>Dans le laboratoire R&amp;D d’Heuritech, sur les modèles de vision IA.</p>
+                <p class="cd-date"><span>Nov. 2019 -</span> <span>Oct. 2023</span> <em>4 ans</em></p>
+                <p>Dans le laboratoire R&amp;D d’Heuritech, sur les modèles de vision IA. Responsable de l’équipe R&amp;D à partir de juin 2020.</p>
 
-<p>Responsable de l’équipe R&amp;D à partir de juin 2020.</p>
+<ul>
+  <li><strong>MLOps :</strong> refonte complète de la stack d’entraînement des modèles de computer vision, avec automatisation de tout le processus d’entraînement.</li>
+  <li><strong>Modèles :</strong> R&amp;D continue sur les backbones et l’entraînement des modèles. Conception et industrialisation d’un nouveau localiseur d’objets.</li>
+  <li><strong>Évaluation fiable :</strong> travaux sur l’active learning et sur la mesure fiable des performances des modèles quand les données d’entraînement diffèrent des données de production.</li>
+  <li><strong>Projet client :</strong> conception d’un algorithme de similarité de SKU pour aider les acheteurs de collection d’un client du luxe.</li>
+  <li><strong>Équipe :</strong> management de l’équipe R&amp;D avec un turnover très faible, et contribution à l’organisation tech.</li>
+  <li><strong>Pratiques d’ingénierie :</strong> amélioration de la stack Python, du workflow git et de la structure des repos, et de la CI/CD, à l’échelle de toute l’équipe tech.</li>
+</ul>
 
 
                 
@@ -755,7 +791,7 @@
                         
                     
                         
-                        <span class="color-2">Recherche</span>
+                        <span class="color-6">Recherche</span>
                         
                     
 
@@ -766,8 +802,8 @@
                 
                 
                 <h3>Doctorat en Deep Learning</h3>
-                <p class="subtitle">Sorbonne Université (ex Université Pierre and Marie Curie) – Paris</p>
-                <p class="cd-date">2019 <em>3 ans</em></p>
+                <p class="subtitle">Sorbonne Université (ex Université Pierre et Marie Curie) – Paris</p>
+                <p class="cd-date">2019</p>
                 <p><a href="https://hal.archives-ouvertes.fr/tel-02309812/"><em>Amélioration des représentations latentes des ConvNets pour l’interprétation de données visuelles</em></a> - <a href="/data/publis/TheseSlides_ThomasRobert.pdf">Slides de soutenance</a></p>
 
 <p><strong>Jury :</strong></p>
@@ -783,7 +819,7 @@
                 <div class="clearfix"></div>
                 <p class="text-right">
                 
-                    <a class="btn btn-default btn-sm btn-sm cd-read-more" href="https://hal.archives-ouvertes.fr/tel-02309812">Thesis <i class="fa fa-chevron-right"></i></a>
+                    <a class="btn btn-default btn-sm btn-sm cd-read-more" href="https://hal.archives-ouvertes.fr/tel-02309812">Thèse <i class="fa fa-chevron-right"></i></a>
                 
                     <a class="btn btn-default btn-sm btn-sm cd-read-more" href="/data/publis/TheseSlides_ThomasRobert.pdf">Slides <i class="fa fa-chevron-right"></i></a>
                 
@@ -810,7 +846,7 @@
                         
                     
                         
-                        <span class="color-2">Recherche</span>
+                        <span class="color-6">Recherche</span>
                         
                     
 
@@ -820,22 +856,22 @@
                 </div>
                 
                 
-                <h3>Ingénieur-recherche puis Doctorant en Deep Learning</h3>
-                <p class="subtitle">Laboratoire LIP6, Sorbonne Université (ex Université Pierre and Marie Curie) – Paris</p>
-                <p class="cd-date"><span>Nov. 2015 -</span> <span>Oct. 2019</span> <em>Actuel</em></p>
+                <h3>Doctorant en Deep Learning</h3>
+                <p class="subtitle">Laboratoire LIP6, Sorbonne Université (ex Université Pierre et Marie Curie) – Paris</p>
+                <p class="cd-date"><span>Nov. 2015 -</span> <span>Nov. 2019</span> <em>4 ans</em></p>
                 <p>Encadré par <a href="https://cord.isir.upmc.fr/">Matthieu Cord</a> et <a href="https://thome.isir.upmc.fr/">Nicolas Thome</a></p>
 
-<p>Travail sur les projets ANR VISIIR et <a href="https://anr.fr/Projet-ANR-15-CE23-0029">DeepVision</a> en partenariat avec le LIRIS (INSA Lyon, France), Simon Fraser University (Canada) et l’University of Guelph (Canada).</p>
+<p>Travail sur les projets ANR VISIIR et <a href="https://anr.fr/Projet-ANR-15-CE23-0029">DeepVision</a> en partenariat avec le LIRIS (INSA Lyon, France), Simon Fraser University (Canada) et l’Université de Guelph (Canada).</p>
 
 <ul>
-  <li>Travail sur la <strong>classification de recettes de cuisines.</strong> Réalisation d’un site web de démonstration du classifieur</li>
-  <li><strong>Mission d’enseignement</strong> (64h / an) : encadrement de plusieurs cours, réalisation de sujets sur les réseaux convolutionnels</li>
-  <li>Participation au <strong>challenge <em>workflow</em> du workshop <a href="http://camma.u-strasbg.fr/m2cai2016/"><em>M2CAI (MICCAI 2016)</em></a></strong>  avec <a href="http://remicadene.com">Remi Cadène</a> : classification d’étapes d’opération basé sur des vidéos endoscopiques. 2e meilleur modèle soumis.</li>
+  <li>Travail sur la <strong>classification de recettes de cuisine</strong>. Réalisation d’un site web de démonstration du classifieur.</li>
+  <li><strong>Mission d’enseignement</strong> (64h / an) : encadrement de plusieurs cours, réalisation de sujets sur les réseaux convolutionnels.</li>
+  <li>Participation au <strong>challenge <em>workflow</em> du workshop <a href="http://camma.u-strasbg.fr/m2cai2016/"><em>M2CAI (MICCAI 2016)</em></a></strong> avec <a href="http://remicadene.com">Rémi Cadène</a> : classification d’étapes d’opération basée sur des vidéos endoscopiques. 2e meilleur modèle soumis.</li>
   <li><strong>Régularisation des réseaux profonds</strong> avec <a href="https://scholar.google.com/citations?user=rxK3-OwAAAAJ&amp;hl=fr">Michael Blot</a>. Publication à ICIP 2018 (best paper award).<br />
 <em>SHADE: Information-Based Regularization for Deep Learning</em></li>
-  <li>Amélioration de modèles <strong>d’apprentissage semi-supervisé basé auto-encodeur.</strong> Publication à ECCV 2018.<br />
+  <li>Amélioration de modèles <strong>d’apprentissage semi-supervisé basés sur des auto-encodeurs</strong>. Publication à ECCV 2018.<br />
 <em>HybridNet: Classification and Reconstruction Cooperation for Semi-Supervised Learning</em></li>
-  <li>Travail sur un modèle de <strong>disentangling pour la génération.</strong><br />
+  <li>Travail sur des modèles de <strong>disentangling pour la génération</strong>.<br />
 <em>DualDis: Dual-Branch Disentangling with Adversarial Learning</em></li>
 </ul>
 
@@ -867,11 +903,11 @@
                 <div class="cd-tags">
                     
                         
-                        <span class="color-2">Recherche</span>
+                        <span class="color-6">Recherche</span>
                         
                     
                         
-                        <span class="color-3">Web</span>
+                        <span class="color-4">Web</span>
                         
                     
 
@@ -904,7 +940,7 @@
 
     
 
-        <div id="experience-5" class="cd-timeline-block cd-enter" data-type="pro"  data-tags="ML,bigdata,stats,research">
+        <div id="experience-5" class="cd-timeline-block cd-enter" data-type="pro"  data-tags="ML,DE,DS,research">
             <div class="cd-timeline-img cd-type-pro">
                 
                 <i class="fa fa-youtube-play"></i>
@@ -920,15 +956,15 @@
                         
                     
                         
-                        <span class="color-4">Big Data</span>
+                        <span class="color-2">Data Engineering</span>
                         
                     
                         
-                        <span class="color-5">Statistiques</span>
+                        <span class="color-3">Data Science</span>
                         
                     
                         
-                        <span class="color-2">Recherche</span>
+                        <span class="color-6">Recherche</span>
                         
                     
 
@@ -940,13 +976,13 @@
                 
                 <h3>Stage de recherche en Data Science</h3>
                 <p class="subtitle">Conviva – Baie de San Francisco, Californie, USA</p>
-                <p class="cd-date">Été 2015 <em>6 mois</em></p>
+                <p class="cd-date">2015 <em>6 mois</em></p>
                 <p>Travail sur divers problèmes de recherche concernant l’<strong>optimisation de la qualité de streaming vidéo</strong></p>
 
 <ul>
-  <li><strong>Prédiction de la qualité vidéo optimale</strong> d’une session en utilisant <em>Machine Learning</em> et <em>A/B testing</em></li>
-  <li>Formulation et résolution d’un <strong>problème d’optimisation mathématique pour déterminer les décisions optimales</strong> que les produits de Conviva devraient prendre</li>
-  <li><strong>Etude statistique de l’évolution de la bande passante</strong> dans le contexte des produits de Conviva</li>
+  <li><strong>Prédiction de la qualité vidéo optimale</strong> d’une session en utilisant <em>Machine Learning</em> et <em>A/B testing</em>.</li>
+  <li>Formulation et résolution d’un <strong>problème d’optimisation mathématique pour déterminer les décisions optimales</strong> que les produits de Conviva devraient prendre.</li>
+  <li><strong>Étude statistique de l’évolution de la bande passante</strong> dans le contexte des produits de Conviva.</li>
   <li><strong>Technologies utilisées :</strong> Python, Hive, Hadoop MapReduce, Spark</li>
 </ul>
 
@@ -957,7 +993,7 @@
 
     
 
-        <div id="experience-6" class="cd-timeline-block cd-enter" data-type="edu"  data-tags="ML,stats">
+        <div id="experience-6" class="cd-timeline-block cd-enter" data-type="edu"  data-tags="ML,DS">
             <div class="cd-timeline-img cd-type-edu">
                 
                 <i class="fa fa-graduation-cap"></i>
@@ -973,7 +1009,7 @@
                         
                     
                         
-                        <span class="color-5">Statistiques</span>
+                        <span class="color-3">Data Science</span>
                         
                     
 
@@ -985,14 +1021,14 @@
                 
                 <h3>Double diplôme d'ingénieur en Data Science</h3>
                 <p class="subtitle">Institut National de Sciences Appliquées &amp; Université de Rouen</p>
-                <p class="cd-date">2015 <em>5 ans</em></p>
+                <p class="cd-date">2015</p>
                 <p>Diplôme d’ingénieur en Architecture des Systèmes d’Information spécialisé en <strong>Data Science</strong><br />
 Master en Systèmes de Traitement de l’Information Multimédia (traitement d’images)</p>
 
 <ul>
-  <li>Cycle préparatoire (2 ans)</li>
-  <li>Cycle ingénieur au département ASI (3 ans)</li>
-  <li>Cours de master (1 an en parallèle de l’INSA)</li>
+  <li>Cycle préparatoire (2 ans).</li>
+  <li>Cycle ingénieur au département ASI (3 ans).</li>
+  <li>Cours de master (1 an en parallèle de l’INSA).</li>
 </ul>
 
 
@@ -1002,7 +1038,7 @@ Master en Systèmes de Traitement de l’Information Multimédia (traitement d�
 
     
 
-        <div id="experience-7" class="cd-timeline-block cd-enter" data-type="pro"  data-tags="ML,bigdata,stats">
+        <div id="experience-7" class="cd-timeline-block cd-enter" data-type="pro"  data-tags="ML,DE,DS,research">
             <div class="cd-timeline-img cd-type-pro">
                 
                 <i class="fa fa-cogs"></i>
@@ -1018,11 +1054,15 @@ Master en Systèmes de Traitement de l’Information Multimédia (traitement d�
                         
                     
                         
-                        <span class="color-4">Big Data</span>
+                        <span class="color-2">Data Engineering</span>
                         
                     
                         
-                        <span class="color-5">Statistiques</span>
+                        <span class="color-3">Data Science</span>
+                        
+                    
+                        
+                        <span class="color-6">Recherche</span>
                         
                     
 
@@ -1033,12 +1073,12 @@ Master en Systèmes de Traitement de l’Information Multimédia (traitement d�
                 
                 
                 <h3>Stagiaire Data-Scientist</h3>
-                <p class="subtitle">Creativedata – Rouen</p>
+                <p class="subtitle">Creative Data – Rouen</p>
                 <p class="cd-date">Été 2014 <em>14 semaines</em></p>
                 <ul>
   <li><strong>Auto-formation sur le Big Data</strong> : concepts, architectures et technologies de l’écosystème Hadoop.</li>
   <li><strong>Déploiement de clusters Big Data</strong> sur Google Cloud Platform.</li>
-  <li><strong>Etude statistique</strong> de données d’une plateforme e-commerce pour avoir un aperçu de l’état des boutiques.</li>
+  <li><strong>Étude statistique</strong> de données d’une plateforme e-commerce pour avoir un aperçu de l’état des boutiques.</li>
   <li><strong>Essai et comparaison d’algorithmes de Machine Learning</strong> pour prédire le prochain élément d’une séquence d’achats pour un fournisseur de solutions self-scanning pour grande distribution (utilisation de Matlab &amp; scikit-learn de Python). Lecture de publications de Machine Learning.</li>
 </ul>
 
@@ -1049,7 +1089,7 @@ Master en Systèmes de Traitement de l’Information Multimédia (traitement d�
 
     
 
-        <div id="experience-8" class="cd-timeline-block cd-enter" data-type="pro"  data-tags="BI,web">
+        <div id="experience-8" class="cd-timeline-block cd-enter" data-type="pro"  data-tags="DS,web,mgmt">
             <div class="cd-timeline-img cd-type-pro">
                 
                 <i class="fa fa-bar-chart-o"></i>
@@ -1061,11 +1101,15 @@ Master en Systèmes de Traitement de l’Information Multimédia (traitement d�
                 <div class="cd-tags">
                     
                         
-                        <span class="color-6">Business Intelligence</span>
+                        <span class="color-3">Data Science</span>
                         
                     
                         
-                        <span class="color-3">Web</span>
+                        <span class="color-4">Web</span>
+                        
+                    
+                        
+                        <span class="color-7">Management</span>
                         
                     
 
@@ -1116,7 +1160,7 @@ Master en Systèmes de Traitement de l’Information Multimédia (traitement d�
                 <div class="cd-tags">
                     
                         
-                        <span class="color-3">Web</span>
+                        <span class="color-4">Web</span>
                         
                     
 
@@ -1131,7 +1175,7 @@ Master en Systèmes de Traitement de l’Information Multimédia (traitement d�
                 <p class="cd-date">2014</p>
                 <ul>
   <li>Contribution au développement de PGPic, un <strong>outil web permettant le suivi de la qualité et la gestion de projet</strong>.</li>
-  <li>Cet outil est utilisé quotidiennement par toutes les équipes PIC (les PIC sont les projets réalisés en ASI, tels que mon projet TUDOR présenté ci-dessus. Il y en a 6 par an).</li>
+  <li>Cet outil est utilisé quotidiennement par toutes les équipes PIC (les PIC sont les projets réalisés en ASI, tels que mon projet pour le LIST présenté ci-dessus. Il y en a 6 par an).</li>
   <li><strong>Compétences développées :</strong> HTML / CSS3 / PHP / MySQL / Javascript</li>
 </ul>
 
@@ -1142,7 +1186,7 @@ Master en Systèmes de Traitement de l’Information Multimédia (traitement d�
 
     
 
-        <div id="experience-10" class="cd-timeline-block cd-enter" data-type="pro"  data-tags="BPM">
+        <div id="experience-10" class="cd-timeline-block cd-enter" data-type="pro"  data-tags="web">
             <div class="cd-timeline-img cd-type-pro">
                 
                 <i class="fa fa-briefcase"></i>
@@ -1154,7 +1198,7 @@ Master en Systèmes de Traitement de l’Information Multimédia (traitement d�
                 <div class="cd-tags">
                     
                         
-                        <span class="color-7">BPM</span>
+                        <span class="color-4">Web</span>
                         
                     
 
@@ -1170,10 +1214,10 @@ Master en Systèmes de Traitement de l’Information Multimédia (traitement d�
                 <ul>
   <li>Dans le domaine du BPM (Business Process Modelling), <strong>mission d’analyste développeur</strong> dans un contexte métier de gestion d’épargne salariale en <strong>soutien d’un consultant métier senior</strong> en Assurance et Protection Sociale.</li>
   <li><strong>Participation aux ateliers avec la MOA</strong> (2 jours par semaine) en compagnie du chef de projet MOA pour capter la matière.</li>
-  <li><strong>Modélisation et optimisation des processus cœur de métier</strong> à la norme BMPN 2.0.</li>
+  <li><strong>Modélisation et optimisation des processus cœur de métier</strong> à la norme BPMN 2.0.</li>
   <li>Rédaction des spécifications détaillées des diverses activités des processus.</li>
-  <li><strong>Saisie des processus sur le logiciel de workflow Bonita</strong>, et programmation de formulaires et scripts pour le suivi du processus et la saisie et vérification des données. Vérification de la cohérence des données saisies avec la base de données par exemple. <em>Utilisation de Groovy et MySQL.</em></li>
-  <li>Réalisation d’un <strong>outil de conversion de format de données</strong> pour permettre l’insertion de données créées par les processus dans l’outil de gestion du client. <em>Utilisation de PHP, MySQL, jQuery, Bootstrap, FTP.</em></li>
+  <li><strong>Saisie des processus sur le logiciel de workflow Bonita</strong>, et programmation de formulaires et scripts pour le suivi du processus, la saisie et la vérification des données (notamment leur cohérence avec la base de données). <em>Utilisation de Groovy et MySQL.</em>.</li>
+  <li>Réalisation d’un <strong>outil de conversion de format de données</strong> pour permettre l’insertion de données créées par les processus dans l’outil de gestion du client. <em>Utilisation de PHP, MySQL, jQuery, Bootstrap, FTP.</em>.</li>
 </ul>
 
 
@@ -1183,7 +1227,7 @@ Master en Systèmes de Traitement de l’Information Multimédia (traitement d�
 
     
 
-        <div id="experience-11" class="cd-timeline-block cd-enter" data-type="asso"  data-tags="">
+        <div id="experience-11" class="cd-timeline-block cd-enter" data-type="asso"  data-tags="mgmt">
             <div class="cd-timeline-img cd-type-asso">
                 
                 <i class="fa fa-code"></i>
@@ -1193,6 +1237,10 @@ Master en Systèmes de Traitement de l’Information Multimédia (traitement d�
             <div class="cd-timeline-content">
                 
                 <div class="cd-tags">
+                    
+                        
+                        <span class="color-7">Management</span>
+                        
                     
 
                     
@@ -1207,11 +1255,11 @@ Master en Systèmes de Traitement de l’Information Multimédia (traitement d�
                 <p><em>L’AJIR est une association qui met en contact des étudiants et des entreprises afin de réaliser des projets professionnels en ingénierie (informatique, mécanique, énergétique, chimie, etc.)</em></p>
 
 <ul>
-  <li>Responsable de la <strong>gestion associative et administrative</strong> de la Junior-Entreprise</li>
-  <li>Organisation des <strong>Conseils d’Administration et des Assemblées Générales</strong></li>
-  <li>Responsable des Ressources Humaines et du local</li>
-  <li>Membre du bureau</li>
-  <li>Achat des fournitures</li>
+  <li>Responsable de la <strong>gestion associative et administrative</strong> de la Junior-Entreprise.</li>
+  <li>Organisation des <strong>Conseils d’Administration et des Assemblées Générales</strong>.</li>
+  <li>Responsable des Ressources Humaines et du local.</li>
+  <li>Membre du bureau.</li>
+  <li>Achat des fournitures.</li>
 </ul>
 
 
@@ -1233,7 +1281,7 @@ Master en Systèmes de Traitement de l’Information Multimédia (traitement d�
                 <div class="cd-tags">
                     
                         
-                        <span class="color-3">Web</span>
+                        <span class="color-4">Web</span>
                         
                     
 
@@ -1247,7 +1295,7 @@ Master en Systèmes de Traitement de l’Information Multimédia (traitement d�
                 <p class="subtitle"></p>
                 <p class="cd-date">Fév. 2013</p>
                 <ul>
-  <li>Réalisation du <strong>site web</strong> de l’Association des Elèves des INSA sous forme d’étude via l’AJIR avec un autre étudiant.</li>
+  <li>Réalisation du <strong>site web</strong> de l’Association des Élèves des INSA sous forme d’étude via l’AJIR avec un autre étudiant.</li>
   <li>Expérience de réalisation d’un projet pour un <strong>vrai client</strong>.</li>
   <li>Site réalisé sous forme de template Wordpress.</li>
   <li><strong>Compétences développées :</strong> HTML / CSS3 / PHP / Javascript / Wordpress</li>
@@ -1279,7 +1327,7 @@ Master en Systèmes de Traitement de l’Information Multimédia (traitement d�
                 <div class="cd-tags">
                     
                         
-                        <span class="color-3">Web</span>
+                        <span class="color-4">Web</span>
                         
                     
 
@@ -1390,7 +1438,7 @@ Master en Systèmes de Traitement de l’Information Multimédia (traitement d�
                 <div class="cd-tags">
                     
                         
-                        <span class="color-3">Web</span>
+                        <span class="color-4">Web</span>
                         
                     
 
@@ -1404,7 +1452,7 @@ Master en Systèmes de Traitement de l’Information Multimédia (traitement d�
                 <p class="subtitle"></p>
                 <p class="cd-date">2011</p>
                 <ul>
-  <li>Réalisation en groupe d’un site web simplifiant le prêt de livres entre étudiants. Réalisé en tant de projet scolaire.</li>
+  <li>Réalisation en groupe d’un site web simplifiant le prêt de livres entre étudiants. Réalisé dans le cadre d’un projet scolaire.</li>
   <li>Utilisation de l’API Facebook pour la connexion et de nombreuses API pour récupérer les informations sur les livres à partir de l’ISBN.</li>
   <li>Requêtes SQL relativement complexes.</li>
   <li><strong>Compétences développées :</strong> HTML / CSS3 / PHP / MySQL / Javascript</li>
@@ -1500,7 +1548,6 @@ Master en Systèmes de Traitement de l’Information Multimédia (traitement d�
                 <p class="cd-date">2009-2015</p>
                 <ul>
   <li>Rédaction (et publication) de fiches de cours depuis la terminale jusqu’à la fin de mes études d’ingénieur.</li>
-  <li><strong>Compétences développées :</strong> Word 2010 / Inkscape</li>
 </ul>
 
 
@@ -1520,82 +1567,6 @@ Master en Systèmes de Traitement de l’Information Multimédia (traitement d�
         <div id="experience-20" class="cd-timeline-block cd-enter" data-type="perso"  data-tags="web">
             <div class="cd-timeline-img cd-type-perso">
                 
-                <i class="fa fa-video-camera"></i>
-                
-            </div>
-
-            <div class="cd-timeline-content">
-                
-                <div class="cd-tags">
-                    
-                        
-                        <span class="color-3">Web</span>
-                        
-                    
-
-                    
-                    <img src="/data/cv/betaseries.png" class="big" />
-                    
-                </div>
-                
-                
-                <h3>Gadget iGoogle pour BetaSeries</h3>
-                <p class="subtitle"></p>
-                <p class="cd-date">2010</p>
-                <ul>
-  <li>Gadget permet de <strong>gérer son compte BetaSeries</strong> (site web permettant de savoir quels épisodes de séries ont été vus) directement depuis iGoogle.</li>
-  <li><strong>Compétences développées :</strong> HTML / CSS / PHP / XML / Javascript</li>
-</ul>
-
-
-                
-            </div>
-        </div>
-
-    
-
-        <div id="experience-21" class="cd-timeline-block cd-enter" data-type="perso"  data-tags="web">
-            <div class="cd-timeline-img cd-type-perso">
-                
-                <i class="fa fa-camera"></i>
-                
-            </div>
-
-            <div class="cd-timeline-content">
-                
-                <div class="cd-tags">
-                    
-                        
-                        <span class="color-3">Web</span>
-                        
-                    
-
-                    
-                    <img src="/data/cv/trombi.png" />
-                    
-                </div>
-                
-                
-                <h3>Trombinoscope</h3>
-                <p class="subtitle"></p>
-                <p class="cd-date">2010</p>
-                <ul>
-  <li>Réalisation d’un système de <strong>trombinoscope professionnel interactif</strong> pour Sogécap trié par ordre alphabétique ou par service.</li>
-  <li>Pensé le plus simple possible pour les Ressources Humaines : les pages sont générées à partir des fichiers d’images nommés avec le nom et la position dans l’entreprise.</li>
-  <li>Rendu HTML mis en cache pour plus de rapidité.</li>
-  <li><strong>Compétences développées :</strong> HTML / CSS / PHP</li>
-</ul>
-
-
-                
-            </div>
-        </div>
-
-    
-
-        <div id="experience-22" class="cd-timeline-block cd-enter" data-type="perso"  data-tags="web">
-            <div class="cd-timeline-img cd-type-perso">
-                
                 <i class="fa fa-gamepad"></i>
                 
             </div>
@@ -1605,7 +1576,7 @@ Master en Systèmes de Traitement de l’Information Multimédia (traitement d�
                 <div class="cd-tags">
                     
                         
-                        <span class="color-3">Web</span>
+                        <span class="color-4">Web</span>
                         
                     
 
@@ -1617,15 +1588,15 @@ Master en Systèmes de Traitement de l’Information Multimédia (traitement d�
                 <p class="subtitle"></p>
                 <p class="cd-date">2010</p>
                 <ul>
-  <li><strong>Site bilingue référençant des thèmes et fond d’écran</strong> pour toutes consoles.</li>
-  <li>Site important permettant la <strong>consultation de contenus divers</strong> (actualités, thèmes, fonds d’écrans, sondages) chacun séparés en de nombreuses catégories.</li>
+  <li><strong>Site bilingue référençant des thèmes et fonds d’écran</strong> pour toutes consoles.</li>
+  <li>Site important permettant la <strong>consultation de contenus divers</strong> (actualités, thèmes, fonds d’écrans, sondages) chacun réparti en de nombreuses catégories.</li>
   <li>Création d’un <strong>design original</strong> proche de la charte graphique de l’univers Mediagen.</li>
   <li>Gestion de <strong>nombreux caches</strong> pour augmenter les performances.</li>
   <li>Mise en place d’un <strong>forum phpBB</strong> intégré dans le site.</li>
   <li>Interface d’administration complète permettant :
     <ul>
-      <li>Gestion du processus de rédaction (écriture, correction, validation)</li>
-      <li>Gestion intelligence des fichiers (thèmes et images) permettant l’automatisation des traitements et d’une grande partie des tâches de rédaction.</li>
+      <li>Gestion du processus de rédaction (écriture, correction, validation).</li>
+      <li>Gestion intelligente des fichiers (thèmes et images) permettant l’automatisation des traitements et d’une grande partie des tâches de rédaction.</li>
       <li>La gestion des droits entre rédacteurs, correcteurs, validateurs, etc.</li>
       <li>L’administration du site incluant les catégories, les utilisateurs, etc.</li>
     </ul>

@@ -45,33 +45,28 @@ cv:
         en: Machine Learning
         fr: Machine Learning
       color: color-1
-    research:
+    DE:
       title:
-        en: Research
-        fr: Recherche
+        en: Data Engineering
+        fr: Data Engineering
       color: color-2
+    DS:
+      title:
+        en: Data Science
+        fr: Data Science
+      color: color-3
     web:
       title:
         en: Web
         fr: Web
-      color: color-3
-    bigdata:
-      title:
-        en: Big Data
-        fr: Big Data
       color: color-4
-    stats:
+    research:
       title:
-        en: Statistics
-        fr: Statistiques
-      color: color-5
-    BI:
-      title:
-        en: Business Intelligence
-        fr: Business Intelligence
+        en: Research
+        fr: Recherche
       color: color-6
-    BPM:
+    mgmt:
       title:
-        en: BPM
-        fr: BPM
+        en: Management
+        fr: Management
       color: color-7

@@ -1,36 +1,51 @@
-- title: CTO
-  at: Heuritech – Paris, France
-  date: "Oct. 2023 <em>Actuel</em>"
-  image: /data/cv/heuritech.png
+- title: Chief Technology Officer (CTO)
+  at: Heuritech, une entreprise Luxurynsight – Paris, France
+  date: "<span>Oct. 2023 -</span> <span>Aujourd'hui</span>"
+  image: /data/cv/heuritech-ly.png
   type: pro
   icon: cogs
-  tags: [ML]
+  tags: [ML, DE, web, mgmt]
   content: |
     CTO d'[Heuritech](https://www.heuritech.com/), une technologie IA de [Luxurynsight](https://www.luxurynsight.com/) qui fournit des données de tendances à l'industrie de la mode.
 
+    - **Stratégie de modernisation :** audit d'une stack quasiment inchangée depuis 6 ans, alors que les volumes de données doublaient chaque année et qu'elle ne pouvait plus passer à l'échelle. Définition et pilotage d'une roadmap de modernisation sur plusieurs années, centrée sur les principaux goulots d'étranglement et risques, autour de l'architecture data et de l'infrastructure globale.
+    - **Nouvelle architecture data :**
+      - Mise en place de Snowflake comme data warehouse central, en remplacement d'un cluster Elasticsearch 2.4 de 50 nœuds, peu adapté à nos besoins et qui ne pouvait plus passer à l'échelle. Sécurisation du principal pipeline critique, qui transforme les prédictions IA en données de tendances.
+      - Migration de tous les flux de données depuis des frameworks non maintenus vers des process scalables sous Airflow et Celery.
+    - **Inférence IA à grande échelle :** construction d'une nouvelle stack d'inférence sur NVIDIA Triton, capable de traiter 10 milliards d'images en quelques semaines, là où l'ancienne stack aurait eu besoin de 2 ans de calcul continu.
+    - **Migration cloud :** migration de plus de 100 nœuds Kubernetes on-premise non maintenus vers AWS (EKS & MongoDB Atlas), en repensant les workloads pour le cloud. Livrée sous le budget, sans interruption de service.
+    - **Maintien des livraisons produit :** livraison de toute la roadmap produit en parallèle de la migration.
+    - **Équipe :** restructuration de l'organisation tech autour de recrutements seniors clés (DevOps, data engineering, data science, backend), avec un turnover quasi nul.
+    - **Adoption de l'IA :** accompagnement de l'adoption de l'ingénierie assistée par IA.
 
-- title: Responsable de l'équipe R&D & Ingénieur recherche en Deep Learning
+
+- title: Responsable de l'équipe R&D & Ingénieur de recherche en Deep Learning
   at: Heuritech – Paris, France
-  date: "2023 <em>4 ans</em>"
+  date: "<span>Nov. 2019 -</span> <span>Oct. 2023</span> <em>4 ans</em>"
   image: /data/cv/heuritech.png
   type: pro
   icon: flask
-  tags: [ML, research]
+  tags: [ML, research, mgmt]
   content: |
-    Dans le laboratoire R&D d'Heuritech, sur les modèles de vision IA.
+    Dans le laboratoire R&D d'Heuritech, sur les modèles de vision IA. Responsable de l'équipe R&D à partir de juin 2020.
 
-    Responsable de l'équipe R&D à partir de juin 2020.
+    - **MLOps :** refonte complète de la stack d'entraînement des modèles de computer vision, avec automatisation de tout le processus d'entraînement.
+    - **Modèles :** R&D continue sur les backbones et l'entraînement des modèles. Conception et industrialisation d'un nouveau localiseur d'objets.
+    - **Évaluation fiable :** travaux sur l'active learning et sur la mesure fiable des performances des modèles quand les données d'entraînement diffèrent des données de production.
+    - **Projet client :** conception d'un algorithme de similarité de SKU pour aider les acheteurs de collection d'un client du luxe.
+    - **Équipe :** management de l'équipe R&D avec un turnover très faible, et contribution à l'organisation tech.
+    - **Pratiques d'ingénierie :** amélioration de la stack Python, du workflow git et de la structure des repos, et de la CI/CD, à l'échelle de toute l'équipe tech.
 
 
 - title: Doctorat en Deep Learning
-  at: Sorbonne Université (ex Université Pierre and Marie Curie) – Paris
-  date: "2019 <em>3 ans</em>"
+  at: Sorbonne Université (ex Université Pierre et Marie Curie) – Paris
+  date: "2019"
   image: /data/cv/SU.png
   type: edu
   tags: [ML, research]
   urls:
     - url: https://hal.archives-ouvertes.fr/tel-02309812
-      title: Thesis
+      title: Thèse
     - url: /data/publis/TheseSlides_ThomasRobert.pdf
       title: Slides
   content: |
@@ -43,9 +58,9 @@
     * Examinateurs : [Catherine Achard](https://sites.google.com/view/catherine-achard/home), [Karteek Alahari](https://lear.inrialpes.fr/people/alahari/), [David Picard](https://davidpicard.github.io/)
 
 
-- title: Ingénieur-recherche puis Doctorant en Deep Learning
-  at: Laboratoire LIP6, Sorbonne Université (ex Université Pierre and Marie Curie) – Paris
-  date: "<span>Nov. 2015 -</span> <span>Oct. 2019</span> <em>Actuel</em>"
+- title: Doctorant en Deep Learning
+  at: Laboratoire LIP6, Sorbonne Université (ex Université Pierre et Marie Curie) – Paris
+  date: "<span>Nov. 2015 -</span> <span>Nov. 2019</span> <em>4 ans</em>"
   image: /data/cv/LIP6.png
   type: pro
   icon: flask
@@ -58,16 +73,16 @@
   content: |
     Encadré par [Matthieu Cord](https://cord.isir.upmc.fr/) et [Nicolas Thome](https://thome.isir.upmc.fr/)
 
-    Travail sur les projets ANR VISIIR et [DeepVision](https://anr.fr/Projet-ANR-15-CE23-0029) en partenariat avec le LIRIS (INSA Lyon, France), Simon Fraser University (Canada) et l'University of Guelph (Canada).
+    Travail sur les projets ANR VISIIR et [DeepVision](https://anr.fr/Projet-ANR-15-CE23-0029) en partenariat avec le LIRIS (INSA Lyon, France), Simon Fraser University (Canada) et l'Université de Guelph (Canada).
 
-    - Travail sur la **classification de recettes de cuisines.** Réalisation d'un site web de démonstration du classifieur
-    - **Mission d'enseignement** (64h / an) : encadrement de plusieurs cours, réalisation de sujets sur les réseaux convolutionnels
-    - Participation au **challenge _workflow_ du workshop [_M2CAI (MICCAI 2016)_](http://camma.u-strasbg.fr/m2cai2016/)**  avec [Remi Cadène](http://remicadene.com) : classification d'étapes d'opération basé sur des vidéos endoscopiques. 2e meilleur modèle soumis.
+    - Travail sur la **classification de recettes de cuisine**. Réalisation d'un site web de démonstration du classifieur.
+    - **Mission d'enseignement** (64h / an) : encadrement de plusieurs cours, réalisation de sujets sur les réseaux convolutionnels.
+    - Participation au **challenge _workflow_ du workshop [_M2CAI (MICCAI 2016)_](http://camma.u-strasbg.fr/m2cai2016/)** avec [Rémi Cadène](http://remicadene.com) : classification d'étapes d'opération basée sur des vidéos endoscopiques. 2e meilleur modèle soumis.
     - **Régularisation des réseaux profonds** avec [Michael Blot](https://scholar.google.com/citations?user=rxK3-OwAAAAJ&hl=fr). Publication à ICIP 2018 (best paper award).  
       _SHADE: Information-Based Regularization for Deep Learning_
-    - Amélioration de modèles **d'apprentissage semi-supervisé basé auto-encodeur.** Publication à ECCV 2018.  
+    - Amélioration de modèles **d'apprentissage semi-supervisé basés sur des auto-encodeurs**. Publication à ECCV 2018.  
       _HybridNet: Classification and Reconstruction Cooperation for Semi-Supervised Learning_
-    - Travail sur un modèle de **disentangling pour la génération.**  
+    - Travail sur des modèles de **disentangling pour la génération**.  
       _DualDis: Dual-Branch Disentangling with Adversarial Learning_
 
 
@@ -87,48 +102,48 @@
 
 - title: Stage de recherche en Data Science
   at: Conviva – Baie de San Francisco, Californie, USA
-  date: "Été 2015 <em>6 mois</em>"
+  date: "2015 <em>6 mois</em>"
   image: /data/cv/conviva.png
   type: pro
   icon: youtube-play
-  tags: [ML, bigdata, stats, research]
+  tags: [ML, DE, DS, research]
   content: |
     Travail sur divers problèmes de recherche concernant l'**optimisation de la qualité de streaming vidéo**
 
-    - **Prédiction de la qualité vidéo optimale** d'une session en utilisant _Machine Learning_ et _A/B testing_
-    - Formulation et résolution d'un **problème d'optimisation mathématique pour déterminer les décisions optimales** que les produits de Conviva devraient prendre
-    - **Etude statistique de l'évolution de la bande passante** dans le contexte des produits de Conviva
+    - **Prédiction de la qualité vidéo optimale** d'une session en utilisant _Machine Learning_ et _A/B testing_.
+    - Formulation et résolution d'un **problème d'optimisation mathématique pour déterminer les décisions optimales** que les produits de Conviva devraient prendre.
+    - **Étude statistique de l'évolution de la bande passante** dans le contexte des produits de Conviva.
     - **Technologies utilisées :** Python, Hive, Hadoop MapReduce, Spark
 
 
 
 - title: Double diplôme d'ingénieur en Data Science
-  date: "2015 <em>5 ans</em>"
+  date: "2015"
   at: Institut National de Sciences Appliquées &amp; Université de Rouen
   image: /data/cv/insa.png
   type: edu
-  tags: [ML, stats]
+  tags: [ML, DS]
   content: |
     Diplôme d'ingénieur en Architecture des Systèmes d'Information spécialisé en **Data Science**  
     Master en Systèmes de Traitement de l'Information Multimédia (traitement d'images)
 
-    - Cycle préparatoire (2 ans)
-    - Cycle ingénieur au département ASI (3 ans)
-    - Cours de master (1 an en parallèle de l'INSA)
+    - Cycle préparatoire (2 ans).
+    - Cycle ingénieur au département ASI (3 ans).
+    - Cours de master (1 an en parallèle de l'INSA).
 
 
 
 - title: Stagiaire Data-Scientist
-  at: Creativedata – Rouen
+  at: Creative Data – Rouen
   date: "Été 2014 <em>14 semaines</em>"
   image: /data/cv/creativedata.png
   type: pro
-  tags: [ML, bigdata, stats]
+  tags: [ML, DE, DS, research]
   icon: cogs
   content: |
     - **Auto-formation sur le Big Data** : concepts, architectures et technologies de l'écosystème Hadoop.
     - **Déploiement de clusters Big Data** sur Google Cloud Platform.
-    - **Etude statistique** de données d'une plateforme e-commerce pour avoir un aperçu de l'état des boutiques.
+    - **Étude statistique** de données d'une plateforme e-commerce pour avoir un aperçu de l'état des boutiques.
     - **Essai et comparaison d'algorithmes de Machine Learning** pour prédire le prochain élément d'une séquence d'achats pour un fournisseur de solutions self-scanning pour grande distribution (utilisation de Matlab & scikit-learn de Python). Lecture de publications de Machine Learning.
 
 
@@ -145,7 +160,7 @@
     - url: https://github.com/loganalysis
       title: Page GitHub de l'organisation du projet 
   type: pro
-  tags: [BI, web]
+  tags: [DS, web, mgmt]
   icon: bar-chart-o
   content: |
     - Développement d'une **solution web open-source et user-friendly** pour l'**analyse de données OLAP spatiales sur ses diverses dimensions**. Intégration au logiciel GeoNode.
@@ -163,7 +178,7 @@
   tags: [web]
   content: |
     - Contribution au développement de PGPic, un **outil web permettant le suivi de la qualité et la gestion de projet**.
-    - Cet outil est utilisé quotidiennement par toutes les équipes PIC (les PIC sont les projets réalisés en ASI, tels que mon projet TUDOR présenté ci-dessus. Il y en a 6 par an).
+    - Cet outil est utilisé quotidiennement par toutes les équipes PIC (les PIC sont les projets réalisés en ASI, tels que mon projet pour le LIST présenté ci-dessus. Il y en a 6 par an).
     - **Compétences développées :** HTML / CSS3 / PHP / MySQL / Javascript
 
 
@@ -173,14 +188,14 @@
   date: "Été 2013 <em>9 semaines</em>"
   image: /data/cv/sopra.png
   type: pro
-  tags: [BPM]
+  tags: [web]
   content: |
     - Dans le domaine du BPM (Business Process Modelling), **mission d'analyste développeur** dans un contexte métier de gestion d'épargne salariale en **soutien d'un consultant métier senior** en Assurance et Protection Sociale.
     - **Participation aux ateliers avec la MOA** (2 jours par semaine) en compagnie du chef de projet MOA pour capter la matière.
-    - **Modélisation et optimisation des processus cœur de métier** à la norme BMPN 2.0.
+    - **Modélisation et optimisation des processus cœur de métier** à la norme BPMN 2.0.
     - Rédaction des spécifications détaillées des diverses activités des processus.
-    - **Saisie des processus sur le logiciel de workflow Bonita**, et programmation de formulaires et scripts pour le suivi du processus et la saisie et vérification des données. Vérification de la cohérence des données saisies avec la base de données par exemple. _Utilisation de Groovy et MySQL._
-    - Réalisation d'un **outil de conversion de format de données** pour permettre l'insertion de données créées par les processus dans l'outil de gestion du client. _Utilisation de PHP, MySQL, jQuery, Bootstrap, FTP._
+    - **Saisie des processus sur le logiciel de workflow Bonita**, et programmation de formulaires et scripts pour le suivi du processus, la saisie et la vérification des données (notamment leur cohérence avec la base de données). _Utilisation de Groovy et MySQL._.
+    - Réalisation d'un **outil de conversion de format de données** pour permettre l'insertion de données créées par les processus dans l'outil de gestion du client. _Utilisation de PHP, MySQL, jQuery, Bootstrap, FTP._.
 
 
 
@@ -189,14 +204,15 @@
   date: "<span>Fév. 2013 -</span> <span>Fév. 2014</span> <em>1 an</em>"
   image: /data/cv/ajir.png
   type: asso
+  tags: [mgmt]
   content: |
     _L'AJIR est une association qui met en contact des étudiants et des entreprises afin de réaliser des projets professionnels en ingénierie (informatique, mécanique, énergétique, chimie, etc.)_
 
-    - Responsable de la **gestion associative et administrative** de la Junior-Entreprise
-    - Organisation des **Conseils d'Administration et des Assemblées Générales**
-    - Responsable des Ressources Humaines et du local
-    - Membre du bureau
-    - Achat des fournitures
+    - Responsable de la **gestion associative et administrative** de la Junior-Entreprise.
+    - Organisation des **Conseils d'Administration et des Assemblées Générales**.
+    - Responsable des Ressources Humaines et du local.
+    - Membre du bureau.
+    - Achat des fournitures.
 
 
 
@@ -209,7 +225,7 @@
   type: perso
   tags: [web]
   content: |
-    - Réalisation du **site web** de l'Association des Elèves des INSA sous forme d'étude via l'AJIR avec un autre étudiant.
+    - Réalisation du **site web** de l'Association des Élèves des INSA sous forme d'étude via l'AJIR avec un autre étudiant.
     - Expérience de réalisation d'un projet pour un **vrai client**.
     - Site réalisé sous forme de template Wordpress.
     - **Compétences développées :** HTML / CSS3 / PHP / Javascript / Wordpress
@@ -266,7 +282,7 @@
   tags: [web]
   icon: book
   content: |
-    - Réalisation en groupe d’un site web simplifiant le prêt de livres entre étudiants. Réalisé en tant de projet scolaire.
+    - Réalisation en groupe d’un site web simplifiant le prêt de livres entre étudiants. Réalisé dans le cadre d'un projet scolaire.
     - Utilisation de l'API Facebook pour la connexion et de nombreuses API pour récupérer les informations sur les livres à partir de l'ISBN.
     - Requêtes SQL relativement complexes.
     - **Compétences développées :** HTML / CSS3 / PHP / MySQL / Javascript
@@ -300,33 +316,6 @@
   icon: pencil
   content: |
     - Rédaction (et publication) de fiches de cours depuis la terminale jusqu'à la fin de mes études d'ingénieur.
-    - **Compétences développées :** Word 2010 / Inkscape
-
-
-
-- title: Gadget iGoogle pour BetaSeries
-  date: "2010"
-  image-big: /data/cv/betaseries.png
-  type: perso
-  icon: video-camera
-  tags: [web]
-  content: |
-    - Gadget permet de **gérer son compte BetaSeries** (site web permettant de savoir quels épisodes de séries ont été vus) directement depuis iGoogle.
-    - **Compétences développées :** HTML / CSS / PHP / XML / Javascript
-
-
-
-- title: Trombinoscope
-  date: "2010"
-  image: /data/cv/trombi.png
-  type: perso
-  tags: [web]
-  icon: camera
-  content: |
-    - Réalisation d’un système de **trombinoscope professionnel interactif** pour Sogécap trié par ordre alphabétique ou par service.
-    - Pensé le plus simple possible pour les Ressources Humaines : les pages sont générées à partir des fichiers d'images nommés avec le nom et la position dans l'entreprise.
-    - Rendu HTML mis en cache pour plus de rapidité.
-    - **Compétences développées :** HTML / CSS / PHP
 
 
 
@@ -336,14 +325,14 @@
   tags: [web]
   icon: gamepad
   content: |
-    - **Site bilingue référençant des thèmes et fond d'écran** pour toutes consoles.
-    - Site important permettant la **consultation de contenus divers** (actualités, thèmes, fonds d'écrans, sondages) chacun séparés en de nombreuses catégories.
+    - **Site bilingue référençant des thèmes et fonds d'écran** pour toutes consoles.
+    - Site important permettant la **consultation de contenus divers** (actualités, thèmes, fonds d'écrans, sondages) chacun réparti en de nombreuses catégories.
     - Création d'un **design original** proche de la charte graphique de l'univers Mediagen.
     - Gestion de **nombreux caches** pour augmenter les performances.
     - Mise en place d'un **forum phpBB** intégré dans le site.
     - Interface d'administration complète permettant :
-      - Gestion du processus de rédaction (écriture, correction, validation)
-      - Gestion intelligence des fichiers (thèmes et images) permettant l'automatisation des traitements et d'une grande partie des tâches de rédaction.
+      - Gestion du processus de rédaction (écriture, correction, validation).
+      - Gestion intelligente des fichiers (thèmes et images) permettant l'automatisation des traitements et d'une grande partie des tâches de rédaction.
       - La gestion des droits entre rédacteurs, correcteurs, validateurs, etc.
       - L'administration du site incluant les catégories, les utilisateurs, etc.
     - **Compétences développées :** HTML / CSS / PHP / MySQL / Javascript
