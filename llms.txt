@@ -1,0 +1,46 @@
+---
+# Summary of the site for AI assistants (https://llmstxt.org/), generated from the site data
+layout: null
+sitemap: false
+---
+{% assign person = site.data.person -%}
+# {{ site.author.name }}
+
+> {{ person.description.en }}
+
+This is the personal website of {{ site.author.name }}, in French (main version) and English.
+
+## Profiles
+
+- [LinkedIn](https://www.linkedin.com/in/{{ site.author.linkedin }})
+- [GitHub](https://github.com/{{ site.author.github }})
+- [X](https://x.com/{{ site.author.twitter }})
+{%- for url in person.same-as %}
+- [{% if url contains "scholar.google" %}Google Scholar{% else %}{{ url }}{% endif %}]({{ url }})
+{%- endfor %}
+
+## Main pages
+{% assign main_pages = site.pages | where_exp: "p", "p.description and p.parent == nil" | sort: "order" %}
+{%- for p in main_pages %}
+- [{% if p.nav-title %}{{ p.nav-title }}{% else %}{{ p.title }}{% endif %} ({{ p.lang }})]({{ p.url | prepend: site.baseurl | prepend: site.url }}): {{ p.description }}
+{%- endfor %}
+
+## Revision notes (fiches de révision)
+
+Free PDF study notes in French (Terminale S / Bac S, INSA Rouen STPI and ASI courses, driving licence theory), written by {{ site.author.name }} as a student. This is the most visited part of the site.
+{% assign fiches = site.pages | where: "parent", "fiches.md" | sort: "order" %}
+{%- for p in fiches %}
+- [{{ p.title }}]({{ p.url | prepend: site.baseurl | prepend: site.url }}): {{ p.description }}
+{%- endfor %}
+
+## Publications
+{% assign publications = site.data.publications-full | where_exp: "p", "p.type != 'website' and p.type != 'experiment'" %}
+{%- for publication in publications %}
+{%- assign first_url = publication.urls.first.url %}
+- {% if first_url contains "://" %}[{{ publication.title }}]({{ first_url }}){% else %}{{ publication.title }}{% endif %}, {{ publication.authors }}. {{ publication.in }}, {{ publication.year }}.{% if publication.award %} {{ publication.award }}.{% endif %}
+{%- endfor %}
+
+## Blog posts
+{% for post in site.posts %}
+- [{{ post.title }} ({{ post.lang }}, {{ post.date | date: "%Y" }})]({{ post.url | prepend: site.baseurl | prepend: site.url }}): {{ post.description }}
+{%- endfor %}

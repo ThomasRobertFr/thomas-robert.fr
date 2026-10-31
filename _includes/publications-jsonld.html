@@ -1,0 +1,31 @@
+{% comment %}
+  schema.org markup of the publications listed in site.data[include.data-name]:
+  papers as ScholarlyArticle, the PhD as Thesis (other items, e.g. websites, are skipped).
+  "T. Robert" is linked to the Person defined on the home pages (_includes/person-jsonld.html).
+{% endcomment %}
+{% assign person_id = site.url | append: site.baseurl | append: "/#person" %}
+{% assign publications = site.data[include.data-name] | where_exp: "p", "p.type != 'website' and p.type != 'experiment'" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {% for publication in publications %}
+    {% if publication.type contains "thesis" %}{% assign schema_type = "Thesis" %}{% else %}{% assign schema_type = "ScholarlyArticle" %}{% endif %}
+    {% assign authors = publication.authors | split: ", " %}
+    {
+      "@type": "{{ schema_type }}",
+      "name": {{ publication.title | jsonify }},
+      "author": [
+        {% for author in authors %}{% if author == "T. Robert" %}{ "@type": "Person", "@id": "{{ person_id }}", "name": {{ site.author.name | jsonify }} }{% else %}{ "@type": "Person", "name": {{ author | jsonify }} }{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}
+      ],
+      "datePublished": "{{ publication.year }}",
+      {% if schema_type == "Thesis" %}"inSupportOf": "PhD",{% elsif publication.in %}"isPartOf": { "@type": "CreativeWork", "name": {{ publication.in | jsonify }} },{% endif %}
+      {% if publication.award %}"award": {{ publication.award | jsonify }},{% endif %}
+      {% if publication.image %}"image": "{{ publication.image | prepend: site.baseurl | prepend: site.url }}",{% endif %}
+      {% if publication.urls %}{% assign first_url = publication.urls.first.url %}{% capture url %}{% include url.html url=first_url %}{% endcapture %}{% unless url contains "://" %}{% assign url = url | prepend: site.url %}{% endunless %}"url": {{ url | strip | jsonify }},{% endif %}
+      "inLanguage": "en"
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>

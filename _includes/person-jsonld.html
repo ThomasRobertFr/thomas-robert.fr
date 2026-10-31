@@ -17,7 +17,8 @@
   "worksFor": {
     "@type": "Organization",
     "name": {{ person.works-for.name | jsonify }},
-    "url": {{ person.works-for.url | jsonify }}
+    "url": {{ person.works-for.url | jsonify }},
+    "description": {{ person.works-for.description | jsonify }}
   },
   "alumniOf": [
     {% for school in person.alumni-of %}{ "@type": "CollegeOrUniversity", "name": {{ school.name | jsonify }}, "url": {{ school.url | jsonify }} }{% unless forloop.last %},

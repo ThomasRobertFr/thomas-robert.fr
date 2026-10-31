@@ -1,0 +1,56 @@
+# Thomas Robert
+
+> CTO of Heuritech, a Paris-based Luxurynsight AI technology that forecasts fashion trends through large-scale image analysis of social media. PhD in deep learning for computer vision from Sorbonne Université.
+
+This is the personal website of Thomas Robert, in French (main version) and English.
+
+## Profiles
+
+- [LinkedIn](https://www.linkedin.com/in/thomasrobertfr)
+- [GitHub](https://github.com/ThomasRobertFr)
+- [X](https://x.com/ThomasR_Fr)
+- [Google Scholar](https://scholar.google.com/citations?user=v6oayvkAAAAJ)
+
+## Main pages
+
+- [Home (en)](https://www.thomas-robert.fr/en/): Thomas Robert, CTO of Heuritech: AI forecasting fashion trends from large-scale image analysis. PhD in deep learning from Sorbonne Université.
+- [Accueil (fr)](https://www.thomas-robert.fr/): Thomas Robert, CTO d'Heuritech : IA de prévision des tendances mode par analyse d'images à grande échelle. Docteur en deep learning (Sorbonne Université).
+- [CV (en)](https://www.thomas-robert.fr/en/resume/): Resume of Thomas Robert: CTO of Heuritech, former AI R&D team lead, PhD in deep learning. Experience, skills and education (INSA Rouen, Sorbonne Université).
+- [CV (fr)](https://www.thomas-robert.fr/fr/cv/): CV de Thomas Robert : CTO d'Heuritech, ex-responsable R&D IA, docteur en deep learning. Expériences, compétences et formation (INSA Rouen, Sorbonne Université).
+- [Publications (fr)](https://www.thomas-robert.fr/fr/publications/): Publications scientifiques de Thomas Robert en deep learning et vision par ordinateur : thèse, articles de conférence (ECCV, ICIP) et preprints.
+- [Publications (en)](https://www.thomas-robert.fr/en/publications/): Scientific publications of Thomas Robert in deep learning and computer vision: PhD thesis, conference papers (ECCV, ICIP) and preprints.
+- [Fiches (fr)](https://www.thomas-robert.fr/fr/fiches/): Fiches de révision gratuites en PDF : Terminale S / Bac S, INSA Rouen (STPI, ASI) et code de la route, rédigées par Thomas Robert pendant ses études.
+- [Cours (fr)](https://www.thomas-robert.fr/fr/teaching/): Cours et TP donnés par Thomas Robert : deep learning et vision par ordinateur (M2), réseaux convolutionnels (M2) et Java (L2), avec sujets et code.
+
+## Revision notes (fiches de révision)
+
+Free PDF study notes in French (Terminale S / Bac S, INSA Rouen STPI and ASI courses, driving licence theory), written by Thomas Robert as a student. This is the most visited part of the site.
+
+- [Fiches Terminale & Bac S](https://www.thomas-robert.fr/fr/fiches/terminale-bac-s/): Fiches de révision gratuites en PDF pour la Terminale S et le Bac S : physique, chimie, maths, SI, histoire et géographie.
+- [Fiches INSA Rouen - STPI 1 - Semestre 1](https://www.thomas-robert.fr/fr/fiches/insa-rouen-stpi-1-1-semestre-1/): Fiches de révision gratuites en PDF pour l'INSA Rouen, STPI 1, semestre 1 : résumés de cours rédigés par Thomas Robert.
+- [Fiches INSA Rouen - STPI 1 - Semestre 2](https://www.thomas-robert.fr/fr/fiches/insa-rouen-stpi-1-2-semestre-2/): Fiches de révision gratuites en PDF pour l'INSA Rouen, STPI 1, semestre 2 : résumés de cours rédigés par Thomas Robert.
+- [Fiches INSA Rouen - STPI 2 - Semestre 3](https://www.thomas-robert.fr/fr/fiches/insa-rouen-stpi-2-1-semestre-3/): Fiches de révision gratuites en PDF pour l'INSA Rouen, STPI 2, semestre 3 : résumés de cours rédigés par Thomas Robert.
+- [Fiches INSA Rouen - STPI 2 - Semestre 4 (ASI/MECA)](https://www.thomas-robert.fr/fr/fiches/insa-rouen-stpi-2-2-asi-meca-semestre-4/): Fiches de révision gratuites en PDF pour l'INSA Rouen, STPI 2, semestre 4 (ASI/MECA) : résumés de cours rédigés par Thomas Robert.
+- [Fiches INSA Rouen - ASI 3 - Semestre 5](https://www.thomas-robert.fr/fr/fiches/insa-rouen-asi-3-1-semestre-5/): Fiches de révision gratuites en PDF pour l'INSA Rouen, ASI 3, semestre 5 : résumés de cours rédigés par Thomas Robert.
+- [Fiches INSA Rouen - ASI 3 - Semestre 6](https://www.thomas-robert.fr/fr/fiches/insa-rouen-asi-3-2-semestre-6/): Fiches de révision gratuites en PDF pour l'INSA Rouen, ASI 3, semestre 6 : résumés de cours rédigés par Thomas Robert.
+- [Fiches INSA Rouen - ASI 4 - Semestre 7](https://www.thomas-robert.fr/fr/fiches/insa-rouen-asi-4-1-semestre-7/): Fiches de révision gratuites en PDF pour l'INSA Rouen, ASI 4, semestre 7 : résumés de cours rédigés par Thomas Robert.
+- [Fiches INSA Rouen - ASI 4 - Semestre 8](https://www.thomas-robert.fr/fr/fiches/insa-rouen-asi-4-2-semestre-8/): Fiches de révision gratuites en PDF pour l'INSA Rouen, ASI 4, semestre 8 : résumés de cours rédigés par Thomas Robert.
+- [Fiches INSA Rouen - ASI 5 & STIM - Semestre 9](https://www.thomas-robert.fr/fr/fiches/insa-rouen-asi-5-1-stim-semestre-9/): Fiches de révision gratuites en PDF pour l'INSA Rouen, ASI 5 & STIM, semestre 9 : résumés de cours rédigés par Thomas Robert.
+- [Fiche Code De La Route](https://www.thomas-robert.fr/fr/fiches/code-de-la-route/): Fiche de révision gratuite en PDF (2013) résumant le code de la route, à télécharger ou à lire en ligne.
+
+## Publications
+
+- [Insights from the Future for Continual Learning](https://arxiv.org/abs/2006.13748), A. Douillard, M. Cord, C. Ollion, T. Robert, E. Valle. arxiv, 2020.
+- [PODNet: Pooled Outputs Distillation for Small-Tasks Incremental Learning](https://arxiv.org/abs/2004.13513), A. Douillard, M. Cord, C. Ollion, T. Robert, E. Valle. European Conference on Computer Vision (ECCV), 2020.
+- [Improving Latent Representations of ConvNets for Visual Understanding](https://hal.archives-ouvertes.fr/tel-02309812), T. Robert. PhD thesis, Sorbonne Université, Paris, 2019.
+- [DualDis: Dual-Branch Disentangling with Adversarial Learning](https://arxiv.org/abs/1906.00804), T. Robert, N. Thome, M. Cord. arXiv, 2019.
+- [HybridNet: Classification and Reconstruction Cooperation for Semi-Supervised Learning](https://arxiv.org/abs/1807.11407), T. Robert, N. Thome, M. Cord. European Conference on Computer Vision (ECCV), 2018.
+- [SHADE: Information-Based Regularization for Deep Learning](https://arxiv.org/abs/1805.05814), M. Blot, T. Robert, N. Thome, M. Cord. IEEE International Conference on Image Processing (ICIP), 2018. Best paper award (ICIP 2018).
+- [M2CAI workflow challenge: classification of surgical operation steps based on endosopic videos](https://arxiv.org/abs/1610.05541), R. Cadene, T. Robert, N. Thome, M. Cord. M2CAI workshop @ MICCAI, 2016.
+
+## Blog posts
+
+- [LogAnalysis : Outil Web Open-Source De Business Intelligence Gégraphique (fr, 2015)](https://www.thomas-robert.fr/blog/fr/2015/03/17/loganalysis-outil-web-open-source-de-business-intelligence-gegraphique/): LogAnalysis, un outil web open-source pour faire de la business intelligence géographique (GeoBI) simplement, réalisé en projet industriel à l'INSA Rouen.
+- [LogAnalysis: Open-Source Web Tool For Geographic Business Intelligence (en, 2015)](https://www.thomas-robert.fr/blog/en/2015/03/17/loganalysis-open-source-web-tool-for-geographic-business-intelligence/): LogAnalysis, an open-source web tool making geographic business intelligence (GeoBI) easy, built as an INSA Rouen industrial student project.
+- [Mon Résumé Des Concepts Du Big Data (fr, 2014)](https://www.thomas-robert.fr/blog/fr/2014/09/06/mon-resume-des-concepts-du-big-data/): Résumé des principaux concepts du Big Data (Hadoop, MapReduce, NoSQL…), écrit après un stage sur les technologies Big Data.
+- [My Sum-Up Of Big Data Concepts (en, 2014)](https://www.thomas-robert.fr/blog/en/2014/09/06/my-sum-up-of-big-data-concepts/): A summary of the main Big Data concepts (Hadoop, MapReduce, NoSQL…) written after an internship working on Big Data technologies.

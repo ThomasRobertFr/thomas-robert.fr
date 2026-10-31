@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Thomas Robert</title>
-    <description>Thomas Robert, CTO of Heuritech: data architecture, AI and computer vision. PhD in deep learning from Sorbonne Université.</description>
+    <description>Thomas Robert, CTO of Heuritech: AI forecasting fashion trends from large-scale image analysis. PhD in deep learning from Sorbonne Université.</description>
     <link>https://www.thomas-robert.fr/</link>
     <atom:link href="https://www.thomas-robert.fr/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 31 Oct 2026 18:55:00 +0100</pubDate>
-    <lastBuildDate>Sat, 31 Oct 2026 18:55:00 +0100</lastBuildDate>
+    <pubDate>Sat, 31 Oct 2026 19:15:27 +0100</pubDate>
+    <lastBuildDate>Sat, 31 Oct 2026 19:15:27 +0100</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
       <item>

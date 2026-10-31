@@ -2,8 +2,8 @@
 # LinkedIn, GitHub & X come from `author` in _config.yml
 
 description:
-  en: CTO of Heuritech (a Luxurynsight AI technology), working on data architecture, AI and computer vision. PhD in deep learning for computer vision from Sorbonne Université.
-  fr: CTO d'Heuritech (une technologie IA de Luxurynsight), spécialisé en architecture data, IA et computer vision. Docteur en deep learning pour la vision par ordinateur de Sorbonne Université.
+  en: CTO of Heuritech, a Paris-based Luxurynsight AI technology that forecasts fashion trends through large-scale image analysis of social media. PhD in deep learning for computer vision from Sorbonne Université.
+  fr: CTO d'Heuritech, une technologie IA de Luxurynsight basée à Paris, qui prévoit les tendances de mode grâce à l'analyse à grande échelle d'images des réseaux sociaux. Docteur en deep learning pour la vision par ordinateur de Sorbonne Université.
 
 job-title:
   en: CTO
@@ -12,6 +12,7 @@ job-title:
 works-for:
   name: Heuritech
   url: https://www.heuritech.com/
+  description: Paris-based Luxurynsight AI technology forecasting fashion trends through large-scale image analysis of social media.
 
 alumni-of:
   - name: Sorbonne Université

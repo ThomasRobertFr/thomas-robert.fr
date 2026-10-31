@@ -1,7 +1,7 @@
 ---
 title: Thomas Robert
 nav-title: Accueil
-description: "Thomas Robert, CTO d'Heuritech : architecture data, IA et computer vision. Docteur en deep learning pour la vision par ordinateur (Sorbonne Université)."
+description: "Thomas Robert, CTO d'Heuritech : IA de prévision des tendances mode par analyse d'images à grande échelle. Docteur en deep learning (Sorbonne Université)."
 collection: onepage_home_fr
 layout: onepage
 permalink: /

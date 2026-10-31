@@ -7,7 +7,7 @@ bg-image: /data/headers/datacenter.jpg
 class: dark large cover-image parallax
 ---
 
-Je suis actuellement CTO d'[Heuritech](https://www.heuritech.com/), une technologie IA de [Luxurynsight](https://www.luxurynsight.com/).
+Je suis CTO d'[Heuritech](https://www.heuritech.com/), une technologie IA de [Luxurynsight](https://www.luxurynsight.com/) basée à Paris, qui prévoit les tendances de mode grâce à l'analyse à grande échelle d'images des réseaux sociaux.
 
 Auparavant, j'étais responsable de l'équipe R&D travaillant sur les modèles de vision IA d'Heuritech.
 
