@@ -28,8 +28,11 @@ plugins:
 sass:
   sass_dir: /assets/css/
   style: compressed
+  # old Bootstrap 3 / SCSS syntax: hide dart-sass deprecation noise
+  silence_deprecations: [import, global-builtin, color-functions, slash-div, if-function]
 timezone: Europe/Paris
 include: ['CNAME']
+exclude: ['README.md']
 permalink: /:title/
 destination: docs/
 

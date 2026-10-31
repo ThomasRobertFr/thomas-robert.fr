@@ -6,6 +6,6 @@ bg-image: /data/headers/datacenter.jpg
 class: dark large cover-image parallax
 ---
 
-Je suis actuellement responsable de l'équipe R&D et ingénieur recherche en Deep Learning au [Heuritech R&D Lab](https://www.heuritech.com/research-development/).
+Je suis actuellement CTO d'[Heuritech](https://www.heuritech.com/), une technologie IA de [Luxurynsight](https://www.luxurynsight.com/). Auparavant, j'étais responsable de l'équipe R&D travaillant sur les modèles de vision IA d'Heuritech.
 
-Précédemment, j'ai soutenu ma [thèse en Deep Learning pour la Computer Vision](https://tel.archives-ouvertes.fr/tel-02309812/) à [Sorbonne Université](http://www.sorbonne-universite.fr/) ([MLIA](https://mlia.lip6.fr/) / [LIP6](https://www.lip6.fr/)) en octobre 2019.
+Je suis titulaire d'un [doctorat en Deep Learning pour la Computer Vision](https://tel.archives-ouvertes.fr/tel-02309812/) de [Sorbonne Université](http://www.sorbonne-universite.fr/).

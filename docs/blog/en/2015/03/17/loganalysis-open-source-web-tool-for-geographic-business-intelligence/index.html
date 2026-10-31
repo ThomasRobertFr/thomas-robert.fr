@@ -265,19 +265,19 @@
 <p><strong>Crossfilter</strong></p>
 
 <ul>
-  <li><script type="math/tex">\mathcal{O}(n^p)</script> <script type="math/tex">\left(\prod_{i \in \mathcal{D}} n_i\right)</script><br />
-<strong><script type="math/tex">\Rightarrow</script> Resonable volumes</strong></li>
+  <li>\(\mathcal{O}(n^p)\) \(\left(\prod_{i \in \mathcal{D}} n_i\right)\)<br />
+<strong>\(\Rightarrow\) Resonable volumes</strong></li>
   <li>Quick client side filtering &amp; aggregates (&lt; 10 ms)<br />
-<strong><script type="math/tex">\Rightarrow</script> Great responsivity</strong></li>
+<strong>\(\Rightarrow\) Great responsivity</strong></li>
 </ul>
 
 <p><strong>Crossfilter Server</strong></p>
 
 <ul>
-  <li><script type="math/tex">\mathcal{O}(n\times p)</script> <script type="math/tex">\left(\sum_{i \in \mathcal{D}} n_i\right)</script><br />
-<strong><script type="math/tex">\Rightarrow</script> Important volumes</strong></li>
-  <li>Server side filtering &amp; aggregates, reload data (<script type="math/tex">\approx</script> 1s)<br />
-<strong><script type="math/tex">\Rightarrow</script> limited responsivity</strong></li>
+  <li>\(\mathcal{O}(n\times p)\) \(\left(\sum_{i \in \mathcal{D}} n_i\right)\)<br />
+<strong>\(\Rightarrow\) Important volumes</strong></li>
+  <li>Server side filtering &amp; aggregates, reload data (\(\approx\) 1s)<br />
+<strong>\(\Rightarrow\) limited responsivity</strong></li>
 </ul>
 
 <p>Our final solution was to use both of these solutions, using one or the other depending on the volume of data you are studying, and switching dynamically from one to the other when needed.</p>

@@ -305,19 +305,19 @@
 <p><strong>Crossfilter</strong></p>
 
 <ul>
-  <li><script type="math/tex">\mathcal{O}(n^p)</script> <script type="math/tex">\left(\prod_{i \in \mathcal{D}} n_i\right)</script><br />
-<strong><script type="math/tex">\Rightarrow</script> Volumes raisonnables</strong></li>
+  <li>\(\mathcal{O}(n^p)\) \(\left(\prod_{i \in \mathcal{D}} n_i\right)\)<br />
+<strong>\(\Rightarrow\) Volumes raisonnables</strong></li>
   <li>Filtrage &amp; agrégats côté client rapide (&lt; 10 ms)<br />
-<strong><script type="math/tex">\Rightarrow</script> Excellente réactivité</strong></li>
+<strong>\(\Rightarrow\) Excellente réactivité</strong></li>
 </ul>
 
 <p><strong>Crossfilter Server</strong></p>
 
 <ul>
-  <li><script type="math/tex">\mathcal{O}(n\times p)</script> <script type="math/tex">\left(\sum_{i \in \mathcal{D}} n_i\right)</script><br />
-<strong><script type="math/tex">\Rightarrow</script> Volumes importants</strong></li>
+  <li>\(\mathcal{O}(n\times p)\) \(\left(\sum_{i \in \mathcal{D}} n_i\right)\)<br />
+<strong>\(\Rightarrow\) Volumes importants</strong></li>
   <li>Filtrage &amp; agrégats côté serveur, rechargement (≈≈\approx 1s)<br />
-<strong><script type="math/tex">\Rightarrow</script> Réactivité réduite</strong></li>
+<strong>\(\Rightarrow\) Réactivité réduite</strong></li>
 </ul>
 
 <p>Notre solution définitive consiste a utiliser ces deux solutions, en utilisant l’une ou l’autre selon le volume de données en cours d’étude, en passant dynamiquement de l’une à l’autre selon les besoin.</p>
