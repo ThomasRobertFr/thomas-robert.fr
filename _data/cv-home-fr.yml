@@ -38,9 +38,9 @@
 
     **Jury :**
 
-    * Encadrants : [Matthieu Cord](http://webia.lip6.fr/~cord/), [Nicolas Thome](http://cedric.cnam.fr/~thomen/)
-    * Rapporteurs : [Stéphane Canu](http://asi.insa-rouen.fr/enseignants/~scanu/), [Greg Mori](https://www.cs.sfu.ca/~mori/)
-    * Examinateurs : [Catherine Achard](http://www.isir.upmc.fr/?op=view_profil&lang=fr&id=7), [Karteek Alahari](https://lear.inrialpes.fr/people/alahari/), [David Picard](https://davidpicard.github.io/)
+    * Encadrants : [Matthieu Cord](https://cord.isir.upmc.fr/), [Nicolas Thome](https://thome.isir.upmc.fr/)
+    * Rapporteurs : [Stéphane Canu](https://stephanecanu.github.io/Pages_perso/), [Greg Mori](https://www.cs.sfu.ca/~mori/)
+    * Examinateurs : [Catherine Achard](https://sites.google.com/view/catherine-achard/home), [Karteek Alahari](https://lear.inrialpes.fr/people/alahari/), [David Picard](https://davidpicard.github.io/)
 
 
 - title: Ingénieur-recherche puis Doctorant en Deep Learning
@@ -54,14 +54,14 @@
       title: Détail des publications et cours 
   tags: [ML, research]
   content: |
-    Encadré par [Matthieu Cord](http://webia.lip6.fr/~cord/) et [Nicolas Thome](http://cedric.cnam.fr/~thomen/)
+    Encadré par [Matthieu Cord](https://cord.isir.upmc.fr/) et [Nicolas Thome](https://thome.isir.upmc.fr/)
 
-    Travail sur les projets ANR [projet VISIIR](http://visiir.univ-lr.fr); et [DeepVision](https://anr.fr/Projet-ANR-15-CE23-0029) en partenariat avec le LIRIS (INSA Lyon, France), Simon Fraser University (Canada) et l'University of Guelph (Canada).
+    Travail sur les projets ANR VISIIR et [DeepVision](https://anr.fr/Projet-ANR-15-CE23-0029) en partenariat avec le LIRIS (INSA Lyon, France), Simon Fraser University (Canada) et l'University of Guelph (Canada).
 
-    - Travail sur la **classification de recettes de cuisines.** Réalisation d'un [site web de démonstration du classifieur](http://visiir.lip6.fr)
+    - Travail sur la **classification de recettes de cuisines.** Réalisation d'un site web de démonstration du classifieur
     - **Mission d'enseignement** (64h / an) : encadrement de plusieurs cours, réalisation de sujets sur les réseaux convolutionnels
     - Participation au **challenge _workflow_ du workshop [_M2CAI (MICCAI 2016)_](http://camma.u-strasbg.fr/m2cai2016/)**  avec [Remi Cadène](http://remicadene.com) : classification d'étapes d'opération basé sur des vidéos endoscopiques. 2e meilleur modèle soumis.
-    - **Régularisation des réseaux profonds** avec [Michael Blot](http://webia.lip6.fr/~blot/). Publication à ICIP 2018 (best paper award).  
+    - **Régularisation des réseaux profonds** avec [Michael Blot](https://scholar.google.com/citations?user=rxK3-OwAAAAJ&hl=fr). Publication à ICIP 2018 (best paper award).  
       _SHADE: Information-Based Regularization for Deep Learning_
     - Amélioration de modèles **d'apprentissage semi-supervisé basé auto-encodeur.** Publication à ECCV 2018.  
       _HybridNet: Classification and Reconstruction Cooperation for Semi-Supervised Learning_

@@ -105,13 +105,6 @@
   additional: Unpublised extension of published work
   type: experiment
   image: /data/projects/visiir.png
-  urls:
-    - url: http://visiir.lip6.fr
-      title: Project website & Demo
-      style: primary
-    - url: http://visiir.univ-lr.fr/images/publication/CEA_ICME2015.pdf
-      title: Related publication
-      style: info
 
 - title: "DjLu: an open-source tool to organize your bibliography"
   year: 2016
