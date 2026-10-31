@@ -27,7 +27,7 @@ This is the personal website of {{ site.author.name }}, in French (main version)
 
 ## Revision notes (fiches de révision)
 
-Free PDF study notes in French (Terminale S / Bac S, INSA Rouen STPI and ASI courses, driving licence theory), written by {{ site.author.name }} as a student. This is the most visited part of the site.
+Free PDF study notes in French (Terminale S / Bac S, INSA Rouen STPI and ASI courses), written by {{ site.author.name }} as a student. This is the most visited part of the site.
 {% assign fiches = site.pages | where: "parent", "fiches.md" | sort: "order" %}
 {%- for p in fiches %}
 - [{{ p.title }}]({{ p.url | prepend: site.baseurl | prepend: site.url }}): {{ p.description }}

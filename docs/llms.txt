@@ -15,16 +15,16 @@ This is the personal website of Thomas Robert, in French (main version) and Engl
 
 - [Home (en)](https://www.thomas-robert.fr/en/): Thomas Robert, CTO of Heuritech: AI forecasting fashion trends from large-scale image analysis. PhD in deep learning from Sorbonne Université.
 - [Accueil (fr)](https://www.thomas-robert.fr/): Thomas Robert, CTO d'Heuritech : IA de prévision des tendances mode par analyse d'images à grande échelle. Docteur en deep learning (Sorbonne Université).
-- [CV (en)](https://www.thomas-robert.fr/en/resume/): Resume of Thomas Robert: CTO of Heuritech, former AI R&D team lead, PhD in deep learning. Experience, skills and education (INSA Rouen, Sorbonne Université).
 - [CV (fr)](https://www.thomas-robert.fr/fr/cv/): CV de Thomas Robert : CTO d'Heuritech, ex-responsable R&D IA, docteur en deep learning. Expériences, compétences et formation (INSA Rouen, Sorbonne Université).
+- [CV (en)](https://www.thomas-robert.fr/en/resume/): Resume of Thomas Robert: CTO of Heuritech, former AI R&D team lead, PhD in deep learning. Experience, skills and education (INSA Rouen, Sorbonne Université).
 - [Publications (fr)](https://www.thomas-robert.fr/fr/publications/): Publications scientifiques de Thomas Robert en deep learning et vision par ordinateur : thèse, articles de conférence (ECCV, ICIP) et preprints.
 - [Publications (en)](https://www.thomas-robert.fr/en/publications/): Scientific publications of Thomas Robert in deep learning and computer vision: PhD thesis, conference papers (ECCV, ICIP) and preprints.
-- [Fiches (fr)](https://www.thomas-robert.fr/fr/fiches/): Fiches de révision gratuites en PDF : Terminale S / Bac S, INSA Rouen (STPI, ASI) et code de la route, rédigées par Thomas Robert pendant ses études.
+- [Fiches (fr)](https://www.thomas-robert.fr/fr/fiches/): Fiches de révision gratuites en PDF : Terminale S / Bac S et INSA Rouen (STPI, ASI), rédigées par Thomas Robert pendant ses études.
 - [Cours (fr)](https://www.thomas-robert.fr/fr/teaching/): Cours et TP donnés par Thomas Robert : deep learning et vision par ordinateur (M2), réseaux convolutionnels (M2) et Java (L2), avec sujets et code.
 
 ## Revision notes (fiches de révision)
 
-Free PDF study notes in French (Terminale S / Bac S, INSA Rouen STPI and ASI courses, driving licence theory), written by Thomas Robert as a student. This is the most visited part of the site.
+Free PDF study notes in French (Terminale S / Bac S, INSA Rouen STPI and ASI courses), written by Thomas Robert as a student. This is the most visited part of the site.
 
 - [Fiches Terminale & Bac S](https://www.thomas-robert.fr/fr/fiches/terminale-bac-s/): Fiches de révision gratuites en PDF pour la Terminale S et le Bac S : physique, chimie, maths, SI, histoire et géographie.
 - [Fiches INSA Rouen - STPI 1 - Semestre 1](https://www.thomas-robert.fr/fr/fiches/insa-rouen-stpi-1-1-semestre-1/): Fiches de révision gratuites en PDF pour l'INSA Rouen, STPI 1, semestre 1 : résumés de cours rédigés par Thomas Robert.
@@ -36,7 +36,6 @@ Free PDF study notes in French (Terminale S / Bac S, INSA Rouen STPI and ASI cou
 - [Fiches INSA Rouen - ASI 4 - Semestre 7](https://www.thomas-robert.fr/fr/fiches/insa-rouen-asi-4-1-semestre-7/): Fiches de révision gratuites en PDF pour l'INSA Rouen, ASI 4, semestre 7 : résumés de cours rédigés par Thomas Robert.
 - [Fiches INSA Rouen - ASI 4 - Semestre 8](https://www.thomas-robert.fr/fr/fiches/insa-rouen-asi-4-2-semestre-8/): Fiches de révision gratuites en PDF pour l'INSA Rouen, ASI 4, semestre 8 : résumés de cours rédigés par Thomas Robert.
 - [Fiches INSA Rouen - ASI 5 & STIM - Semestre 9](https://www.thomas-robert.fr/fr/fiches/insa-rouen-asi-5-1-stim-semestre-9/): Fiches de révision gratuites en PDF pour l'INSA Rouen, ASI 5 & STIM, semestre 9 : résumés de cours rédigés par Thomas Robert.
-- [Fiche Code De La Route](https://www.thomas-robert.fr/fr/fiches/code-de-la-route/): Fiche de révision gratuite en PDF (2013) résumant le code de la route, à télécharger ou à lire en ligne.
 
 ## Publications
 
