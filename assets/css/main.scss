@@ -73,3 +73,22 @@ h1.post-title {
     font-weight: 300;
     font-size: $font-size-h1 * 1.3;
 }
+
+// Pixel titles are pure black on light backgrounds and pure white on dark ones
+// (instead of the greys of the block themes in _styles.scss).
+.layout-onepage .onepage-block {
+    h1, h2 { color: #000; }
+
+    &.dark, &.darker, &.style-gray.darken {
+        h1, h2 { color: #fff; }
+    }
+}
+
+// Same for post / page titles, depending on the header style
+.post-header {
+    h1.post-title { color: #000; }
+
+    &.dark, &.darker, &.style-gray.darken {
+        h1.post-title { color: #fff; }
+    }
+}
