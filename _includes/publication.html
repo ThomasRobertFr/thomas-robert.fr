@@ -21,10 +21,10 @@
     {% endif %}
   </div>
   {% if publication.image %}
-    <div class="publi-image"><img src="{{ publication.image | prepend: site.baseurl }}" alt=""></div>
+    <div class="publi-image"><img src="{{ publication.image | prepend: site.baseurl }}" alt="" loading="lazy" decoding="async"></div>
   {% endif %}
   <div class="publi-content">
-    <h4 class="publi-title">{{ publication.title }}</h4>
+    <h3 class="publi-title">{{ publication.title }}</h3>
     {% if publication.full-raw-desc %}
       <p class="publi-authors">{{ publication.full-raw-desc }}</p>
     {% else %}

@@ -2,9 +2,10 @@
 # This fontmatter is necessary for this file to be compiled to CSS
 ---
 
-// Fonts (Chakra Petch, Bitcount Single) are loaded from _includes/head.html
+// Fonts (Chakra Petch, Bitcount Single) are self-hosted, see _fonts.scss
 
 @use "variables" as *;
+@use "fonts";
 @use "font-awesome.min";
 @use "base";
 @use "syntax-highlighting";

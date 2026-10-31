@@ -149,7 +149,10 @@ function initTooltips() {
     var tip = null;
     var title = el.getAttribute("title");
     el.removeAttribute("title");
-    if (!el.textContent.trim()) el.setAttribute("aria-label", title);
+    if (!el.textContent.trim()) {
+      el.setAttribute("role", "img"); // aria-label is not allowed on a role-less <i>
+      el.setAttribute("aria-label", title);
+    }
 
     function show() {
       if (tip) return;
