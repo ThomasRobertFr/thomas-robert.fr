@@ -155,6 +155,28 @@ body.scrolled .navbar-default .navbar-brand .brand-more {
 			height: auto;
 			padding: 10px 20px;
 		}
+		// One-pager: no burger inside the burger, list the other pages right below the sections
+		>li.nav-pages {
+			>.dropdown-toggle {
+				display: none;
+			}
+			>.dropdown-menu {
+				display: block;
+				position: static;
+				float: none;
+				min-width: 0;
+				margin: 5px 0 0;
+				padding: 5px 0 0;
+				background-color: transparent;
+				border: 0;
+				border-top: 1px solid $navbar-default-border;
+				box-shadow: none;
+				>li > a {
+					padding: 8px 20px;
+					color: $gray-light;
+				}
+			}
+		}
 	}
 	.navbar {
 		padding: 10px 0;
