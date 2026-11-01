@@ -1,7 +1,7 @@
 <section
     id="{{ page.title-short | default: page.title | slugify }}"
     class="onepage-block {% if page.class %}{{ page.class }}{% endif %}"
-    {% if page.class contains "cover-image" %}style="background-image: url('{{ page.bg-image | prepend: site.baseurl }}')"{% endif %}>
+    {% if page.class contains "cover-image" %}style="--bg-image: url('{{ page.bg-image | prepend: site.baseurl }}')"{% endif %}>
     <div class="container onepage-block-header">
         <div class="picture">
             <img src="{{ site.author.photo | prepend: site.baseurl }}" alt="{{ site.author.name }}" width="200" height="200" />

@@ -37,41 +37,51 @@
 	}
 
 	>li.lang-selector {
-		display: flex;
-		align-items: center;
-		gap: 10px;
 		height: 65px;
 		padding-left: 12px;
 		transition: height 0.2s ease-in-out 0;
 		>a {
-			display: block;
-			padding: 0;
+			padding: 0; // not the menu links' padding, which would push the flags apart
 			line-height: 0;
 		}
-		.flag {
-			display: block;
-			width: 20px;
-			height: 20px;
-			border-radius: 50%;
-			box-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.25);
-			opacity: 0.5;
-			filter: grayscale(60%);
-			transition: opacity $transition-time, filter $transition-time, box-shadow $transition-time;
-		}
-		>a:hover .flag {
-			opacity: 1;
-			filter: none;
-		}
-		>a.current-lang .flag {
-			opacity: 1;
-			filter: none;
-			box-shadow: 0 0 0 2px #fff, 0 0 0 3.5px $color-2;
-		}
-		>a.no-translation .flag, >a.no-translation:hover .flag {
-			opacity: 0.35;
-			filter: grayscale(100%) contrast(60%);
-		}
 	}
+}
+// Language flags: in the menu on desktop, right of the burger on mobile so they stay one tap away
+.navbar-default .lang-selector {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	>a {
+		display: block;
+		padding: 0;
+		line-height: 0;
+	}
+	.flag {
+		display: block;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		box-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.25);
+		opacity: 0.5;
+		filter: grayscale(60%);
+		transition: opacity $transition-time, filter $transition-time, box-shadow $transition-time;
+	}
+	>a:hover .flag {
+		opacity: 1;
+		filter: none;
+	}
+	>a.current-lang .flag {
+		opacity: 1;
+		filter: none;
+		box-shadow: 0 0 0 2px #fff, 0 0 0 3.5px $color-2;
+	}
+	>a.no-translation .flag, >a.no-translation:hover .flag {
+		opacity: 0.35;
+		filter: grayscale(100%) contrast(60%);
+	}
+}
+.navbar-default .lang-selector-header {
+	display: none;
 }
 .navbar-default .navbar-brand {
 	text-decoration: none;
@@ -123,21 +133,30 @@ body.scrolled .navbar-default .navbar-brand .brand-more {
 		padding-top: 8px;
 	}
 }
-// Tablet: full-width bar and a smaller name once opened, so the menu stays on one line
-@media (min-width: 768px) and (max-width: 991px) {
-	#header .container {
-		width: auto;
-	}
+// Tablet and narrow phones: a smaller name once opened, so it shares the bar with the menu or the burger and flags
+@media (min-width: 768px) and (max-width: 991px), (max-width: 374px) {
 	// Keep the T and R initials at full size, shrink only the letters that slide in
 	.navbar-default .navbar-brand .brand-more {
 		font-size: 22px;
 		position: relative;
 		top: 2px; // centered in the same 40px line, so its baseline sits 2px above the initials'
 	}
+}
+@media (max-width: 374px) {
+	.navbar-default .navbar-brand .brand-more {
+		font-size: 20px;
+		top: 3px;
+	}
+}
+// Tablet: full-width bar, so the menu stays on one line
+@media (min-width: 768px) and (max-width: 991px) {
+	#header .container {
+		width: auto;
+	}
 	.navbar-default .navbar-nav {
 		>li > a {
-			padding-left: 6px;
-			padding-right: 6px;
+			padding-left: 7px;
+			padding-right: 7px;
 		}
 		>li.lang-selector {
 			padding-right: 15px;
@@ -152,8 +171,7 @@ body.scrolled .navbar-default .navbar-brand .brand-more {
 			}
 		}
 		>li.lang-selector {
-			height: auto;
-			padding: 10px 20px;
+			display: none;
 		}
 		// One-pager: no burger inside the burger, list the other pages right below the sections
 		>li.nav-pages {
@@ -178,11 +196,27 @@ body.scrolled .navbar-default .navbar-brand .brand-more {
 			}
 		}
 	}
-	.navbar {
-		padding: 10px 0;
+	// Same 55px bar as on tablet: name, then the burger and the flags on the right
+	.navbar-default .lang-selector-header {
+		display: flex;
+		float: right;
+		height: 55px;
+		margin-left: 6px;
+		margin-right: 15px;
 	}
-	.navbar-brand {
-		padding-top: 0;
-		padding-bottom: 0;
+	.navbar-default .navbar-toggle {
+		height: 55px;
+		margin: 0;
+		padding: 0 8px;
+		border: 0;
+		border-radius: 0;
+		&:hover, &:focus {
+			background-color: transparent;
+			.icon-bar { background-color: $gray-dark; }
+		}
+		.icon-bar {
+			background-color: $gray-light;
+			transition: background-color $transition-time;
+		}
 	}
 }

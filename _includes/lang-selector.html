@@ -1,0 +1,28 @@
+{% assign post_fr=site.posts | where:"lang-ref", page.lang-ref | where: "lang", "fr" %}
+{% assign post_en=site.posts | where:"lang-ref", page.lang-ref | where: "lang", "en" %}
+{% if post_fr.size == 0 %}
+  {% assign post_fr=site.pages | where:"lang-ref", page.lang-ref | where: "lang", "fr" %}
+{% endif %}
+{% if post_en.size == 0 %}
+  {% assign post_en=site.pages | where:"lang-ref", page.lang-ref | where: "lang", "en" %}
+{% endif %}
+
+{% if page.lang == "fr" %}
+<a class="current-lang">
+{% elsif post_fr.size > 0 %}
+<a href="{{ site.base-url }}{{ post_fr[0].url }}">
+{% else %}
+<a class="no-translation">
+{% endif %}
+  <svg class="flag" viewBox="0 0 30 30" role="img" aria-label="Français"><title>Français</title><rect width="10" height="30" fill="#002395"/><rect x="10" width="10" height="30" fill="#fff"/><rect x="20" width="10" height="30" fill="#ed2939"/></svg>
+</a>
+
+{% if page.lang == "en" %}
+<a class="current-lang">
+{% elsif post_en.size > 0 %}
+<a href="{{ site.base-url }}{{ post_en[0].url }}">
+{% else %}
+<a class="no-translation">
+{% endif %}
+  <svg class="flag" viewBox="15 0 30 30" role="img" aria-label="English"><title>English</title><rect width="60" height="30" fill="#012169"/><path d="M0,0 60,30M60,0 0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 60,30M60,0 0,30" stroke="#c8102e" stroke-width="2"/><path d="M30,0V30M0,15H60" stroke="#fff" stroke-width="10"/><path d="M30,0V30M0,15H60" stroke="#c8102e" stroke-width="6"/></svg>
+</a>

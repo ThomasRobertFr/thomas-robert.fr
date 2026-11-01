@@ -283,8 +283,8 @@ function initScrollspy() {
   update();
 }
 
-// PARALLAX: the background moves at half the scrolling speed (on top of
-// background-attachment: fixed), as the former jQuery Parallax plugin did
+// PARALLAX: the background moves at half the scrolling speed (on top of the fixed
+// image layer, see _onepage.scss), as the former jQuery Parallax plugin did
 function initParallax() {
   if (windowWidth() < 768 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
@@ -299,7 +299,7 @@ function initParallax() {
       var top = block.el.getBoundingClientRect().top + pos;
       // skip blocks totally above or below the viewport
       if (top + block.el.offsetHeight < pos || top > pos + windowHeight) return;
-      block.el.style.backgroundPosition = "50% " + Math.round((block.firstTop - pos) * 0.5) + "px";
+      block.el.style.setProperty("--parallax-y", Math.round((block.firstTop - pos) * 0.5) + "px");
     });
   }
 

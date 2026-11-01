@@ -58,6 +58,7 @@
     }
 
     &.cover-image {
+        background-image: var(--bg-image); // set inline by the block layouts
         background-size: cover;
         background-position: center;
 
@@ -66,8 +67,37 @@
         }
     }
 
+    // Parallax: the image stays on screen while the block scrolls over it, as a fixed background
+    // would, on a fixed layer clipped to the block. The layer is 100lvh high, the screen's height
+    // with the URL bar hidden, so a phone's URL bar showing or hiding doesn't resize it (it did with
+    // background-attachment: fixed, which iOS also ignores). On desktop, main.js moves the image at
+    // half the scrolling speed through --parallax-y.
     &.cover-image.parallax {
-        background-attachment: fixed;
+        position: relative;
+        isolation: isolate;
+        clip-path: inset(0); // unlike overflow, also clips the fixed layer
+
+        &::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100lvh;
+            z-index: -1;
+            background-image: var(--bg-image);
+            background-size: cover;
+            background-position: 50% var(--parallax-y, 50%);
+        }
+        // the block's inset top shadow, back on top of the image layer
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            box-shadow: inherit;
+            pointer-events: none;
+        }
     }
 }
 
